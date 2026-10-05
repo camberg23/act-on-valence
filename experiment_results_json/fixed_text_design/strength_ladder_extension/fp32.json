@@ -1,0 +1,338 @@
+{
+ "member": "llama31_8b",
+ "gate": "relative",
+ "n_boot": 2000,
+ "rungs": {
+  "e6_k32": {
+   "arm": "e6_k32",
+   "k": 0.03125,
+   "k_name": "1/32",
+   "role": "new",
+   "available": true,
+   "n_shared": 316,
+   "bf16": {
+    "slope": 0.03837113348789715,
+    "ci95": [
+     0.03441530268050212,
+     0.04248686108450472
+    ]
+   },
+   "fp32": {
+    "slope": 0.03971738834184223,
+    "ci95": [
+     0.03868304746516981,
+     0.040852830596274335
+    ]
+   },
+   "diff_bf16_minus_fp32": -0.0013462548539450794,
+   "diff_ci95": [
+    -0.005096836635634602,
+    0.0026208098657910174
+   ],
+   "diff_excludes_zero": false,
+   "diff_as_fraction_of_bf16": -0.03508509474628132,
+   "paired_bootstrap_se": 0.0019916667167256996,
+   "min_detectable_difference_95": 0.003903595064780569,
+   "min_detectable_difference_80pct_power": 0.005579825590244686,
+   "min_detectable_fraction_95": 0.10173259713612118
+  },
+  "e6_k24": {
+   "arm": "e6_k24",
+   "k": 0.041666666666666664,
+   "k_name": "1/24",
+   "role": "new",
+   "available": true,
+   "n_shared": 312,
+   "bf16": {
+    "slope": 0.05544989869946521,
+    "ci95": [
+     0.051283533330790616,
+     0.05993702835056841
+    ]
+   },
+   "fp32": {
+    "slope": 0.052915820475006294,
+    "ci95": [
+     0.05153056380315114,
+     0.05430816957036535
+    ]
+   },
+   "diff_bf16_minus_fp32": 0.002534078224458919,
+   "diff_ci95": [
+    -0.001471578271969674,
+    0.006816114228237764
+   ],
+   "diff_excludes_zero": false,
+   "diff_as_fraction_of_bf16": 0.045700321982434185,
+   "paired_bootstrap_se": 0.002080178774399174,
+   "min_detectable_difference_95": 0.004077075511386503,
+   "min_detectable_difference_80pct_power": 0.005827799731853884,
+   "min_detectable_fraction_95": 0.07352719494554864
+  },
+  "e6_ksixth": {
+   "arm": "e6_ksixth",
+   "k": 0.16666666666666666,
+   "k_name": "1/6",
+   "role": "anchor",
+   "available": true,
+   "n_shared": 310,
+   "bf16": {
+    "slope": 0.21008583169421796,
+    "ci95": [
+     0.20306590817096073,
+     0.21718390553840877
+    ]
+   },
+   "fp32": {
+    "slope": 0.21007914748624562,
+    "ci95": [
+     0.2045688243573891,
+     0.21584606279025087
+    ]
+   },
+   "diff_bf16_minus_fp32": 6.6842079723405945e-06,
+   "diff_ci95": [
+    -0.003723123450201378,
+    0.0038472269826715015
+   ],
+   "diff_excludes_zero": false,
+   "diff_as_fraction_of_bf16": 3.1816557634736294e-05,
+   "paired_bootstrap_se": 0.0019427076076286185,
+   "min_detectable_difference_95": 0.003807636973478218,
+   "min_detectable_difference_80pct_power": 0.005442662435625831,
+   "min_detectable_fraction_95": 0.018124196871211532
+  }
+ },
+ "criterion": "Llama-3.1-8B at k=1/24 and k=1/32, repeated in fp32 on the same skeletons and compared with the standard bf16 run, plus the same comparison at k=1/6 as the reference rung. fp32 moves every number a little, so the thin-rung comparison only means 'rounding is biting' if the reference comparison does not move. If the thin rungs disagree beyond their intervals while the reference agrees, rounding is biting and the entire thin end is re-read in fp32 before any verdict.",
+ "verdict": "NO_PRECISION_EFFECT_DETECTED",
+ "moved_thin_rungs": [],
+ "moved_reference_rungs": [],
+ "resolution_note": "a null here is worth the smallest difference it could have seen: 1/32 resolves 0.00390 (10.17% of its own effect); 1/24 resolves 0.00408 (7.35% of its own effect); 1/6 resolves 0.00381 (1.81% of its own effect)",
+ "pairing_note": "the fp32 side runs 320 skeletons and the bf16 panel runs 960 on the thin rungs, so the bf16 side is cut to the shared skeletons before anything is compared and the interval is the one those skeletons support, not the panel's",
+ "under_other_gates": {
+  "absolute": {
+   "member": "llama31_8b",
+   "gate": "absolute",
+   "n_boot": 2000,
+   "rungs": {
+    "e6_k32": {
+     "arm": "e6_k32",
+     "k": 0.03125,
+     "k_name": "1/32",
+     "role": "new",
+     "available": true,
+     "n_shared": 316,
+     "bf16": {
+      "slope": 0.03837113348789715,
+      "ci95": [
+       0.03441530268050212,
+       0.04248686108450472
+      ]
+     },
+     "fp32": {
+      "slope": 0.03971738834184223,
+      "ci95": [
+       0.03868304746516981,
+       0.040852830596274335
+      ]
+     },
+     "diff_bf16_minus_fp32": -0.0013462548539450794,
+     "diff_ci95": [
+      -0.005096836635634602,
+      0.0026208098657910174
+     ],
+     "diff_excludes_zero": false,
+     "diff_as_fraction_of_bf16": -0.03508509474628132,
+     "paired_bootstrap_se": 0.0019916667167256996,
+     "min_detectable_difference_95": 0.003903595064780569,
+     "min_detectable_difference_80pct_power": 0.005579825590244686,
+     "min_detectable_fraction_95": 0.10173259713612118
+    },
+    "e6_k24": {
+     "arm": "e6_k24",
+     "k": 0.041666666666666664,
+     "k_name": "1/24",
+     "role": "new",
+     "available": true,
+     "n_shared": 312,
+     "bf16": {
+      "slope": 0.05544989869946521,
+      "ci95": [
+       0.051283533330790616,
+       0.05993702835056841
+      ]
+     },
+     "fp32": {
+      "slope": 0.052915820475006294,
+      "ci95": [
+       0.05153056380315114,
+       0.05430816957036535
+      ]
+     },
+     "diff_bf16_minus_fp32": 0.002534078224458919,
+     "diff_ci95": [
+      -0.001471578271969674,
+      0.006816114228237764
+     ],
+     "diff_excludes_zero": false,
+     "diff_as_fraction_of_bf16": 0.045700321982434185,
+     "paired_bootstrap_se": 0.002080178774399174,
+     "min_detectable_difference_95": 0.004077075511386503,
+     "min_detectable_difference_80pct_power": 0.005827799731853884,
+     "min_detectable_fraction_95": 0.07352719494554864
+    },
+    "e6_ksixth": {
+     "arm": "e6_ksixth",
+     "k": 0.16666666666666666,
+     "k_name": "1/6",
+     "role": "anchor",
+     "available": true,
+     "n_shared": 310,
+     "bf16": {
+      "slope": 0.21008583169421796,
+      "ci95": [
+       0.20306590817096073,
+       0.21718390553840877
+      ]
+     },
+     "fp32": {
+      "slope": 0.21007914748624562,
+      "ci95": [
+       0.2045688243573891,
+       0.21584606279025087
+      ]
+     },
+     "diff_bf16_minus_fp32": 6.6842079723405945e-06,
+     "diff_ci95": [
+      -0.003723123450201378,
+      0.0038472269826715015
+     ],
+     "diff_excludes_zero": false,
+     "diff_as_fraction_of_bf16": 3.1816557634736294e-05,
+     "paired_bootstrap_se": 0.0019427076076286185,
+     "min_detectable_difference_95": 0.003807636973478218,
+     "min_detectable_difference_80pct_power": 0.005442662435625831,
+     "min_detectable_fraction_95": 0.018124196871211532
+    }
+   },
+   "criterion": "Llama-3.1-8B at k=1/24 and k=1/32, repeated in fp32 on the same skeletons and compared with the standard bf16 run, plus the same comparison at k=1/6 as the reference rung. fp32 moves every number a little, so the thin-rung comparison only means 'rounding is biting' if the reference comparison does not move. If the thin rungs disagree beyond their intervals while the reference agrees, rounding is biting and the entire thin end is re-read in fp32 before any verdict.",
+   "verdict": "NO_PRECISION_EFFECT_DETECTED",
+   "moved_thin_rungs": [],
+   "moved_reference_rungs": [],
+   "resolution_note": "a null here is worth the smallest difference it could have seen: 1/32 resolves 0.00390 (10.17% of its own effect); 1/24 resolves 0.00408 (7.35% of its own effect); 1/6 resolves 0.00381 (1.81% of its own effect)",
+   "pairing_note": "the fp32 side runs 320 skeletons and the bf16 panel runs 960 on the thin rungs, so the bf16 side is cut to the shared skeletons before anything is compared and the interval is the one those skeletons support, not the panel's"
+  },
+  "none": {
+   "member": "llama31_8b",
+   "gate": "none",
+   "n_boot": 2000,
+   "rungs": {
+    "e6_k32": {
+     "arm": "e6_k32",
+     "k": 0.03125,
+     "k_name": "1/32",
+     "role": "new",
+     "available": true,
+     "n_shared": 320,
+     "bf16": {
+      "slope": 0.03859464765854682,
+      "ci95": [
+       0.034688281572042345,
+       0.042657113612392536
+      ]
+     },
+     "fp32": {
+      "slope": 0.03980539777292492,
+      "ci95": [
+       0.03873058140727545,
+       0.04087288538623299
+      ]
+     },
+     "diff_bf16_minus_fp32": -0.0012107501143781008,
+     "diff_ci95": [
+      -0.004990359251991753,
+      0.002668569340764695
+     ],
+     "diff_excludes_zero": false,
+     "diff_as_fraction_of_bf16": -0.031370933220839475,
+     "paired_bootstrap_se": 0.0020165094402910945,
+     "min_detectable_difference_95": 0.003952285908630695,
+     "min_detectable_difference_80pct_power": 0.005649424616787366,
+     "min_detectable_fraction_95": 0.10240502630305676
+    },
+    "e6_k24": {
+     "arm": "e6_k24",
+     "k": 0.041666666666666664,
+     "k_name": "1/24",
+     "role": "new",
+     "available": true,
+     "n_shared": 320,
+     "bf16": {
+      "slope": 0.05609490452873118,
+      "ci95": [
+       0.05195207716499049,
+       0.06031356706629186
+      ]
+     },
+     "fp32": {
+      "slope": 0.05306045697913689,
+      "ci95": [
+       0.05162846448090246,
+       0.05448436489389848
+      ]
+     },
+     "diff_bf16_minus_fp32": 0.0030344475495942894,
+     "diff_ci95": [
+      -0.0011025282503254366,
+      0.007171617627039847
+     ],
+     "diff_excludes_zero": false,
+     "diff_as_fraction_of_bf16": 0.054094887496244505,
+     "paired_bootstrap_se": 0.0021374074568429775,
+     "min_detectable_difference_95": 0.004189241668743789,
+     "min_detectable_difference_80pct_power": 0.0059881308073868895,
+     "min_detectable_fraction_95": 0.07468132273222976
+    },
+    "e6_ksixth": {
+     "arm": "e6_ksixth",
+     "k": 0.16666666666666666,
+     "k_name": "1/6",
+     "role": "anchor",
+     "available": true,
+     "n_shared": 320,
+     "bf16": {
+      "slope": 0.21055201522301373,
+      "ci95": [
+       0.20383207718879937,
+       0.21734913366835615
+      ]
+     },
+     "fp32": {
+      "slope": 0.21039562114870067,
+      "ci95": [
+       0.20471379220165623,
+       0.2161010060619389
+      ]
+     },
+     "diff_bf16_minus_fp32": 0.00015639407431305985,
+     "diff_ci95": [
+      -0.003429671449352617,
+      0.0039095023032361615
+     ],
+     "diff_excludes_zero": false,
+     "diff_as_fraction_of_bf16": 0.0007427811799730791,
+     "paired_bootstrap_se": 0.0018871248745332564,
+     "min_detectable_difference_95": 0.0036986968175896995,
+     "min_detectable_difference_80pct_power": 0.005286942628744127,
+     "min_detectable_fraction_95": 0.017566665480128946
+    }
+   },
+   "criterion": "Llama-3.1-8B at k=1/24 and k=1/32, repeated in fp32 on the same skeletons and compared with the standard bf16 run, plus the same comparison at k=1/6 as the reference rung. fp32 moves every number a little, so the thin-rung comparison only means 'rounding is biting' if the reference comparison does not move. If the thin rungs disagree beyond their intervals while the reference agrees, rounding is biting and the entire thin end is re-read in fp32 before any verdict.",
+   "verdict": "NO_PRECISION_EFFECT_DETECTED",
+   "moved_thin_rungs": [],
+   "moved_reference_rungs": [],
+   "resolution_note": "a null here is worth the smallest difference it could have seen: 1/32 resolves 0.00395 (10.24% of its own effect); 1/24 resolves 0.00419 (7.47% of its own effect); 1/6 resolves 0.00370 (1.76% of its own effect)",
+   "pairing_note": "the fp32 side runs 320 skeletons and the bf16 panel runs 960 on the thin rungs, so the bf16 side is cut to the shared skeletons before anything is compared and the interval is the one those skeletons support, not the panel's"
+  }
+ }
+}

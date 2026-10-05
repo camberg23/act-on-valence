@@ -1,0 +1,494 @@
+{
+ "definition": {
+  "before_first_reset": "operator-active offer-1-7 turns up to and including the conversation's first reset_context call in any tool turn (offer 0 onward); conversations that never reset contribute all their operator-active turns",
+  "after_first_reset": "operator-active offer-1-7 turns after that first reset (the operator re-imposed its state after the model reset or adjusted)",
+  "no_state": "offer-1-7 tool turns with no state applied (model reset on the previous turn; for the null cell every operator-default turn)",
+  "interval": "95% percentile cluster bootstrap over conversations, 10,000 resamples, seed 42"
+ },
+ "cells": {
+  "gated_selfreport_neg_d05": {
+   "n_conv": 200,
+   "operator_active_all": {
+    "k": 234,
+    "n_turns": 988,
+    "rate": 0.23684210526315788,
+    "lo": 0.19332453907164834,
+    "hi": 0.2834732106779285,
+    "n_conv": 200
+   },
+   "operator_active_before_first_reset": {
+    "k": 89,
+    "n_turns": 486,
+    "rate": 0.1831275720164609,
+    "lo": 0.14089620932086686,
+    "hi": 0.23703952274422072,
+    "n_conv": 200
+   },
+   "operator_active_after_first_reset": {
+    "k": 145,
+    "n_turns": 502,
+    "rate": 0.28884462151394424,
+    "lo": 0.22656170280612245,
+    "hi": 0.35669088843036983,
+    "n_conv": 200
+   },
+   "no_state_turns": {
+    "k": 88,
+    "n_turns": 329,
+    "rate": 0.2674772036474164,
+    "lo": 0.1794871794871795,
+    "hi": 0.35180319412514927,
+    "n_conv": 200
+   }
+  },
+  "gated_selfreport_neg_d1": {
+   "n_conv": 200,
+   "operator_active_all": {
+    "k": 256,
+    "n_turns": 942,
+    "rate": 0.27176220806794055,
+    "lo": 0.22708647172824256,
+    "hi": 0.32174957731903664,
+    "n_conv": 200
+   },
+   "operator_active_before_first_reset": {
+    "k": 96,
+    "n_turns": 419,
+    "rate": 0.22911694510739858,
+    "lo": 0.17922387556516156,
+    "hi": 0.29411764705882354,
+    "n_conv": 200
+   },
+   "operator_active_after_first_reset": {
+    "k": 160,
+    "n_turns": 523,
+    "rate": 0.30592734225621415,
+    "lo": 0.24732950501455842,
+    "hi": 0.372,
+    "n_conv": 200
+   },
+   "no_state_turns": {
+    "k": 131,
+    "n_turns": 377,
+    "rate": 0.34748010610079577,
+    "lo": 0.26198083067092653,
+    "hi": 0.4275920897818806,
+    "n_conv": 200
+   }
+  },
+  "gated_selfreport_null": {
+   "n_conv": 200,
+   "operator_active_all": {
+    "k": 0,
+    "n_turns": 0,
+    "rate": null,
+    "lo": null,
+    "hi": null
+   },
+   "operator_active_before_first_reset": {
+    "k": 0,
+    "n_turns": 0,
+    "rate": null,
+    "lo": null,
+    "hi": null
+   },
+   "operator_active_after_first_reset": {
+    "k": 0,
+    "n_turns": 0,
+    "rate": null,
+    "lo": null,
+    "hi": null
+   },
+   "no_state_turns": {
+    "k": 45,
+    "n_turns": 1349,
+    "rate": 0.033358042994810974,
+    "lo": 0.01722814203054565,
+    "hi": 0.05325443786982249,
+    "n_conv": 200
+   }
+  },
+  "gated_selfreport_pos_d05": {
+   "n_conv": 200,
+   "operator_active_all": {
+    "k": 25,
+    "n_turns": 1299,
+    "rate": 0.01924557351809084,
+    "lo": 0.01061410159211524,
+    "hi": 0.02975724353954581,
+    "n_conv": 200
+   },
+   "operator_active_before_first_reset": {
+    "k": 20,
+    "n_turns": 1062,
+    "rate": 0.018832391713747645,
+    "lo": 0.010958904109589041,
+    "hi": 0.028112449799196786,
+    "n_conv": 200
+   },
+   "operator_active_after_first_reset": {
+    "k": 5,
+    "n_turns": 237,
+    "rate": 0.02109704641350211,
+    "lo": 0.0,
+    "hi": 0.05668068366793271,
+    "n_conv": 200
+   },
+   "no_state_turns": {
+    "k": 0,
+    "n_turns": 58,
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "n_conv": 200
+   }
+  },
+  "gated_selfreport_pos_d1": {
+   "n_conv": 200,
+   "operator_active_all": {
+    "k": 37,
+    "n_turns": 1259,
+    "rate": 0.02938840349483717,
+    "lo": 0.020553359683794466,
+    "hi": 0.03904413266381179,
+    "n_conv": 200
+   },
+   "operator_active_before_first_reset": {
+    "k": 35,
+    "n_turns": 975,
+    "rate": 0.035897435897435895,
+    "lo": 0.024342745861733205,
+    "hi": 0.049676197151585166,
+    "n_conv": 200
+   },
+   "operator_active_after_first_reset": {
+    "k": 2,
+    "n_turns": 284,
+    "rate": 0.007042253521126761,
+    "lo": 0.0,
+    "hi": 0.01838235294117647,
+    "n_conv": 200
+   },
+   "no_state_turns": {
+    "k": 6,
+    "n_turns": 73,
+    "rate": 0.0821917808219178,
+    "lo": 0.0,
+    "hi": 0.23529411764705882,
+    "n_conv": 200
+   }
+  },
+  "gated_selfreport_rand_d05": {
+   "n_conv": 200,
+   "operator_active_all": {
+    "k": 46,
+    "n_turns": 1270,
+    "rate": 0.03622047244094488,
+    "lo": 0.02125942434811699,
+    "hi": 0.05390244050265945,
+    "n_conv": 200
+   },
+   "operator_active_before_first_reset": {
+    "k": 27,
+    "n_turns": 1004,
+    "rate": 0.026892430278884463,
+    "lo": 0.016775396085740912,
+    "hi": 0.038702928870292884,
+    "n_conv": 200
+   },
+   "operator_active_after_first_reset": {
+    "k": 19,
+    "n_turns": 266,
+    "rate": 0.07142857142857142,
+    "lo": 0.02564102564102564,
+    "hi": 0.13059701492537312,
+    "n_conv": 200
+   },
+   "no_state_turns": {
+    "k": 20,
+    "n_turns": 94,
+    "rate": 0.2127659574468085,
+    "lo": 0.039473684210526314,
+    "hi": 0.373139303482587,
+    "n_conv": 200
+   }
+  },
+  "gated_selfreport_rand_d1": {
+   "n_conv": 200,
+   "operator_active_all": {
+    "k": 90,
+    "n_turns": 1172,
+    "rate": 0.07679180887372014,
+    "lo": 0.054282636030364435,
+    "hi": 0.10214685983095,
+    "n_conv": 200
+   },
+   "operator_active_before_first_reset": {
+    "k": 45,
+    "n_turns": 779,
+    "rate": 0.057766367137355584,
+    "lo": 0.04083891402584403,
+    "hi": 0.07865205992509362,
+    "n_conv": 200
+   },
+   "operator_active_after_first_reset": {
+    "k": 45,
+    "n_turns": 393,
+    "rate": 0.11450381679389313,
+    "lo": 0.06914860782768585,
+    "hi": 0.1681981427612441,
+    "n_conv": 200
+   },
+   "no_state_turns": {
+    "k": 28,
+    "n_turns": 161,
+    "rate": 0.17391304347826086,
+    "lo": 0.07857142857142857,
+    "hi": 0.26590535964702244,
+    "n_conv": 200
+   }
+  },
+  "gated_zone_neg_d05": {
+   "n_conv": 200,
+   "operator_active_all": {
+    "k": 230,
+    "n_turns": 1080,
+    "rate": 0.21296296296296297,
+    "lo": 0.17716751894292862,
+    "hi": 0.2509775133472083,
+    "n_conv": 200
+   },
+   "operator_active_before_first_reset": {
+    "k": 118,
+    "n_turns": 414,
+    "rate": 0.28502415458937197,
+    "lo": 0.22267206477732793,
+    "hi": 0.3626062322946176,
+    "n_conv": 200
+   },
+   "operator_active_after_first_reset": {
+    "k": 112,
+    "n_turns": 666,
+    "rate": 0.16816816816816818,
+    "lo": 0.12463757490756089,
+    "hi": 0.21621621621621623,
+    "n_conv": 200
+   },
+   "no_state_turns": {
+    "k": 40,
+    "n_turns": 277,
+    "rate": 0.1444043321299639,
+    "lo": 0.060495199086819315,
+    "hi": 0.23264483447488576,
+    "n_conv": 200
+   }
+  },
+  "gated_zone_neg_d1": {
+   "n_conv": 200,
+   "operator_active_all": {
+    "k": 336,
+    "n_turns": 948,
+    "rate": 0.35443037974683544,
+    "lo": 0.3065173116089613,
+    "hi": 0.4062173432475884,
+    "n_conv": 200
+   },
+   "operator_active_before_first_reset": {
+    "k": 135,
+    "n_turns": 374,
+    "rate": 0.3609625668449198,
+    "lo": 0.289347636129507,
+    "hi": 0.4559282464491216,
+    "n_conv": 200
+   },
+   "operator_active_after_first_reset": {
+    "k": 201,
+    "n_turns": 574,
+    "rate": 0.3501742160278746,
+    "lo": 0.29241799183041234,
+    "hi": 0.41553524145757154,
+    "n_conv": 200
+   },
+   "no_state_turns": {
+    "k": 98,
+    "n_turns": 406,
+    "rate": 0.2413793103448276,
+    "lo": 0.17038660406513728,
+    "hi": 0.31132182675814746,
+    "n_conv": 200
+   }
+  },
+  "gated_zone_null": {
+   "n_conv": 200,
+   "operator_active_all": {
+    "k": 0,
+    "n_turns": 0,
+    "rate": null,
+    "lo": null,
+    "hi": null
+   },
+   "operator_active_before_first_reset": {
+    "k": 0,
+    "n_turns": 0,
+    "rate": null,
+    "lo": null,
+    "hi": null
+   },
+   "operator_active_after_first_reset": {
+    "k": 0,
+    "n_turns": 0,
+    "rate": null,
+    "lo": null,
+    "hi": null
+   },
+   "no_state_turns": {
+    "k": 72,
+    "n_turns": 1368,
+    "rate": 0.05263157894736842,
+    "lo": 0.03646906558809832,
+    "hi": 0.07117044811071759,
+    "n_conv": 200
+   }
+  },
+  "gated_zone_pos_d05": {
+   "n_conv": 200,
+   "operator_active_all": {
+    "k": 60,
+    "n_turns": 1283,
+    "rate": 0.04676539360872954,
+    "lo": 0.03348909657320872,
+    "hi": 0.061465721040189124,
+    "n_conv": 200
+   },
+   "operator_active_before_first_reset": {
+    "k": 48,
+    "n_turns": 909,
+    "rate": 0.052805280528052806,
+    "lo": 0.03765592004302147,
+    "hi": 0.0711743772241993,
+    "n_conv": 200
+   },
+   "operator_active_after_first_reset": {
+    "k": 12,
+    "n_turns": 374,
+    "rate": 0.03208556149732621,
+    "lo": 0.008107561739637212,
+    "hi": 0.0636604774535809,
+    "n_conv": 200
+   },
+   "no_state_turns": {
+    "k": 0,
+    "n_turns": 86,
+    "rate": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "n_conv": 200
+   }
+  },
+  "gated_zone_pos_d1": {
+   "n_conv": 200,
+   "operator_active_all": {
+    "k": 55,
+    "n_turns": 1245,
+    "rate": 0.04417670682730924,
+    "lo": 0.03368083400160385,
+    "hi": 0.05519480519480519,
+    "n_conv": 200
+   },
+   "operator_active_before_first_reset": {
+    "k": 53,
+    "n_turns": 846,
+    "rate": 0.06264775413711583,
+    "lo": 0.04520990312163617,
+    "hi": 0.08311688311688312,
+    "n_conv": 200
+   },
+   "operator_active_after_first_reset": {
+    "k": 2,
+    "n_turns": 399,
+    "rate": 0.005012531328320802,
+    "lo": 0.0,
+    "hi": 0.013054830287206266,
+    "n_conv": 200
+   },
+   "no_state_turns": {
+    "k": 1,
+    "n_turns": 93,
+    "rate": 0.010752688172043012,
+    "lo": 0.0,
+    "hi": 0.03488372093023256,
+    "n_conv": 200
+   }
+  },
+  "gated_zone_rand_d05": {
+   "n_conv": 200,
+   "operator_active_all": {
+    "k": 86,
+    "n_turns": 1267,
+    "rate": 0.06787687450670876,
+    "lo": 0.04746996865129101,
+    "hi": 0.0910586652629116,
+    "n_conv": 200
+   },
+   "operator_active_before_first_reset": {
+    "k": 49,
+    "n_turns": 971,
+    "rate": 0.05046343975283213,
+    "lo": 0.03605248425343062,
+    "hi": 0.06725468577728776,
+    "n_conv": 200
+   },
+   "operator_active_after_first_reset": {
+    "k": 37,
+    "n_turns": 296,
+    "rate": 0.125,
+    "lo": 0.0684931506849315,
+    "hi": 0.19314826548392203,
+    "n_conv": 200
+   },
+   "no_state_turns": {
+    "k": 17,
+    "n_turns": 111,
+    "rate": 0.15315315315315314,
+    "lo": 0.03845238095238096,
+    "hi": 0.2727272727272727,
+    "n_conv": 200
+   }
+  },
+  "gated_zone_rand_d1": {
+   "n_conv": 200,
+   "operator_active_all": {
+    "k": 90,
+    "n_turns": 1230,
+    "rate": 0.07317073170731707,
+    "lo": 0.05347060197471842,
+    "hi": 0.09500010237510237,
+    "n_conv": 200
+   },
+   "operator_active_before_first_reset": {
+    "k": 58,
+    "n_turns": 833,
+    "rate": 0.06962785114045618,
+    "lo": 0.05125220922684961,
+    "hi": 0.09201665638150752,
+    "n_conv": 200
+   },
+   "operator_active_after_first_reset": {
+    "k": 32,
+    "n_turns": 397,
+    "rate": 0.08060453400503778,
+    "lo": 0.04076086956521739,
+    "hi": 0.1287699022460522,
+    "n_conv": 200
+   },
+   "no_state_turns": {
+    "k": 23,
+    "n_turns": 138,
+    "rate": 0.16666666666666666,
+    "lo": 0.046875,
+    "hi": 0.2916666666666667,
+    "n_conv": 200
+   }
+  }
+ }
+}

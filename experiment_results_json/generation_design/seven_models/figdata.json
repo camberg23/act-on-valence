@@ -1,0 +1,1057 @@
+{
+ "panel_differenced_slope": {
+  "rows": [
+   {
+    "model": "OLMo-2-32B",
+    "family": "OLMo",
+    "slope": 0.7888531761178107,
+    "lo": 0.6740022607610261,
+    "hi": 0.8977166713199835,
+    "n_sessions": 60,
+    "floor_slopes": [
+     -0.19140741469972455,
+     -0.03562486987923876,
+     -0.07907549470728217,
+     -0.2817192172245905,
+     0.33172193181137116,
+     0.36437533542813755,
+     0.2574997114273833,
+     0.011915507062265426
+    ],
+    "floor_max": 0.36437533542813755,
+    "floor_min": -0.2817192172245905,
+    "rank": 1,
+    "n_ranked": 9,
+    "t_vs_floor": 10.451758095314002,
+    "verdict": "STATE_SURVIVES",
+    "mirror_verdict": "MIRRORED",
+    "record_slope": 0.9492198467398555,
+    "record_verdict": "STATE_SURVIVES"
+   },
+   {
+    "model": "Qwen2.5-32B",
+    "family": "Qwen",
+    "slope": 2.2777227602136505,
+    "lo": 1.9507399609115716,
+    "hi": 2.5882729242587565,
+    "n_sessions": 60,
+    "floor_slopes": [
+     0.1787373626984919,
+     1.5615037938183527,
+     0.025552582025188685,
+     1.046204166371636,
+     0.5538944294035028,
+     1.872282552874934,
+     -1.4323529518614095,
+     0.875560875895613
+    ],
+    "floor_max": 1.872282552874934,
+    "floor_min": -1.4323529518614095,
+    "rank": 1,
+    "n_ranked": 8,
+    "t_vs_floor": 2.712233351821919,
+    "verdict": "STATE_SURVIVES",
+    "mirror_verdict": "MIRRORED",
+    "record_slope": 2.170720828821038,
+    "record_verdict": "STATE_SURVIVES"
+   },
+   {
+    "model": "Qwen3-14B",
+    "family": "Qwen",
+    "slope": 2.2211249904706145,
+    "lo": 1.9224454699106133,
+    "hi": 2.5353319536711405,
+    "n_sessions": 60,
+    "floor_slopes": [
+     -0.6047780034501448,
+     0.5956204989937023,
+     0.3275120477157776,
+     -0.5380818562905882,
+     -2.8650848629767163,
+     0.2640622207438499,
+     1.8221038435080268,
+     -0.5530769791164531
+    ],
+    "floor_max": 1.8221038435080268,
+    "floor_min": -2.8650848629767163,
+    "rank": 1,
+    "n_ranked": 9,
+    "t_vs_floor": 5.2203243002588415,
+    "verdict": "STATE_SURVIVES",
+    "mirror_verdict": "MIRRORED",
+    "record_slope": 2.3299999490988355,
+    "record_verdict": "STATE_WITHIN_FLOOR"
+   },
+   {
+    "model": "Qwen3-32B",
+    "family": "Qwen",
+    "slope": 0.05378189385706247,
+    "lo": -0.01711261273759956,
+    "hi": 0.1216226871383818,
+    "n_sessions": 60,
+    "floor_slopes": [
+     0.07333099747501072,
+     0.1526538319377001,
+     0.04627618467671158,
+     -0.20356429478850607,
+     -0.30163990006786645,
+     0.029767408056073592,
+     -0.20376632322986551,
+     -0.10186167593392874
+    ],
+    "floor_max": 0.1526538319377001,
+    "floor_min": -0.30163990006786645,
+    "rank": 3,
+    "n_ranked": 9,
+    "t_vs_floor": 2.256230134036942,
+    "verdict": "NOT_DETECTED",
+    "mirror_verdict": "PARTIAL_MIRROR",
+    "record_slope": 0.04671404249851813,
+    "record_verdict": "NOT_DETECTED"
+   },
+   {
+    "model": "Mistral-24B",
+    "family": "Mistral",
+    "slope": 0.2729574977381844,
+    "lo": 0.2317020534993486,
+    "hi": 0.3136134144780497,
+    "n_sessions": 59,
+    "floor_slopes": [
+     -0.05353792354315919,
+     0.05912492074697773,
+     -0.08469568986645165,
+     -0.009586978663916309,
+     -0.021554482726339152,
+     -0.07836150209064954,
+     0.11198396243355645,
+     0.09820414940560503
+    ],
+    "floor_max": 0.11198396243355645,
+    "floor_min": -0.08469568986645165,
+    "rank": 1,
+    "n_ranked": 8,
+    "t_vs_floor": 8.035400859303683,
+    "verdict": "STATE_SURVIVES",
+    "mirror_verdict": "MIRRORED",
+    "record_slope": 0.29808573896446994,
+    "record_verdict": "STATE_SURVIVES"
+   },
+   {
+    "model": "Gemma-3-27B",
+    "family": "Gemma",
+    "slope": -0.4436813414877999,
+    "lo": -0.8966382250181424,
+    "hi": 0.017301019551962338,
+    "n_sessions": 60,
+    "floor_slopes": [
+     2.358905129283177,
+     -0.283327369883581,
+     0.531865075838382,
+     -0.8471010970248883,
+     1.9765625336309878,
+     0.8239254980918223,
+     1.7380089057886308,
+     0.5062806849548539
+    ],
+    "floor_max": 2.358905129283177,
+    "floor_min": -0.8471010970248883,
+    "rank": 8,
+    "n_ranked": 9,
+    "t_vs_floor": -2.770257087937036,
+    "verdict": "NOT_DETECTED",
+    "mirror_verdict": "PARTIAL_MIRROR",
+    "record_slope": -0.008040795408920382,
+    "record_verdict": "NOT_DETECTED"
+   },
+   {
+    "model": "Llama-3.1-8B",
+    "family": "Llama",
+    "slope": 1.1285351303268367,
+    "lo": 1.0458984521541763,
+    "hi": 1.2175723364006033,
+    "n_sessions": 60,
+    "floor_slopes": [
+     -0.47420528168689396,
+     0.18780840368738907,
+     0.11115633490224065,
+     -0.31567519150565687,
+     -0.11609805390941053,
+     -0.2917163173541416,
+     0.020671910289466484,
+     -0.17318317573411332
+    ],
+    "floor_max": 0.18780840368738907,
+    "floor_min": -0.47420528168689396,
+    "rank": 1,
+    "n_ranked": 9,
+    "t_vs_floor": 15.90668188878932,
+    "verdict": "STATE_SURVIVES",
+    "mirror_verdict": "MIRRORED",
+    "record_slope": 1.088470735594283,
+    "record_verdict": "STATE_SURVIVES"
+   }
+  ],
+  "note": "Differenced state contrast: the slope of margin(steered cache) - margin(clean replay) on signed dose, both read over byte-identical tokens. The floor is eight norm-matched random directions generated and differenced identically. The valenced slope and the eight floor slopes are fitted on the skeletons all nine cells share, so the comparison is at matched leverage."
+ },
+ "dose_curves": {
+  "rows": [
+   {
+    "model": "OLMo-2-32B",
+    "dose": -1.0,
+    "mean": -0.33645292582727204,
+    "lo": -0.4997413556577835,
+    "hi": -0.16510740763389067,
+    "arm": "Valenced axis",
+    "n": 60
+   },
+   {
+    "model": "OLMo-2-32B",
+    "dose": -0.5,
+    "mean": -0.39115112341374925,
+    "lo": -0.47475636864147136,
+    "hi": -0.2916655458954267,
+    "arm": "Valenced axis",
+    "n": 60
+   },
+   {
+    "model": "OLMo-2-32B",
+    "dose": 0.5,
+    "mean": 0.5317709514407966,
+    "lo": 0.4385288425537867,
+    "hi": 0.6213803820651131,
+    "arm": "Valenced axis",
+    "n": 60
+   },
+   {
+    "model": "OLMo-2-32B",
+    "dose": 1.0,
+    "mean": 1.1742189770399818,
+    "lo": 1.013802703989547,
+    "hi": 1.3408988760880027,
+    "arm": "Valenced axis",
+    "n": 60
+   },
+   {
+    "model": "OLMo-2-32B",
+    "dose": -1.0,
+    "mean": 0.009433839305231744,
+    "lo": -0.04795600372941833,
+    "hi": 0.07095086734107801,
+    "arm": "Random directions (8)",
+    "n": 159
+   },
+   {
+    "model": "OLMo-2-32B",
+    "dose": -0.5,
+    "mean": -0.028613404199238347,
+    "lo": -0.055861828087970515,
+    "hi": -0.0018556086862685105,
+    "arm": "Random directions (8)",
+    "n": 160
+   },
+   {
+    "model": "OLMo-2-32B",
+    "dose": 0.5,
+    "mean": 0.03535155316251633,
+    "lo": 0.007807428864008586,
+    "hi": 0.06465348902990897,
+    "arm": "Random directions (8)",
+    "n": 160
+   },
+   {
+    "model": "OLMo-2-32B",
+    "dose": 1.0,
+    "mean": 0.09602448500354988,
+    "lo": 0.03341045059440501,
+    "hi": 0.16259871264085704,
+    "arm": "Random directions (8)",
+    "n": 158
+   },
+   {
+    "model": "Qwen2.5-32B",
+    "dose": -1.0,
+    "mean": -4.047872319946635,
+    "lo": -4.526595700604101,
+    "hi": -3.5478723215335495,
+    "arm": "Valenced axis",
+    "n": 47
+   },
+   {
+    "model": "Qwen2.5-32B",
+    "dose": -0.5,
+    "mean": -1.3935185126814769,
+    "lo": -1.6482638957323106,
+    "hi": -1.1435185515431459,
+    "arm": "Valenced axis",
+    "n": 54
+   },
+   {
+    "model": "Qwen2.5-32B",
+    "dose": 0.5,
+    "mean": 0.6132076090884584,
+    "lo": 0.4292453504488697,
+    "hi": 0.8018868657233063,
+    "arm": "Valenced axis",
+    "n": 53
+   },
+   {
+    "model": "Qwen2.5-32B",
+    "dose": 1.0,
+    "mean": 0.7050000217876585,
+    "lo": 0.23000001283965155,
+    "hi": 1.1550000475914943,
+    "arm": "Valenced axis",
+    "n": 50
+   },
+   {
+    "model": "Qwen2.5-32B",
+    "dose": -1.0,
+    "mean": -1.4270072858735674,
+    "lo": -1.7555200663459298,
+    "hi": -1.0911952329891124,
+    "arm": "Random directions (8)",
+    "n": 137
+   },
+   {
+    "model": "Qwen2.5-32B",
+    "dose": -0.5,
+    "mean": -0.40924655991034675,
+    "lo": -0.5719606124311919,
+    "hi": -0.24657531385396284,
+    "arm": "Random directions (8)",
+    "n": 146
+   },
+   {
+    "model": "Qwen2.5-32B",
+    "dose": 0.5,
+    "mean": 0.06423610968210965,
+    "lo": -0.09201389049648813,
+    "hi": 0.20833334367947062,
+    "arm": "Random directions (8)",
+    "n": 144
+   },
+   {
+    "model": "Qwen2.5-32B",
+    "dose": 1.0,
+    "mean": -0.12781955816389862,
+    "lo": -0.45305454925938404,
+    "hi": 0.19370301232969644,
+    "arm": "Random directions (8)",
+    "n": 133
+   },
+   {
+    "model": "Qwen3-14B",
+    "dose": -1.0,
+    "mean": -1.9703388498131533,
+    "lo": -2.5656778844202908,
+    "hi": -1.45333668983827,
+    "arm": "Valenced axis",
+    "n": 59
+   },
+   {
+    "model": "Qwen3-14B",
+    "dose": -0.5,
+    "mean": -2.4491525728341403,
+    "lo": -2.78389827978481,
+    "hi": -2.1186440971882043,
+    "arm": "Valenced axis",
+    "n": 59
+   },
+   {
+    "model": "Qwen3-14B",
+    "dose": 0.5,
+    "mean": 1.2142857586074192,
+    "lo": 0.9107143192683633,
+    "hi": 1.5090402219972716,
+    "arm": "Valenced axis",
+    "n": 56
+   },
+   {
+    "model": "Qwen3-14B",
+    "dose": 1.0,
+    "mean": 1.762711886592833,
+    "lo": 1.3050847981984872,
+    "hi": 2.233050851893118,
+    "arm": "Valenced axis",
+    "n": 59
+   },
+   {
+    "model": "Qwen3-14B",
+    "dose": -1.0,
+    "mean": 0.06925682078521665,
+    "lo": -0.28716208745878286,
+    "hi": 0.4003801860283403,
+    "arm": "Random directions (8)",
+    "n": 148
+   },
+   {
+    "model": "Qwen3-14B",
+    "dose": -0.5,
+    "mean": 0.08724832167099104,
+    "lo": -0.06879195820632387,
+    "hi": 0.25675335593523624,
+    "arm": "Random directions (8)",
+    "n": 149
+   },
+   {
+    "model": "Qwen3-14B",
+    "dose": 0.5,
+    "mean": -0.08952705047712012,
+    "lo": -0.23479730110678418,
+    "hi": 0.052364822657362864,
+    "arm": "Random directions (8)",
+    "n": 148
+   },
+   {
+    "model": "Qwen3-14B",
+    "dose": 1.0,
+    "mean": -0.2866666324610991,
+    "lo": -0.561666681534854,
+    "hi": -0.0099999979892567,
+    "arm": "Random directions (8)",
+    "n": 150
+   },
+   {
+    "model": "Qwen3-32B",
+    "dose": -1.0,
+    "mean": -0.04165866567007015,
+    "lo": -0.13331948753677844,
+    "hi": 0.05208950684771224,
+    "arm": "Valenced axis",
+    "n": 60
+   },
+   {
+    "model": "Qwen3-32B",
+    "dose": -0.5,
+    "mean": -0.0021505759125884966,
+    "lo": -0.06033213267322404,
+    "hi": 0.056039134369779205,
+    "arm": "Valenced axis",
+    "n": 58
+   },
+   {
+    "model": "Qwen3-32B",
+    "dose": 0.5,
+    "mean": 0.02801235887192559,
+    "lo": -0.03232389309609638,
+    "hi": 0.08620353215832396,
+    "arm": "Valenced axis",
+    "n": 58
+   },
+   {
+    "model": "Qwen3-32B",
+    "dose": 1.0,
+    "mean": 0.07760083203692539,
+    "lo": -0.02151718057359577,
+    "hi": 0.17895994721711797,
+    "arm": "Valenced axis",
+    "n": 58
+   },
+   {
+    "model": "Qwen3-32B",
+    "dose": -1.0,
+    "mean": 0.05688945981597362,
+    "lo": -0.006415091136982599,
+    "hi": 0.11458535259034512,
+    "arm": "Random directions (8)",
+    "n": 156
+   },
+   {
+    "model": "Qwen3-32B",
+    "dose": -0.5,
+    "mean": 0.01752073604673824,
+    "lo": -0.010345281955479459,
+    "hi": 0.04777347523729108,
+    "arm": "Random directions (8)",
+    "n": 157
+   },
+   {
+    "model": "Qwen3-32B",
+    "dose": 0.5,
+    "mean": -0.018868806984738633,
+    "lo": -0.04952651578398629,
+    "hi": 0.014151217059732426,
+    "arm": "Random directions (8)",
+    "n": 159
+   },
+   {
+    "model": "Qwen3-32B",
+    "dose": 1.0,
+    "mean": -0.08692269717598554,
+    "lo": -0.14984079053789726,
+    "hi": -0.024007832054495762,
+    "arm": "Random directions (8)",
+    "n": 151
+   },
+   {
+    "model": "Mistral-24B",
+    "dose": -1.0,
+    "mean": -0.5864426974389378,
+    "lo": -0.6550078297908286,
+    "hi": -0.5167378376989686,
+    "arm": "Valenced axis",
+    "n": 46
+   },
+   {
+    "model": "Mistral-24B",
+    "dose": -0.5,
+    "mean": -0.25763941885882313,
+    "lo": -0.3060224741871934,
+    "hi": -0.20912601268038006,
+    "arm": "Valenced axis",
+    "n": 44
+   },
+   {
+    "model": "Mistral-24B",
+    "dose": 0.5,
+    "mean": 0.03632388941736685,
+    "lo": 0.008665761328819726,
+    "hi": 0.06406664181578282,
+    "arm": "Valenced axis",
+    "n": 45
+   },
+   {
+    "model": "Mistral-24B",
+    "dose": 1.0,
+    "mean": -0.047329843907694645,
+    "lo": -0.09038097840554353,
+    "hi": -0.0030911890940236255,
+    "arm": "Valenced axis",
+    "n": 48
+   },
+   {
+    "model": "Mistral-24B",
+    "dose": -1.0,
+    "mean": -0.05946408993091493,
+    "lo": -0.085285226543737,
+    "hi": -0.03528136474935952,
+    "arm": "Random directions (8)",
+    "n": 126
+   },
+   {
+    "model": "Mistral-24B",
+    "dose": -0.5,
+    "mean": 0.0009239317238831721,
+    "lo": -0.01486691002491392,
+    "hi": 0.016696083963997348,
+    "arm": "Random directions (8)",
+    "n": 119
+   },
+   {
+    "model": "Mistral-24B",
+    "dose": 0.5,
+    "mean": -0.005970477982406953,
+    "lo": -0.022199590811107086,
+    "hi": 0.009311541628482734,
+    "arm": "Random directions (8)",
+    "n": 108
+   },
+   {
+    "model": "Mistral-24B",
+    "dose": 1.0,
+    "mean": -0.05335270813367236,
+    "lo": -0.0823763331473664,
+    "hi": -0.02564648409943319,
+    "arm": "Random directions (8)",
+    "n": 109
+   },
+   {
+    "model": "Gemma-3-27B",
+    "dose": -1.0,
+    "mean": -3.311320765220276,
+    "lo": -3.955306624270312,
+    "hi": -2.6626769058427833,
+    "arm": "Valenced axis",
+    "n": 53
+   },
+   {
+    "model": "Gemma-3-27B",
+    "dose": -0.5,
+    "mean": -0.9682203650805944,
+    "lo": -1.358156866799752,
+    "hi": -0.6397244791957204,
+    "arm": "Valenced axis",
+    "n": 59
+   },
+   {
+    "model": "Gemma-3-27B",
+    "dose": 0.5,
+    "mean": -1.2681818009469374,
+    "lo": -1.6772726930158257,
+    "hi": -0.8863636093613887,
+    "arm": "Valenced axis",
+    "n": 55
+   },
+   {
+    "model": "Gemma-3-27B",
+    "dose": 1.0,
+    "mean": -4.177272816610837,
+    "lo": -4.959147822875604,
+    "hi": -3.392954629167514,
+    "arm": "Valenced axis",
+    "n": 55
+   },
+   {
+    "model": "Gemma-3-27B",
+    "dose": -1.0,
+    "mean": -4.681973038825562,
+    "lo": -5.199043570939037,
+    "hi": -4.191241779244027,
+    "arm": "Random directions (8)",
+    "n": 147
+   },
+   {
+    "model": "Gemma-3-27B",
+    "dose": -0.5,
+    "mean": -1.5481419418070228,
+    "lo": -1.8725084900837092,
+    "hi": -1.2254857180392134,
+    "arm": "Random directions (8)",
+    "n": 148
+   },
+   {
+    "model": "Gemma-3-27B",
+    "dose": 0.5,
+    "mean": -0.7209874621197616,
+    "lo": -1.030937975252227,
+    "hi": -0.4060842815068297,
+    "arm": "Random directions (8)",
+    "n": 146
+   },
+   {
+    "model": "Gemma-3-27B",
+    "dose": 1.0,
+    "mean": -2.9641625384719728,
+    "lo": -3.4947781006778897,
+    "hi": -2.4385725119524015,
+    "arm": "Random directions (8)",
+    "n": 143
+   },
+   {
+    "model": "Llama-3.1-8B",
+    "dose": -1.0,
+    "mean": -1.1408045228596613,
+    "lo": -1.30812529092793,
+    "hi": -0.9910997877292976,
+    "arm": "Valenced axis",
+    "n": 56
+   },
+   {
+    "model": "Llama-3.1-8B",
+    "dose": -0.5,
+    "mean": -0.6535796759381497,
+    "lo": -0.7478157800900505,
+    "hi": -0.5635479421900663,
+    "arm": "Valenced axis",
+    "n": 57
+   },
+   {
+    "model": "Llama-3.1-8B",
+    "dose": 0.5,
+    "mean": 0.5892905192165563,
+    "lo": 0.5200335232822842,
+    "hi": 0.6651811092068929,
+    "arm": "Valenced axis",
+    "n": 56
+   },
+   {
+    "model": "Llama-3.1-8B",
+    "dose": 1.0,
+    "mean": 1.0592097103184155,
+    "lo": 0.9451752473199513,
+    "hi": 1.182016240565945,
+    "arm": "Valenced axis",
+    "n": 57
+   },
+   {
+    "model": "Llama-3.1-8B",
+    "dose": -1.0,
+    "mean": -0.004002632598517636,
+    "lo": -0.06650153179528662,
+    "hi": 0.05371489967702336,
+    "arm": "Random directions (8)",
+    "n": 156
+   },
+   {
+    "model": "Llama-3.1-8B",
+    "dose": -0.5,
+    "mean": 0.04327120180717163,
+    "lo": 0.013622134264043307,
+    "hi": 0.07291721504598038,
+    "arm": "Random directions (8)",
+    "n": 156
+   },
+   {
+    "model": "Llama-3.1-8B",
+    "dose": 0.5,
+    "mean": -0.0963396442040983,
+    "lo": -0.126594486737605,
+    "hi": -0.06449221642635997,
+    "arm": "Random directions (8)",
+    "n": 157
+   },
+   {
+    "model": "Llama-3.1-8B",
+    "dose": 1.0,
+    "mean": -0.27016644647866844,
+    "lo": -0.325027785175589,
+    "hi": -0.21452304319380472,
+    "arm": "Random directions (8)",
+    "n": 155
+   }
+  ],
+  "note": "Zero is exact at dose 0 by construction: the differenced quantity is a contrast between two reads of one stream."
+ },
+ "sign_mirror": {
+  "rows": [
+   {
+    "model": "OLMo-2-32B",
+    "condition": "Matched (vector applied)",
+    "mean": 0.6042318449301672,
+    "lo": 0.5268798968429003,
+    "hi": 0.6879008023822204,
+    "n": 240,
+    "verdict": "MIRRORED"
+   },
+   {
+    "model": "OLMo-2-32B",
+    "condition": "Opposite (vector negated)",
+    "mean": -0.7769532617856598,
+    "lo": -0.8514474882571152,
+    "hi": -0.7031085053909508,
+    "n": 240,
+    "verdict": "MIRRORED"
+   },
+   {
+    "model": "OLMo-2-32B",
+    "condition": "Norm-matched random",
+    "mean": 0.05338614703533627,
+    "lo": 0.018815817910169674,
+    "hi": 0.08802383416134578,
+    "n": 240,
+    "verdict": "MIRRORED"
+   },
+   {
+    "model": "Qwen2.5-32B",
+    "condition": "Matched (vector applied)",
+    "mean": 1.6495098438536946,
+    "lo": 1.3982537196389124,
+    "hi": 1.9215992998722073,
+    "n": 204,
+    "verdict": "MIRRORED"
+   },
+   {
+    "model": "Qwen2.5-32B",
+    "condition": "Opposite (vector negated)",
+    "mean": -1.9865195780927971,
+    "lo": -2.2904717547311706,
+    "hi": -1.6960171475303998,
+    "n": 204,
+    "verdict": "MIRRORED"
+   },
+   {
+    "model": "Qwen2.5-32B",
+    "condition": "Norm-matched random",
+    "mean": 0.3553921747389228,
+    "lo": 0.10784317277939497,
+    "hi": 0.6164828641156646,
+    "n": 204,
+    "verdict": "MIRRORED"
+   },
+   {
+    "model": "Qwen3-14B",
+    "condition": "Matched (vector applied)",
+    "mean": 1.8610515006159418,
+    "lo": 1.640021494775752,
+    "hi": 2.0928245850473397,
+    "n": 233,
+    "verdict": "MIRRORED"
+   },
+   {
+    "model": "Qwen3-14B",
+    "condition": "Opposite (vector negated)",
+    "mean": -4.592274709638043,
+    "lo": -4.861668516114378,
+    "hi": -4.3352870301271444,
+    "n": 233,
+    "verdict": "MIRRORED"
+   },
+   {
+    "model": "Qwen3-14B",
+    "condition": "Norm-matched random",
+    "mean": -0.1357296379701847,
+    "lo": -0.3015423824491182,
+    "hi": 0.01881704030598381,
+    "n": 233,
+    "verdict": "MIRRORED"
+   },
+   {
+    "model": "Qwen3-32B",
+    "condition": "Matched (vector applied)",
+    "mean": 0.038460198922507516,
+    "lo": -0.0026910428013718784,
+    "hi": 0.0812080972040055,
+    "n": 234,
+    "verdict": "PARTIAL_MIRROR"
+   },
+   {
+    "model": "Qwen3-32B",
+    "condition": "Opposite (vector negated)",
+    "mean": -0.04166162034471199,
+    "lo": -0.09134008025175126,
+    "hi": 0.006418298181955145,
+    "n": 234,
+    "verdict": "PARTIAL_MIRROR"
+   },
+   {
+    "model": "Qwen3-32B",
+    "condition": "Norm-matched random",
+    "mean": -0.0005361487242201557,
+    "lo": -0.04542695720122146,
+    "hi": 0.042730390006461345,
+    "n": 234,
+    "verdict": "PARTIAL_MIRROR"
+   },
+   {
+    "model": "Mistral-24B",
+    "condition": "Matched (vector applied)",
+    "mean": 0.20650781845785882,
+    "lo": 0.16371758415279758,
+    "hi": 0.2536754251003221,
+    "n": 183,
+    "verdict": "MIRRORED"
+   },
+   {
+    "model": "Mistral-24B",
+    "condition": "Opposite (vector negated)",
+    "mean": -0.12014066304914817,
+    "lo": -0.1430682171358793,
+    "hi": -0.097091808114767,
+    "n": 183,
+    "verdict": "MIRRORED"
+   },
+   {
+    "model": "Mistral-24B",
+    "condition": "Norm-matched random",
+    "mean": 0.0063220215134343,
+    "lo": -0.01098600618628393,
+    "hi": 0.02552709236182525,
+    "n": 183,
+    "verdict": "MIRRORED"
+   },
+   {
+    "model": "Gemma-3-27B",
+    "condition": "Matched (vector applied)",
+    "mean": -0.29222973183866896,
+    "lo": -0.7714104483522831,
+    "hi": 0.1762669032351771,
+    "n": 222,
+    "verdict": "PARTIAL_MIRROR"
+   },
+   {
+    "model": "Gemma-3-27B",
+    "condition": "Opposite (vector negated)",
+    "mean": -1.2528153395887087,
+    "lo": -1.6537725772894738,
+    "hi": -0.8788710518207695,
+    "n": 222,
+    "verdict": "PARTIAL_MIRROR"
+   },
+   {
+    "model": "Gemma-3-27B",
+    "condition": "Norm-matched random",
+    "mean": -0.34290543483937974,
+    "lo": -0.8091497170685384,
+    "hi": 0.11714520853029574,
+    "n": 222,
+    "verdict": "PARTIAL_MIRROR"
+   },
+   {
+    "model": "Llama-3.1-8B",
+    "condition": "Matched (vector applied)",
+    "mean": 0.8568082143641171,
+    "lo": 0.7915367869445828,
+    "hi": 0.9254086814990007,
+    "n": 226,
+    "verdict": "MIRRORED"
+   },
+   {
+    "model": "Llama-3.1-8B",
+    "condition": "Opposite (vector negated)",
+    "mean": -0.7389868628810762,
+    "lo": -0.8092504931001291,
+    "hi": -0.6725552368219901,
+    "n": 226,
+    "verdict": "MIRRORED"
+   },
+   {
+    "model": "Llama-3.1-8B",
+    "condition": "Norm-matched random",
+    "mean": -0.20409346058523425,
+    "lo": -0.2478075639589769,
+    "hi": -0.16259736076837383,
+    "n": 226,
+    "verdict": "MIRRORED"
+   }
+  ],
+  "note": "Each bar is a paired difference against that session's own clean replay of the identical tokens, sign-aligned by dose so the two dose signs pool. Clean is exactly zero."
+ },
+ "text_component": {
+  "rows": [
+   {
+    "model": "OLMo-2-32B",
+    "undifferenced": 1.8079750119890585,
+    "undiff_lo": 1.6197469789595675,
+    "undiff_hi": 1.9991330398180858,
+    "differenced": 0.7888531761178107,
+    "diff_lo": 0.6740022607610261,
+    "diff_hi": 0.8977166713199835,
+    "surviving_fraction": 0.436318627683879,
+    "surviving_fraction_withheld_why": null
+   },
+   {
+    "model": "Qwen2.5-32B",
+    "undifferenced": 5.885113991088651,
+    "undiff_lo": 4.916831468914386,
+    "undiff_hi": 6.869333972348579,
+    "differenced": 2.2777227602136505,
+    "diff_lo": 1.9507399609115716,
+    "diff_hi": 2.5882729242587565,
+    "surviving_fraction": 0.38703120511558836,
+    "surviving_fraction_withheld_why": null
+   },
+   {
+    "model": "Qwen3-14B",
+    "undifferenced": 6.271230598345411,
+    "undiff_lo": 5.78412345164645,
+    "undiff_hi": 6.74787890523037,
+    "differenced": 2.2211249904706145,
+    "diff_lo": 1.9224454699106133,
+    "diff_hi": 2.5353319536711405,
+    "surviving_fraction": 0.35417689648609507,
+    "surviving_fraction_withheld_why": null
+   },
+   {
+    "model": "Qwen3-32B",
+    "undifferenced": -0.10031193418387661,
+    "undiff_lo": -0.29660922577237575,
+    "undiff_hi": 0.0897532355597767,
+    "differenced": 0.05378189385706247,
+    "diff_lo": -0.01711261273759956,
+    "diff_hi": 0.1216226871383818,
+    "surviving_fraction": null,
+    "surviving_fraction_withheld_why": "the undifferenced margin slope does not itself exclude zero"
+   },
+   {
+    "model": "Mistral-24B",
+    "undifferenced": 0.7658375864083935,
+    "undiff_lo": 0.673088962301244,
+    "undiff_hi": 0.863369311176871,
+    "differenced": 0.2729574977381844,
+    "diff_lo": 0.2317020534993486,
+    "diff_hi": 0.3136134144780497,
+    "surviving_fraction": 0.35641695129941825,
+    "surviving_fraction_withheld_why": null
+   },
+   {
+    "model": "Gemma-3-27B",
+    "undifferenced": -0.9317765548793628,
+    "undiff_lo": -2.201091738654435,
+    "undiff_hi": 0.4047103227931026,
+    "differenced": -0.4436813414877999,
+    "diff_lo": -0.8966382250181424,
+    "diff_hi": 0.017301019551962338,
+    "surviving_fraction": null,
+    "surviving_fraction_withheld_why": "the undifferenced margin slope does not itself exclude zero"
+   },
+   {
+    "model": "Llama-3.1-8B",
+    "undifferenced": 2.386719014866906,
+    "undiff_lo": 2.1351557266617522,
+    "undiff_hi": 2.6355416669345577,
+    "differenced": 1.1285351303268367,
+    "diff_lo": 1.0458984521541763,
+    "diff_hi": 1.2175723364006033,
+    "surviving_fraction": 0.4728395438663603,
+    "surviving_fraction_withheld_why": null
+   }
+  ],
+  "basis": "margin",
+  "note": "Forced-preference margin slope per unit dose. The undifferenced statistic takes dose 0 from the clean replay, as the published one does; the differenced one subtracts the clean read at every dose, so the words cancel throughout. The surviving fraction is their ratio, shown only where the undifferenced slope itself excludes zero."
+ },
+ "preconditions": {
+  "rows": [
+   {
+    "model": "OLMo-2-32B",
+    "text_slope": 0.5594693644096455,
+    "lo": 0.4838753303407381,
+    "hi": 0.6354530868803461,
+    "pass": true,
+    "retention_relative": 0.9965909090909091,
+    "commit_clean": 1.0,
+    "token_identity": true
+   },
+   {
+    "model": "Qwen2.5-32B",
+    "text_slope": 2.5267312026023863,
+    "lo": 2.068616721947988,
+    "hi": 3.001102395157019,
+    "pass": true,
+    "retention_relative": 0.8681818181818182,
+    "commit_clean": 1.0,
+    "token_identity": true
+   },
+   {
+    "model": "Qwen3-14B",
+    "text_slope": 2.823464011748632,
+    "lo": 2.412326245148977,
+    "hi": 3.237093837320804,
+    "pass": true,
+    "retention_relative": 0.9409090909090909,
+    "commit_clean": 1.0,
+    "token_identity": true
+   },
+   {
+    "model": "Qwen3-32B",
+    "text_slope": 3.334738405942917,
+    "lo": 2.77348428674539,
+    "hi": 3.9432852572500705,
+    "pass": true,
+    "retention_relative": 0.9738636363636364,
+    "commit_clean": 0.625,
+    "token_identity": true
+   },
+   {
+    "model": "Mistral-24B",
+    "text_slope": 0.6739364437262217,
+    "lo": 0.6286670168712736,
+    "hi": 0.7201358051331093,
+    "pass": true,
+    "retention_relative": 0.7329545454545454,
+    "commit_clean": 0.9916666666666667,
+    "token_identity": true
+   },
+   {
+    "model": "Gemma-3-27B",
+    "text_slope": 400.2291636149088,
+    "lo": 376.28665591430666,
+    "hi": 424.2547969029744,
+    "pass": true,
+    "retention_relative": 0.9159090909090909,
+    "commit_clean": 0.35,
+    "token_identity": true
+   },
+   {
+    "model": "Llama-3.1-8B",
+    "text_slope": 0.7301379440476498,
+    "lo": 0.6748134904578328,
+    "hi": 0.788126100094989,
+    "pass": true,
+    "retention_relative": 0.9659090909090909,
+    "commit_clean": 1.0,
+    "token_identity": true
+   }
+  ],
+  "note": "The conditioned cue's own generated passages, re-encoded with nothing injected, against signed dose. A model near zero here has no installed state to carry, so a flat contrast would not be informative."
+ }
+}

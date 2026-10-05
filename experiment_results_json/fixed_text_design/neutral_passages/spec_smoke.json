@@ -1,0 +1,82 @@
+{
+ "experiment": 255,
+ "smoke": true,
+ "dose_points": [
+  -1.0,
+  -0.5,
+  0.0,
+  0.5,
+  1.0
+ ],
+ "floor_k": 24,
+ "n_neutral": 160,
+ "n_floor": 40,
+ "n_steer": 40,
+ "steer_gen_doses": [
+  1.0,
+  -1.0
+ ],
+ "n_cells": 3,
+ "n_generations": 12,
+ "n_reads": 92,
+ "per_member": {
+  "olmo_32b": {
+   "cells": 3,
+   "generations": 12,
+   "reads": 92
+  }
+ },
+ "cells": [
+  {
+   "member": "olmo_32b",
+   "cell": "smk_floor_b0",
+   "arm": "neutral",
+   "gen_point": 0.0,
+   "runs": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "floor_dirs": [
+    0,
+    1
+   ],
+   "n_sessions": 4,
+   "reads_per_session": 13,
+   "n_reads": 52
+  },
+  {
+   "member": "olmo_32b",
+   "cell": "smk_steered_p",
+   "arm": "steered",
+   "gen_point": 1.0,
+   "runs": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "floor_dirs": [],
+   "n_sessions": 4,
+   "reads_per_session": 5,
+   "n_reads": 20
+  },
+  {
+   "member": "olmo_32b",
+   "cell": "smk_steered_n",
+   "arm": "steered",
+   "gen_point": -1.0,
+   "runs": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "floor_dirs": [],
+   "n_sessions": 4,
+   "reads_per_session": 5,
+   "n_reads": 20
+  }
+ ]
+}

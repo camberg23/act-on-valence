@@ -1,0 +1,208 @@
+{
+ "what": "post-hoc; the pre-registered reading is the straight-line extrapolation and is unchanged by anything here",
+ "members": {
+  "llama31_8b": {
+   "display": "Llama-3.1-8B",
+   "curvature": -0.09627697014172618,
+   "curvature_strength_ladder": null,
+   "exponent": 0.8681051026717339,
+   "rungs": [
+    {
+     "arm": "e6_k32",
+     "k": 0.03125,
+     "k_name": "1/32",
+     "measured": 0.03771042975976452,
+     "line_predicts": 0.05040477943227591,
+     "measured_over_line": 0.7481518654482443,
+     "bend_predicts": 0.028100069373678607,
+     "measured_over_bend": 1.342004863343432
+    },
+    {
+     "arm": "e6_k24",
+     "k": 0.041666666666666664,
+     "k_name": "1/24",
+     "measured": 0.05355375668125404,
+     "line_predicts": 0.06470408102442352,
+     "measured_over_line": 0.8276720082159792,
+     "bend_predicts": 0.041260175885370405,
+     "measured_over_bend": 1.2979526997179516
+    },
+    {
+     "arm": "e6_k16",
+     "k": 0.0625,
+     "k_name": "1/16",
+     "measured": 0.07847180638923404,
+     "line_predicts": 0.09200202658767535,
+     "measured_over_line": 0.8529356287000114,
+     "bend_predicts": 0.06900881289349414,
+     "measured_over_bend": 1.1371273189461288
+    },
+    {
+     "arm": "e6_k12",
+     "k": 0.08333333333333333,
+     "k_name": "1/12",
+     "measured": 0.10565167836496339,
+     "line_predicts": 0.11810202623222402,
+     "measured_over_line": 0.8945797268306006,
+     "bend_predicts": 0.09751083797099627,
+     "measured_over_bend": 1.0834865186615312
+    },
+    {
+     "arm": "e6_k8",
+     "k": 0.125,
+     "k_name": "1/8",
+     "measured": 0.15605622753112428,
+     "line_predicts": 0.16792798205995713,
+     "measured_over_line": 0.9293044888457354,
+     "bend_predicts": 0.15449832779858613,
+     "measured_over_bend": 1.010083602552444
+    }
+   ],
+   "mean_abs_log_error_line": 0.16461578086521375,
+   "mean_abs_log_error_bend": 0.15473504548646094,
+   "error_ratio_worse_over_better": 1.0638558340012079,
+   "closer": "bend",
+   "line_direction": "over-predicts",
+   "bend_direction": "under-predicts"
+  },
+  "qwen3_14b": {
+   "display": "Qwen3-14B",
+   "curvature": -0.12169945246383726,
+   "curvature_strength_ladder": null,
+   "exponent": 0.8897228417670296,
+   "rungs": [
+    {
+     "arm": "e6_k32",
+     "k": 0.03125,
+     "k_name": "1/32",
+     "measured": 0.2636657994189232,
+     "line_predicts": 0.33256398615541216,
+     "measured_over_line": 0.7928272765401249,
+     "bend_predicts": 0.15889234505143343,
+     "measured_over_bend": 1.6593990058713943
+    },
+    {
+     "arm": "e6_k24",
+     "k": 0.041666666666666664,
+     "k_name": "1/24",
+     "measured": 0.34935400585068965,
+     "line_predicts": 0.4295720979477417,
+     "measured_over_line": 0.8132604690102319,
+     "bend_predicts": 0.2432421455060445,
+     "measured_over_bend": 1.436239616797856
+    },
+    {
+     "arm": "e6_k16",
+     "k": 0.0625,
+     "k_name": "1/16",
+     "measured": 0.5387886611585084,
+     "line_predicts": 0.6161812519288031,
+     "measured_over_line": 0.8743996339907514,
+     "bend_predicts": 0.42838768536425825,
+     "measured_over_bend": 1.257712767117421
+    },
+    {
+     "arm": "e6_k12",
+     "k": 0.08333333333333333,
+     "k_name": "1/12",
+     "measured": 0.6972045670366204,
+     "line_predicts": 0.7959198353589205,
+     "measured_over_line": 0.8759733531734581,
+     "bend_predicts": 0.624732725596976,
+     "measured_over_bend": 1.116004554380263
+    },
+    {
+     "arm": "e6_k8",
+     "k": 0.125,
+     "k_name": "1/8",
+     "measured": 1.0763530910821768,
+     "line_predicts": 1.1416730344671697,
+     "measured_over_line": 0.9427857701697593,
+     "bend_predicts": 1.0275047300494038,
+     "measured_over_bend": 1.047540765121757
+    }
+   ],
+   "mean_abs_log_error_line": 0.15288146021003907,
+   "mean_abs_log_error_bend": 0.25079577073793297,
+   "error_ratio_worse_over_better": 1.6404590222605964,
+   "closer": "line",
+   "line_direction": "over-predicts",
+   "bend_direction": "under-predicts"
+  },
+  "olmo_32b": {
+   "display": "OLMo-2-32B",
+   "curvature": 0.10193205867960274,
+   "curvature_strength_ladder": null,
+   "exponent": 1.0766251692620996,
+   "rungs": [
+    {
+     "arm": "e6_k32",
+     "k": 0.03125,
+     "k_name": "1/32",
+     "measured": 0.011510386370600069,
+     "line_predicts": 0.009911586307005801,
+     "measured_over_line": 1.1613061738123784,
+     "bend_predicts": 0.01839979686622691,
+     "measured_over_bend": 0.6255713828954029
+    },
+    {
+     "arm": "e6_k24",
+     "k": 0.041666666666666664,
+     "k_name": "1/24",
+     "measured": 0.01623700521065018,
+     "line_predicts": 0.013510000200616379,
+     "measured_over_line": 1.2018508489666333,
+     "bend_predicts": 0.02175371012707737,
+     "measured_over_bend": 0.7464016535937742
+    },
+    {
+     "arm": "e6_k16",
+     "k": 0.0625,
+     "k_name": "1/16",
+     "measured": 0.024309907719050252,
+     "line_predicts": 0.02090449290645519,
+     "measured_over_line": 1.1629034881560552,
+     "bend_predicts": 0.028344473433566674,
+     "measured_over_bend": 0.8576595284448457
+    },
+    {
+     "arm": "e6_k12",
+     "k": 0.08333333333333333,
+     "k_name": "1/12",
+     "measured": 0.030325544286102967,
+     "line_predicts": 0.028493895387902816,
+     "measured_over_line": 1.0642821514315584,
+     "bend_predicts": 0.034901454381419166,
+     "measured_over_bend": 0.8688905612554553
+    },
+    {
+     "arm": "e6_k8",
+     "k": 0.125,
+     "k_name": "1/8",
+     "measured": 0.046191404525027055,
+     "line_predicts": 0.044089594757112945,
+     "measured_over_line": 1.0476713333268963,
+     "bend_predicts": 0.04815724749628213,
+     "measured_over_bend": 0.9591786683529444
+    }
+   ],
+   "mean_abs_log_error_line": 0.11863969404925087,
+   "mean_abs_log_error_bend": 0.21946906781913422,
+   "error_ratio_worse_over_better": 1.8498789092293686,
+   "closer": "line",
+   "line_direction": "under-predicts",
+   "bend_direction": "over-predicts"
+  }
+ },
+ "summary": {
+  "line_closer_in": [
+   "qwen3_14b",
+   "olmo_32b"
+  ],
+  "bend_closer_in": [
+   "llama31_8b"
+  ],
+  "the_two_extrapolations_bracket_the_measurement": true,
+  "reading": "The anchors' own bend, continued below them, fits the new rungs better than the straight line in Llama-3.1-8B (0.1547 against 0.1646 mean absolute log error); and the line fits better in Qwen3-14B, OLMo-2-32B (0.1529 against 0.2508; 0.1186 against 0.2195). The two extrapolations bracket the measurement in every member, so a shortfall against the line is not by itself evidence of a floor; but the bend is only the better description where it is listed, and where the line wins the curvature alternative does not offset the pre-registered reading."
+ }
+}

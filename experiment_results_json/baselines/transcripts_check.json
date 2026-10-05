@@ -1,0 +1,24 @@
+{
+ "fixed_text": {
+  "run": 0,
+  "ids_sha": "0576163c2e573d78",
+  "seq_len": 1273,
+  "margin_plus1": 3.5312521979003577,
+  "margin_0": 1.7812534570248317,
+  "passages_match_passages255": true
+ },
+ "self_administration": {
+  "conv": 0,
+  "clean_self_admin": false,
+  "n_turns": 12
+ },
+ "removal": {
+  "conv": 2,
+  "removed_when_imposed": true,
+  "n_turns": 12
+ },
+ "short": {
+  "positive_dose": 0.5,
+  "negative_dose": 0.6
+ }
+}

@@ -1,0 +1,196 @@
+{
+ "experiment": 260,
+ "kind": "smoke",
+ "dose_points": [
+  -1.0,
+  -0.5,
+  0.0,
+  0.5,
+  1.0
+ ],
+ "floor_k": 24,
+ "arms": [
+  "bare_e1",
+  "bare_e2",
+  "bare_e3",
+  "bare_e6",
+  "matched_e6",
+  "normmatched_e1"
+ ],
+ "arm_exposures": {
+  "bare_e1": 1,
+  "bare_e2": 2,
+  "bare_e3": 3,
+  "bare_e6": 6,
+  "matched_e6": 6,
+  "normmatched_e1": 1
+ },
+ "n_main": {
+  "bare_e1": 480,
+  "bare_e2": 480,
+  "bare_e3": 480,
+  "bare_e6": 480,
+  "matched_e6": 160,
+  "normmatched_e1": 40
+ },
+ "n_floor": {
+  "bare_e1": 80,
+  "bare_e2": 80,
+  "bare_e3": 80,
+  "bare_e6": 80,
+  "matched_e6": 40,
+  "normmatched_e1": 40
+ },
+ "n_cells": 6,
+ "n_sessions": 18,
+ "n_reads": 234,
+ "per_member": {
+  "olmo_32b": {
+   "cells": 6,
+   "sessions": 18,
+   "reads": 234
+  }
+ },
+ "per_arm": {
+  "bare_e1": {
+   "cells": 1,
+   "sessions": 3,
+   "reads": 39
+  },
+  "bare_e2": {
+   "cells": 1,
+   "sessions": 3,
+   "reads": 39
+  },
+  "bare_e3": {
+   "cells": 1,
+   "sessions": 3,
+   "reads": 39
+  },
+  "bare_e6": {
+   "cells": 1,
+   "sessions": 3,
+   "reads": 39
+  },
+  "matched_e6": {
+   "cells": 1,
+   "sessions": 3,
+   "reads": 39
+  },
+  "normmatched_e1": {
+   "cells": 1,
+   "sessions": 3,
+   "reads": 39
+  }
+ },
+ "cells": [
+  {
+   "member": "olmo_32b",
+   "cell": "smk_b0",
+   "arm": "bare_e1",
+   "n_exposures": 1,
+   "runs": [
+    0,
+    1,
+    2
+   ],
+   "floor_dirs": [
+    0,
+    1
+   ],
+   "n_sessions": 3,
+   "reads_per_session": 13,
+   "n_reads": 39
+  },
+  {
+   "member": "olmo_32b",
+   "cell": "smk_b0",
+   "arm": "bare_e2",
+   "n_exposures": 2,
+   "runs": [
+    0,
+    1,
+    2
+   ],
+   "floor_dirs": [
+    0,
+    1
+   ],
+   "n_sessions": 3,
+   "reads_per_session": 13,
+   "n_reads": 39
+  },
+  {
+   "member": "olmo_32b",
+   "cell": "smk_b0",
+   "arm": "bare_e3",
+   "n_exposures": 3,
+   "runs": [
+    0,
+    1,
+    2
+   ],
+   "floor_dirs": [
+    0,
+    1
+   ],
+   "n_sessions": 3,
+   "reads_per_session": 13,
+   "n_reads": 39
+  },
+  {
+   "member": "olmo_32b",
+   "cell": "smk_b0",
+   "arm": "bare_e6",
+   "n_exposures": 6,
+   "runs": [
+    0,
+    1,
+    2
+   ],
+   "floor_dirs": [
+    0,
+    1
+   ],
+   "n_sessions": 3,
+   "reads_per_session": 13,
+   "n_reads": 39
+  },
+  {
+   "member": "olmo_32b",
+   "cell": "smk_b0",
+   "arm": "matched_e6",
+   "n_exposures": 6,
+   "runs": [
+    0,
+    1,
+    2
+   ],
+   "floor_dirs": [
+    0,
+    1
+   ],
+   "n_sessions": 3,
+   "reads_per_session": 13,
+   "n_reads": 39
+  },
+  {
+   "member": "olmo_32b",
+   "cell": "smk_b0",
+   "arm": "normmatched_e1",
+   "n_exposures": 1,
+   "runs": [
+    0,
+    1,
+    2
+   ],
+   "floor_dirs": [
+    0,
+    1
+   ],
+   "n_sessions": 3,
+   "reads_per_session": 13,
+   "n_reads": 39
+  }
+ ]
+}

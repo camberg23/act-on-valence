@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "act-on-valence"
+version = "1.0.0"
+description = "Replication files for Language Models Act on Hidden Valence"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "CC-BY-4.0"}
+authors = [{name = "Cameron Berg"}, {name = "Caspar Kaiser"}]
+dependencies = ["numpy>=1.24"]
+
+[tool.setuptools]
+packages = []

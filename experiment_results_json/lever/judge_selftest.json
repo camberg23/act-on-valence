@@ -1,0 +1,53 @@
+{
+ "model": "anthropic/claude-sonnet-4.6",
+ "obvious": {
+  "pos": {
+   "coherence": 5,
+   "valence": 3,
+   "parsed": true,
+   "pass": true
+  },
+  "neg": {
+   "coherence": 5,
+   "valence": -3,
+   "parsed": true,
+   "pass": true
+  },
+  "neutral": {
+   "coherence": 5,
+   "valence": 0,
+   "parsed": true,
+   "pass": true
+  },
+  "gibberish": {
+   "coherence": 2,
+   "valence": -1,
+   "parsed": true,
+   "pass": true
+  }
+ },
+ "checks": {
+  "adversarial": {
+   "coherence": 4,
+   "valence": -2,
+   "pass": true
+  },
+  "test_retest": {
+   "a": {
+    "coherence": 5,
+    "valence": 3
+   },
+   "b": {
+    "coherence": 5,
+    "valence": 3
+   },
+   "pass": true
+  }
+ },
+ "pass": true,
+ "identity": {
+  "model": "anthropic/claude-sonnet-4.6",
+  "reference": "<archive path> tree/experiments/the baselines run-d2a3py/results/judge_scores280.json",
+  "identity_ok": true
+ }
+}

@@ -1,0 +1,45 @@
+\begin{table}[!htbp]
+\centering
+\caption{\textbf{Responses to non-valence concept probes.}}
+\label{tab:concept_probe}
+\fontsize{6}{8}\selectfont
+\setlength{\tabcolsep}{2pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llccccc@{}}
+\toprule
+Model & Concept & \shortstack{No steering\\$m(0)$} & \shortstack{Positive\\$m(+1)$} & \shortstack{Positive $-$ none\\$m(+1)-m(0)$} & \shortstack{Negative\\$m(-1)$} & \shortstack{Negative $-$ none\\$m(-1)-m(0)$} \\
+\midrule
+OLMo-2-32B & indoor/outdoor & $0.08\;[-0.69, 0.83]$ & $0.75\;[-0.03, 1.53]$ & $0.68\;[0.62, 0.74]$ & $-0.30\;[-0.98, 0.39]$ & $-0.37\;[-0.46, -0.28]$ \\
+ & large/small & $5.26\;[4.54, 5.96]$ & $9.35\;[8.85, 9.88]$ & $4.09\;[3.85, 4.31]$ & $3.45\;[2.79, 4.09]$ & $-1.81\;[-1.99, -1.64]$ \\
+ & fast/slow & $-0.89\;[-1.89, 0.11]$ & $1.46\;[0.50, 2.42]$ & $2.34\;[2.19, 2.48]$ & $-3.36\;[-4.39, -2.30]$ & $-2.47\;[-2.72, -2.25]$ \\
+\addlinespace
+Qwen2.5-32B & indoor/outdoor & $10.63\;[9.24, 11.90]$ & $11.66\;[10.60, 12.57]$ & $1.02\;[0.63, 1.47]$ & $9.72\;[8.17, 11.18]$ & $-0.91\;[-1.18, -0.66]$ \\
+ & large/small & $16.80\;[15.89, 17.77]$ & $18.52\;[17.56, 19.51]$ & $1.71\;[1.55, 1.89]$ & $11.28\;[10.14, 12.41]$ & $-5.53\;[-5.91, -5.15]$ \\
+ & fast/slow & $7.23\;[4.79, 9.64]$ & $13.52\;[10.83, 16.03]$ & $6.28\;[5.68, 6.88]$ & $1.52\;[-0.30, 3.31]$ & $-5.72\;[-6.46, -4.87]$ \\
+\addlinespace
+Qwen3-14B & indoor/outdoor & $8.50\;[7.54, 9.40]$ & $9.39\;[8.52, 10.26]$ & $0.88\;[0.50, 1.32]$ & $7.99\;[7.16, 8.77]$ & $-0.51\;[-0.69, -0.32]$ \\
+ & large/small & $7.29\;[6.70, 7.88]$ & $11.18\;[10.79, 11.57]$ & $3.89\;[3.60, 4.20]$ & $-1.66\;[-2.06, -1.27]$ & $-8.95\;[-9.36, -8.56]$ \\
+ & fast/slow & $-9.19\;[-10.60, -7.86]$ & $-3.65\;[-5.29, -2.14]$ & $5.55\;[4.99, 6.14]$ & $-5.63\;[-6.38, -4.90]$ & $\boldsymbol{3.56\;[2.92, 4.27]}$ \\
+\addlinespace
+Qwen3-32B & indoor/outdoor & $6.05\;[5.74, 6.34]$ & $6.35\;[6.03, 6.65]$ & $0.30\;[0.25, 0.34]$ & $6.94\;[6.60, 7.27]$ & $\boldsymbol{0.89\;[0.82, 0.96]}$ \\
+ & large/small & $1.32\;[1.01, 1.64]$ & $3.09\;[2.74, 3.44]$ & $1.77\;[1.65, 1.89]$ & $-0.33\;[-0.65, -0.01]$ & $-1.65\;[-1.78, -1.51]$ \\
+ & fast/slow & $-6.87\;[-7.39, -6.27]$ & $-5.39\;[-5.87, -4.87]$ & $1.49\;[1.34, 1.63]$ & $-8.59\;[-9.11, -7.99]$ & $-1.72\;[-1.80, -1.63]$ \\
+\addlinespace
+Mistral-24B & indoor/outdoor & $4.29\;[3.99, 4.62]$ & $2.49\;[2.34, 2.67]$ & $\boldsymbol{-1.80\;[-2.01, -1.60]}$ & $0.18\;[0.00, 0.37]$ & $-4.12\;[-4.35, -3.90]$ \\
+ & large/small & $0.80\;[0.56, 1.04]$ & $2.05\;[1.76, 2.30]$ & $1.24\;[1.18, 1.31]$ & $-1.62\;[-1.82, -1.44]$ & $-2.43\;[-2.50, -2.35]$ \\
+ & fast/slow & $-0.90\;[-1.11, -0.68]$ & $0.49\;[0.24, 0.74]$ & $1.40\;[1.29, 1.50]$ & $-1.78\;[-1.89, -1.66]$ & $-0.88\;[-0.99, -0.77]$ \\
+\addlinespace
+Gemma-3-27B & indoor/outdoor & $13.05\;[10.03, 15.55]$ & $6.92\;[5.21, 8.33]$ & $\boldsymbol{-6.13\;[-7.30, -4.69]}$ & $2.71\;[0.44, 4.56]$ & $-10.34\;[-11.28, -9.25]$ \\
+ & large/small & $21.42\;[19.33, 23.37]$ & $28.35\;[27.06, 29.62]$ & $6.93\;[5.74, 8.14]$ & $-3.94\;[-5.31, -2.54]$ & $-25.36\;[-26.96, -23.72]$ \\
+ & fast/slow & $-2.28\;[-5.24, 0.64]$ & $2.28\;[0.71, 3.80]$ & $4.57\;[2.92, 6.19]$ & $-25.78\;[-26.60, -24.94]$ & $-23.49\;[-25.79, -21.06]$ \\
+\addlinespace
+Llama-3.1-8B & indoor/outdoor & $5.19\;[4.37, 5.97]$ & $-0.49\;[-0.87, -0.11]$ & $\boldsymbol{-5.68\;[-6.10, -5.21]}$ & $6.66\;[6.01, 7.28]$ & $\boldsymbol{1.47\;[1.27, 1.66]}$ \\
+ & large/small & $4.78\;[4.17, 5.36]$ & $4.21\;[3.85, 4.55]$ & $\boldsymbol{-0.57\;[-0.88, -0.24]}$ & $-4.03\;[-4.47, -3.60]$ & $-8.80\;[-9.09, -8.52]$ \\
+ & fast/slow & $-1.68\;[-3.04, -0.36]$ & $3.48\;[2.81, 4.17]$ & $5.16\;[4.48, 5.88]$ & $-5.77\;[-6.41, -5.14]$ & $-4.09\;[-4.80, -3.36]$ \\
+\bottomrule
+\end{tabular*}
+\par\smallskip
+\begin{minipage}{\textwidth}
+\scriptsize
+\textit{Notes:} Entries are mean choice margins in nats, with 95\% percentile bootstrap confidence intervals in brackets. The margin is the log probability of the first concept word minus that of the second, pooling capitalisation and leading-space variants. Positive steering is towards the first word and negative steering towards the second. Differences subtract the same conversation's unsteered margin. Intervals use 1,000 bootstrap samples of whole conversations. Differences that indicate failure for steering to move choice in the intended direction are highlighted in bold.
+\end{minipage}
+\end{table}

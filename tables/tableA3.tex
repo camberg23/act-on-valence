@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & Base & SFT & DPO & Instruct \\
+\midrule
+Base & 1.00000 & & & \\
+SFT & 0.99574 & 1.00000 & & \\
+DPO & 0.99540 & 0.99984 & 1.00000 & \\
+Instruct & 0.99518 & 0.99979 & 0.99997 & 1.00000 \\
+\bottomrule
+\end{tabular}
+\vspace{4pt}
+\caption{\textbf{Cosine similarities between valence vectors across OLMo training stages.} Each vector is constructed separately at layer 32 of the corresponding OLMo-2-32B checkpoint using the procedure described in Methods. Entries give pairwise cosine similarities, with larger values indicating closer alignment. Same vectors as shown in Appendix Figure \ref{fig:figureA12}. Diagonal entries equal one by construction.}
+\label{tab:olmo_valence_cosines}
+
+\end{table}

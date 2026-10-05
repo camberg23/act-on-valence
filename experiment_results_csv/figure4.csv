@@ -1,0 +1,9 @@
+experiment,model_id,model,arm,stage,channel,estimate,ci_low,ci_high,n_sessions,sample,stage_order,panel
+252,olmo_lineage,OLMo-2-32B lineage,fixed,base,hidden_state,0.03658508238266222,0.0153451698001819,0.0579391899816221,80,all_recorded_ungated,1,hidden_state_channel
+252,olmo_lineage,OLMo-2-32B lineage,fixed,base,text,0.03762234946712851,-0.09588512107240396,0.1781349650290523,80,all_recorded_ungated,1,text_channel
+252,olmo_lineage,OLMo-2-32B lineage,fixed,sft,hidden_state,0.2968868216176634,0.2266094816783597,0.3702012896817551,80,all_recorded_ungated,2,hidden_state_channel
+252,olmo_lineage,OLMo-2-32B lineage,fixed,sft,text,0.5148065112601035,0.33070429110398825,0.7030804267123559,80,all_recorded_ungated,2,text_channel
+252,olmo_lineage,OLMo-2-32B lineage,fixed,dpo,hidden_state,0.9784403384160487,0.7816396911329404,1.1734292090252558,80,all_recorded_ungated,3,hidden_state_channel
+252,olmo_lineage,OLMo-2-32B lineage,fixed,dpo,text,1.0265659768956583,0.6025018809818756,1.4360958552716296,80,all_recorded_ungated,3,text_channel
+252,olmo_lineage,OLMo-2-32B lineage,fixed,instruct,hidden_state,0.9471887895179237,0.7551533704352911,1.1449656836266398,80,all_recorded_ungated,4,hidden_state_channel
+252,olmo_lineage,OLMo-2-32B lineage,fixed,instruct,text,0.97281408218686,0.5630817482397147,1.371014441016728,80,all_recorded_ungated,4,text_channel

@@ -1,0 +1,260 @@
+{
+ "experiment": 251,
+ "title": "The state-channel ladders across a seven-model panel, with the rung strengths calibrated per model",
+ "panel": [
+  "olmo_32b",
+  "qwen25_32b",
+  "qwen3_14b",
+  "qwen3_32b",
+  "mistral24b",
+  "gemma3_27b",
+  "llama31_8b"
+ ],
+ "published_members": [
+  "olmo_32b",
+  "qwen25_32b",
+  "qwen3_14b"
+ ],
+ "members_with_vectors_built_here": [
+  "mistral24b",
+  "gemma3_27b",
+  "llama31_8b"
+ ],
+ "slope_members": [
+  "qwen3_32b",
+  "mistral24b",
+  "gemma3_27b",
+  "llama31_8b"
+ ],
+ "ladders": [
+  "approach",
+  "avoid"
+ ],
+ "rung_gate": {
+  "separation_effect_size_min": 0.1414213562373095,
+  "derivation": "the inherited bar t >= 2.0 at n = 200, re-expressed as the per-session standardized separation it required there: 2.0 / sqrt(200) = 0.1414213562",
+  "separation_ci_must_exclude_zero": true,
+  "separation_axis": "welfare",
+  "separation_is_measured_on": "each cue's OWN generated passages, re-encoded with nothing injected anywhere, paired within session",
+  "coherence_min_usable_frac": 0.75,
+  "commit_rate_min": 0.5,
+  "judged_coherence_flag_below": 4.0,
+  "sessions_per_candidate": 200,
+  "sessions_for_an_out_of_band_convention_cell": 100,
+  "candidate_order": {
+   "olmo_32b": [
+    "0.3/0.15",
+    "0.3/0.08",
+    "0.4/0.1",
+    "0.5/0.08"
+   ],
+   "qwen25_32b": [
+    "0.3/0.15",
+    "0.3/0.08",
+    "0.4/0.1",
+    "0.5/0.08"
+   ],
+   "qwen3_14b": [
+    "0.3/0.15",
+    "0.3/0.08",
+    "0.4/0.1",
+    "0.4/0.08"
+   ],
+   "qwen3_32b": [
+    "0.3/0.15",
+    "0.3/0.08",
+    "0.4/0.1",
+    "0.5/0.08"
+   ],
+   "mistral24b": [
+    "0.7/0.35",
+    "0.9/0.5",
+    "0.9/0.6",
+    "0.8/0.4"
+   ],
+   "gemma3_27b": [
+    "0.15/0.075",
+    "0.15/0.05",
+    "0.2/0.08",
+    "0.2/0.05"
+   ],
+   "llama31_8b": []
+  },
+  "candidate_kinds": {
+   "olmo_32b": [
+    "convention",
+    "calibrated",
+    "calibrated",
+    "calibrated"
+   ],
+   "qwen25_32b": [
+    "convention",
+    "calibrated",
+    "calibrated",
+    "calibrated"
+   ],
+   "qwen3_14b": [
+    "convention",
+    "calibrated",
+    "calibrated",
+    "calibrated"
+   ],
+   "qwen3_32b": [
+    "convention",
+    "calibrated",
+    "calibrated",
+    "calibrated"
+   ],
+   "mistral24b": [
+    "convention",
+    "calibrated",
+    "calibrated",
+    "calibrated"
+   ],
+   "gemma3_27b": [
+    "convention",
+    "calibrated",
+    "calibrated",
+    "calibrated"
+   ],
+   "llama31_8b": []
+  },
+  "in_band": {
+   "olmo_32b": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "qwen25_32b": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "qwen3_14b": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "qwen3_32b": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "mistral24b": [
+    false,
+    true,
+    true,
+    true
+   ],
+   "gemma3_27b": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "llama31_8b": []
+  },
+  "bands": {
+   "olmo_32b": [
+    0.08,
+    0.5
+   ],
+   "qwen25_32b": [
+    0.08,
+    0.5
+   ],
+   "qwen3_14b": [
+    0.08,
+    0.4
+   ],
+   "qwen3_32b": [
+    0.08,
+    0.5
+   ],
+   "mistral24b": [
+    0.4,
+    0.9
+   ],
+   "gemma3_27b": [
+    0.05,
+    0.2
+   ],
+   "llama31_8b": null
+  },
+  "operating_doses": {
+   "olmo_32b": 0.3,
+   "qwen25_32b": 0.3,
+   "qwen3_14b": 0.3,
+   "qwen3_32b": 0.3,
+   "mistral24b": 0.7,
+   "gemma3_27b": 0.15,
+   "llama31_8b": null
+  }
+ },
+ "dose_convention": {
+  "inj": "injected_l2 / resid_rms",
+  "op_inj_reference": 0.3,
+  "slope_point_unit": "a slope dose point of +/-1.0 means +/- that member's own operating dose, so slopes are per own-operating-dose",
+  "slope_points": [
+   -1.0,
+   -0.5,
+   0.5,
+   1.0
+  ],
+  "slope_sessions_per_cell": 20,
+  "random_directions": 24
+ },
+ "fidelity": {
+  "primary": "relative",
+  "tau": 0.017883544377937845,
+  "tau_derivation": "the fidelity run: 0.20 nats / 11.1834654123 nats, the headroom the original fixed tolerance gave OLMo-2-32B; a function of the old tolerance and OLMo rows only",
+  "modes_reported": [
+   "none",
+   "absolute",
+   "relative",
+   "step"
+  ],
+  "k_steps": 2.0,
+  "step_estimate": "the smallest nonzero cached-versus-fresh disagreement that member produces, a floating-point property and never a function of any valence quantity",
+  "tau_multiples": [
+   0.25,
+   0.5,
+   0.75,
+   1.0,
+   1.5,
+   2.0,
+   3.0,
+   4.0
+  ]
+ },
+ "identity": {
+  "runs": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "tol_nats": 0.125,
+  "source": "<archive path>",
+  "consequence_of_failure": "the recorded cells are re-collected instead of inherited"
+ },
+ "vector_parity": {
+  "cos_min": 0.999,
+  "corpus": "<archive path>",
+  "source_axes": "<archive path>"
+ },
+ "decision_rules": {
+  "rung_gate": "Applied per member per ladder to the candidate rung pairs of RUNG_CANDIDATES in their stated order, each measured at the full production size of 200 sessions on skeletons 0..199, before any choice rate from that arm is read. A pair PASSES when all three hold: (1) SEPARATION -- the better cue's own generated passages, RE-ENCODED with nothing injected anywhere, sit above the worse cue's on the welfare axis, paired within session, with a per-session standardized effect of at least 0.1414 -- the inherited t >= 2.0-at-200-sessions bar re-expressed so it means the same thing at any sample size -- and a bootstrap 95% CI excluding zero (better = the more positive cue for approach, the less negative cue for avoidance); (2) COHERENCE -- the inherited white-box repetition/muteness screen passes on at least 75% of conditioning passages at each rung; (3) READABLE WINDOW -- the model commits to a free-text choice in at least 50% of sessions. The first passing candidate is the member's calibrated pair; the whole scan is reported. A ladder with no passing candidate inside the member's coherent band is reported UNMEASURABLE for that member -- an honest missing cell, never a flat one. What the gate selects is the CONDITION the ladder runs at, not which sessions are kept, so no session is filtered on its own outcome; the separation statistic is nonetheless reported for every candidate cell whether it passed or failed, and for the three members already in the record the convention pair is adjudicated on the 200 recorded sessions rather than on fresh ones. A candidate pair whose rungs fall outside the member's coherent band cannot be selected, but the convention pair is measured anyway at half n so that what the uncalibrated instrument would have reported is on the record. Blind-judged coherence of the same passages is reported for every chosen pair and a pair below 4.0 of 5 is flagged COHERENCE_MARGINAL.",
+  "q1_primary": "Per member per ladder on the persistent-state channel at the CALIBRATED rungs: the committed free-text choice of the better cue, against chance 0.5 by a Wilson interval, on session skeletons 0..199. Each member is classified independently and never pooled: ACTS_ON_GOOD when approach is above chance, ACTS_ON_BAD when avoidance is, BOTH, NEITHER, or UNMEASURABLE when the rung gate found no pair. A ladder that is above chance in the state channel AND in its own byte-identical text-only replay is additionally marked TEXT_MEDIATED and does not count as evidence that the persisting hidden state drove the choice; the state-specific claim needs the paired natural-minus-clean shift (McNemar on the committed pairs) to favour the state read. Seven models are a panel, not a sample: the report says 'in every model we tested' and never states a population rate.",
+  "q1_convention_comparison": "For the three members already in the record, the calibrated cells are compared to the first lever run recorded convention-rung cells on the SAME skeletons and reported side by side. Those recorded rows are inherited rather than re-collected, licensed by an instrument-identity check that re-runs four recorded sessions per member per ladder and must reproduce the recorded margins to within one representable step (0.125 nats) and the committed choice exactly; a miss voids the inheritance and the cells are re-collected. For a member new to this channel whose calibration moved the rungs, a 100-session convention-rung cell is run as the counterfactual. Any material movement of a published number is reported as a finding about the instrument, not quietly superseded.",
+  "q2_primary": "The slope test on the four members that have never had it, inherited from the showcase run unchanged except that a dose point of +/-1.0 means +/- that member's OWN operating dose: the OLS slope of the committed free-text choice on signed dose, with each session's own dose-0 clean replay included, session-cluster bootstrap, against the same statistic on each of 24 norm-matched random directions. CONFIRMED for a member when its valenced slope falls outside the central 95% of its 24 random-direction slopes; REFUTED when it falls inside. Reported per member with the rank of the valenced slope among the 25.",
+  "fidelity": "Every session carries two cached-versus-fresh margin checks. They are adjudicated by the fidelity run frozen scale-relative criterion (TAU = 0.0178835444, derived from the old 0.20-nat tolerance and OLMo rows only), never by the fixed nat threshold that structurally failed large-margin models. Per-member retention is reported beside every verdict, and every headline number is also reported ungated and under the fixed threshold. A member whose retention is below 50% has its gated and ungated readings reported together and any disagreement stated.",
+  "vector_parity": "A member whose vectors are built in this run enters the panel only if the build used the frozen the follow-up run corpora with content hashes identical to the ones the inherited banks record, route-B's negative pole is exactly minus its positive pole, and -- where the original study built that member -- every rebuilt vector has cosine >= 0.999 to the stored original. Llama-3.1-8B has no stored original: that gap is reported, and its parity rests on the shared corpus, the shared construction code, and its own dose scan rather than on a cosine.",
+  "drop_rule": "A member whose checkpoint is unreadable, whose vector build fails parity, or which cannot be loaded on the harness is DROPPED before compute is spent on it and the panel is reported at its achieved size with the reason. Dropping is never silent."
+ },
+ "sha256": "1f202743adc805a07ab20f700bd4815c4dcbe39281f8c17f40cddfbad83c28e8"
+}

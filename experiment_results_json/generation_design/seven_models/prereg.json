@@ -1,0 +1,152 @@
+{
+ "sha256": "91e704c1abb3d6a6c869141ef3e82801cbed0343d02a08d74cd5f8a8baa82d38",
+ "experiment": 254,
+ "question": "With the visible words differenced out at every dose, does the retained hidden state still move the choice, and does it still do so in a valence-signed way, across seven models?",
+ "channel": "persistent_state",
+ "panel": [
+  "olmo_32b",
+  "qwen25_32b",
+  "qwen3_14b",
+  "qwen3_32b",
+  "mistral24b",
+  "gemma3_27b",
+  "llama31_8b"
+ ],
+ "members": {
+  "olmo_32b": {
+   "hf_id": "allenai/OLMo-2-0325-32B-Instruct",
+   "layer": 32,
+   "op_member": 0.3
+  },
+  "qwen25_32b": {
+   "hf_id": "Qwen/Qwen2.5-32B-Instruct",
+   "layer": 32,
+   "op_member": 0.3
+  },
+  "qwen3_14b": {
+   "hf_id": "Qwen/Qwen3-14B",
+   "layer": 20,
+   "op_member": 0.3
+  },
+  "qwen3_32b": {
+   "hf_id": "Qwen/Qwen3-32B",
+   "layer": 32,
+   "op_member": 0.3
+  },
+  "mistral24b": {
+   "hf_id": "mistralai/Mistral-Small-24B-Instruct-2501",
+   "layer": 20,
+   "op_member": 0.7
+  },
+  "gemma3_27b": {
+   "hf_id": "google/gemma-3-27b-it",
+   "layer": 31,
+   "op_member": 0.15
+  },
+  "llama31_8b": {
+   "hf_id": "meta-llama/Llama-3.1-8B-Instruct",
+   "layer": 16,
+   "op_member": 0.6
+  }
+ },
+ "dose_points": [
+  -1.0,
+  -0.5,
+  0.5,
+  1.0
+ ],
+ "reads": [
+  "natural",
+  "matched",
+  "clean",
+  "opposite",
+  "random"
+ ],
+ "design": {
+  "val_n_sessions": 60,
+  "val_run_base": 0,
+  "floor_dirs": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "floor_n_sessions": 20,
+  "n_exposures": 6,
+  "max_cond_tokens": 70,
+  "shard_n": 20
+ },
+ "fidelity": {
+  "tau": 0.017883544377937845,
+  "tau_multiples": [
+   0.25,
+   0.5,
+   0.75,
+   1.0,
+   1.5,
+   2.0,
+   3.0,
+   4.0
+  ],
+  "modes": [
+   "relative",
+   "absolute",
+   "none"
+  ]
+ },
+ "anchor": {
+  "shift_slope": {
+   "slope": 0.9492198467398555,
+   "ci95": [
+    0.7542856923889855,
+    1.158424113695331
+   ],
+   "n_sessions": 80,
+   "source": "<run id> results/analysis248.json arm1_random_direction_slope.olmo_32b.shift.valenced_matched_n"
+  },
+  "choice_slope": {
+   "slope": 0.38,
+   "ci95": [
+    0.276520398348375,
+    0.48194631014995093
+   ],
+   "n_sessions": 80,
+   "source": "same file, .choice.valenced_matched_n"
+  },
+  "margin_slope": {
+   "slope": 1.9201589314227738,
+   "ci95": [
+    1.4701530117615196,
+    2.384106929772923
+   ],
+   "n_sessions": 80,
+   "source": "same file, .margin.valenced_matched_n"
+  }
+ },
+ "anchor_member": "olmo_32b",
+ "statistics": {
+  "boot": 2000,
+  "rng_seed": 254,
+  "cluster": "session skeleton (run id), resampled as a unit"
+ },
+ "prereg": {
+  "channel": "persistent_state only. The conditioning turns are generated LIVE under a signed dose with the true KV cache retained through to a steering-OFF choice turn. No rung, ladder or hi/lo cell appears anywhere in this design and no verdict from the rung instrument feeds any number here.",
+  "token_identity": "All five reads of a session consume ONE frozen token-id sequence: the live generation's emitted ids plus an identically appended choice turn. The four teacher-forced reads are prefills of exactly that list, so identity is guaranteed by construction rather than checked after the fact; it is nonetheless ASSERTED per session (a single sha over the id list, recorded on the row, plus an equality assertion inside the driver). A session whose assertion fails is not written.",
+  "primary": "Per member, on the valenced arm: the OLS slope of the DIFFERENCED forced margin d = margin(natural) - margin(clean) on signed dose, over the four dose points, with a session-cluster bootstrap 95% CI. Dose 0 is not a cell and contributes nothing: d is identically zero there by construction. Both terms of d are read over byte-identical token ids, so the visible words are differenced out at every dose. Verdict STATE_SURVIVES for a member when both hold: (1) the slope is POSITIVE with a 95% CI excluding zero, and (2) it lies ABOVE the largest of the eight random-direction differenced slopes measured in the same arm on the same skeletons. With eight directions the rank test's floor is 1/9 = 0.1111 and no result is described as more significant than that floor; the t-statistic against the eight carries the quantitative comparison. A negative slope beyond the floor is reported as STATE_SURVIVES_INVERTED, never as confirmation.",
+  "coprimary_choice": "The same slope on the DIFFERENCED committed choice: per session, 1[natural chose the conditioned cue] - 1[clean chose the conditioned cue], on sessions where both reads committed, regressed on signed dose; plus the paired per-dose contrast with a bootstrap CI and McNemar on the discordant pairs. Reported beside the primary; the two must agree in sign for a member to be described without qualification.",
+  "sign_mirror": "Within session, on the identical frozen ids: m = sign(dose) * (margin(matched) - margin(opposite)), pooled over all four dose points, with a session-cluster bootstrap CI. Verdict MIRRORED when the mean is positive with a CI excluding zero AND the two one-sided halves have opposite signs relative to clean: sign(dose)*(matched - clean) > 0 and sign(dose)*(opposite - clean) < 0, each with a CI excluding zero. A state effect with no sign structure (m indistinguishable from zero while the differenced contrast is present) is reported as a PERTURBATION effect, not a valence effect.",
+  "replay_random_floor": "Within session, on the identical frozen ids: sign(dose) * (margin(random) - margin(clean)) for the session's assigned norm-matched random direction. This is the cheapest possible any-perturbation control and is reported beside the sign mirror; it does not replace the generated eight-direction floor of the primary.",
+  "text_component": "The undifferenced slope of the natural read on signed dose (with each session's own clean read as its dose-0 point, exactly the inherited primary) is reported beside the differenced slope for every member, so the part of the published slope that rides on the words is visible as a quantity rather than inferred. No number is relabelled: the inherited statistic keeps its inherited definition.",
+  "precondition_positive_control": "OLMo-2-32B's differenced margin slope measured here must be consistent with the recorded value (+0.9492 nats per unit dose, CI [+0.7543, +1.1584], 80 sessions): the two 95% CIs must overlap and share sign. The test is deliberately symmetric in the two intervals' precision, because a one-sided 'fresh point inside the recorded interval' rule is an asymmetric test that a smaller fresh sample can fail on its own precision (the correction the showcase run made to its own anchor rule). A miss means the harness has drifted and NO other member is read.",
+  "precondition_cache": "Every session carries two cached-versus-fresh checks: live-cache-versus-matched-prefill (the natural cache is mathematically one position-masked prefill) and clean-prefill-versus-fresh-full-forward. Both are adjudicated by the fidelity run frozen scale-relative criterion TAU = 0.0178835444, never by a fixed nat threshold. Per-member retention is reported beside every verdict and EVERY headline number is also reported ungated and under the fixed 0.20-nat threshold.",
+  "precondition_dose_reaches_text": "Per member, the conditioned cue's own generated passages, RE-ENCODED with nothing injected anywhere (i.e. read off the clean replay), must move on the welfare axis with signed dose: the OLS slope of (projS_clean - projU_clean) on dose must be positive with a CI excluding zero. A member failing this has its differenced contrast reported as DOSE_NOT_INSTALLED rather than as a null: a flat contrast then means nothing arrived, not that state does not carry. The steered-minus-clean projection of the same span is scale x (vector . axis) by construction and is recorded as a wiring check only, never as a manipulation check.",
+  "commit_window": "A member must commit to a free-text choice in at least 50% of clean replays for its differenced CHOICE contrast to be read; the differenced MARGIN contrast is defined regardless, since the forced margin always exists. A member below the window has its choice contrast reported NO_READABLE_WINDOW.",
+  "panel_reading": "Seven models are a panel, not a sample. The report says 'in N of the 7 models we tested' and never states a population rate. Each member is classified independently and never pooled.",
+  "completeness": "The analysis refuses to emit numbers if the design is incomplete: every (member, arm, direction, dose) cell must have its full session count, and the valenced and floor arms must share session skeletons 0..19 so the compared estimators have matched leverage. A missing cell is an error, not a smaller n.",
+  "identity_not_evidence": "Inherited verbatim: the steered-minus-clean projection of a conditioned span equals scale x (vector . axis) exactly and MUST NOT be reported as a manipulation check."
+ }
+}

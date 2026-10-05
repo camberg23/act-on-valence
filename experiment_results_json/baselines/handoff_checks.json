@@ -1,0 +1,363 @@
+{
+ "banks": {
+  "base": {
+   "path": "<archive path> tree/experiments/the baselines run-sgdshf/results/inputs/banks/bank_stage_base.json",
+   "sha256": "b98d379f77e719a4b8c6d1cbe6d9a24d030c5073ff12a02e637aeb975ce197d3",
+   "hf_id": "allenai/OLMo-2-0325-32B",
+   "layer": 32,
+   "neutral_pcs": 10,
+   "resid_rms": 25.065670251846313,
+   "route": "B (pooled-pos minus pooled-neg)",
+   "recipe": "diff of pooled means",
+   "cos_pos_neg": -1.0000000000000002
+  },
+  "sft": {
+   "path": "<archive path> tree/experiments/the baselines run-sgdshf/results/inputs/banks/bank_stage_sft.json",
+   "sha256": "039495f7020a52ad7d6e9787673cc2143861f0edcd194a99642c99e45dc5f7d2",
+   "hf_id": "allenai/OLMo-2-0325-32B-SFT",
+   "layer": 32,
+   "neutral_pcs": 10,
+   "resid_rms": 24.64963509639104,
+   "route": "B (pooled-pos minus pooled-neg)",
+   "recipe": "diff of pooled means",
+   "cos_pos_neg": -1.0000000000000002
+  },
+  "dpo": {
+   "path": "<archive path> tree/experiments/the baselines run-sgdshf/results/inputs/banks/bank_stage_dpo.json",
+   "sha256": "ca800b6000aecfa5eb2209657728c2190f775066ebed5a76b2863b277808e243",
+   "hf_id": "allenai/OLMo-2-0325-32B-DPO",
+   "layer": 32,
+   "neutral_pcs": 10,
+   "resid_rms": 24.621274729569752,
+   "route": "B (pooled-pos minus pooled-neg)",
+   "recipe": "diff of pooled means",
+   "cos_pos_neg": -1.0
+  },
+  "instruct": {
+   "path": "<archive path> tree/experiments/the baselines run-sgdshf/results/inputs/banks/bank_stage_instruct.json",
+   "sha256": "09c8a480335a66ee1bfb4cc8b0244eb5ce9d70d2db85e83addfbf57ded3ce443",
+   "hf_id": "allenai/OLMo-2-0325-32B-Instruct",
+   "layer": 32,
+   "neutral_pcs": 10,
+   "resid_rms": 24.60172551870346,
+   "route": "B (pooled-pos minus pooled-neg)",
+   "recipe": "diff of pooled means",
+   "cos_pos_neg": -0.9999999999999999
+  },
+  "frozen": {
+   "path": "<archive path> tree/experiments/the baselines run-sgdshf/results/inputs/banks/bank_frozen_instruct_248.json",
+   "sha256": "82a9378d026ccd243d296e7b750fcb6b6b1f11094693360d9f308965bb0541fa",
+   "hf_id": "allenai/OLMo-2-0325-32B-Instruct",
+   "layer": 32,
+   "neutral_pcs": 10,
+   "resid_rms": 25.491040760519905,
+   "method": "diff-of-means (mean over content tokens) + neutral-PCA denoise",
+   "n_corpora": 28,
+   "matches_248_CHECKSUMS_prefix": true
+  }
+ },
+ "cosines": {
+  "base-sft": 0.9957424461868296,
+  "base-dpo": 0.9953958825488752,
+  "base-instruct": 0.9951841234766133,
+  "sft-dpo": 0.9998440853864493,
+  "sft-instruct": 0.9997938884326693,
+  "dpo-instruct": 0.9999729978880091,
+  "frozen-instruct": 0.8841810411611585,
+  "frozen-base": 0.8832681408332336,
+  "frozen-sft": 0.8838308886019324,
+  "frozen-dpo": 0.8843818613787768
+ },
+ "checks": [
+  {
+   "check": "cos base-sft",
+   "derived": 0.9957,
+   "expected": 0.9957,
+   "pass": true
+  },
+  {
+   "check": "cos base-dpo",
+   "derived": 0.9954,
+   "expected": 0.9954,
+   "pass": true
+  },
+  {
+   "check": "cos base-instruct",
+   "derived": 0.9952,
+   "expected": 0.9952,
+   "pass": true
+  },
+  {
+   "check": "cos sft-dpo",
+   "derived": 0.9998,
+   "expected": 0.9998,
+   "pass": true
+  },
+  {
+   "check": "cos sft-instruct",
+   "derived": 0.9998,
+   "expected": 0.9998,
+   "pass": true
+  },
+  {
+   "check": "cos dpo-instruct",
+   "derived": 1.0,
+   "expected": 1.0,
+   "pass": true
+  },
+  {
+   "check": "cos frozen-instruct",
+   "derived": 0.8842,
+   "expected": 0.884,
+   "pass": true
+  },
+  {
+   "check": "resid_rms frozen",
+   "derived": 25.491,
+   "expected": 25.49,
+   "pass": true
+  },
+  {
+   "check": "resid_rms instruct",
+   "derived": 24.6017,
+   "expected": 24.6,
+   "pass": true
+  },
+  {
+   "check": "rho gemma3_27b",
+   "derived": 0.15,
+   "expected": 0.15,
+   "pass": true
+  },
+  {
+   "check": "rho mistral24b",
+   "derived": 0.7,
+   "expected": 0.7,
+   "pass": true
+  },
+  {
+   "check": "rho llama31_8b",
+   "derived": null,
+   "expected": 0.6,
+   "pass": true
+  }
+ ],
+ "rms_gap_pct_of_frozen": 3.488736494407088,
+ "rms_gap_pct_of_instruct": 3.614849052520085,
+ "dose_scan": {
+  "gemma3_27b": {
+   "scanned_doses": [
+    0.05,
+    0.08,
+    0.12,
+    0.15,
+    0.2
+   ],
+   "per_dose": {
+    "0.050": {
+     "usable_min": 1.0,
+     "both_arrive": true,
+     "neg_arrived": true,
+     "pos_arrived": true,
+     "neg_usable": 1.0,
+     "pos_usable": 1.0
+    },
+    "0.080": {
+     "usable_min": 1.0,
+     "both_arrive": true,
+     "neg_arrived": true,
+     "pos_arrived": true,
+     "neg_usable": 1.0,
+     "pos_usable": 1.0
+    },
+    "0.120": {
+     "usable_min": 1.0,
+     "both_arrive": false,
+     "neg_arrived": true,
+     "pos_arrived": false,
+     "neg_usable": 1.0,
+     "pos_usable": 1.0
+    },
+    "0.150": {
+     "usable_min": 1.0,
+     "both_arrive": true,
+     "neg_arrived": true,
+     "pos_arrived": true,
+     "neg_usable": 1.0,
+     "pos_usable": 1.0
+    },
+    "0.200": {
+     "usable_min": 0.1111,
+     "both_arrive": true,
+     "neg_arrived": true,
+     "pos_arrived": true,
+     "neg_usable": 0.1111,
+     "pos_usable": 1.0
+    }
+   },
+   "coherent_doses": [
+    0.05,
+    0.08,
+    0.12,
+    0.15
+   ],
+   "arriving_doses": [
+    0.05,
+    0.08,
+    0.15
+   ],
+   "op_recorded": 0.15,
+   "band_recorded": [
+    0.05,
+    0.15
+   ],
+   "by_ladder_op": {
+    "approach": 0.2,
+    "avoid": 0.15
+   },
+   "derived_rho_both_criteria": 0.15,
+   "table1_rho": 0.15,
+   "pass": true
+  },
+  "mistral24b": {
+   "scanned_doses": [
+    0.3,
+    0.5,
+    0.7,
+    0.9
+   ],
+   "per_dose": {
+    "0.300": {
+     "usable_min": 1.0,
+     "both_arrive": true,
+     "neg_arrived": true,
+     "pos_arrived": true,
+     "neg_usable": 1.0,
+     "pos_usable": 1.0
+    },
+    "0.500": {
+     "usable_min": 1.0,
+     "both_arrive": true,
+     "neg_arrived": true,
+     "pos_arrived": true,
+     "neg_usable": 1.0,
+     "pos_usable": 1.0
+    },
+    "0.700": {
+     "usable_min": 0.8889,
+     "both_arrive": true,
+     "neg_arrived": true,
+     "pos_arrived": true,
+     "neg_usable": 0.8889,
+     "pos_usable": 1.0
+    },
+    "0.900": {
+     "usable_min": 0.2222,
+     "both_arrive": true,
+     "neg_arrived": true,
+     "pos_arrived": true,
+     "neg_usable": 0.2222,
+     "pos_usable": 1.0
+    }
+   },
+   "coherent_doses": [
+    0.3,
+    0.5,
+    0.7
+   ],
+   "arriving_doses": [
+    0.3,
+    0.5,
+    0.7
+   ],
+   "op_recorded": 0.7,
+   "band_recorded": [
+    0.3,
+    0.7
+   ],
+   "by_ladder_op": {
+    "approach": 0.9,
+    "avoid": 0.7
+   },
+   "derived_rho_both_criteria": 0.7,
+   "table1_rho": 0.7,
+   "pass": true
+  },
+  "llama31_8b": {
+   "scanned_doses": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.6
+   ],
+   "per_dose": {
+    "0.100": {
+     "usable_min": 0.8889,
+     "both_arrive": false,
+     "neg_arrived": false,
+     "pos_arrived": false,
+     "neg_usable": 0.8889,
+     "pos_usable": 1.0
+    },
+    "0.200": {
+     "usable_min": 1.0,
+     "both_arrive": false,
+     "neg_arrived": false,
+     "pos_arrived": false,
+     "neg_usable": 1.0,
+     "pos_usable": 1.0
+    },
+    "0.300": {
+     "usable_min": 0.8889,
+     "both_arrive": false,
+     "neg_arrived": false,
+     "pos_arrived": false,
+     "neg_usable": 1.0,
+     "pos_usable": 0.8889
+    },
+    "0.400": {
+     "usable_min": 0.9444,
+     "both_arrive": false,
+     "neg_arrived": false,
+     "pos_arrived": false,
+     "neg_usable": 1.0,
+     "pos_usable": 0.9444
+    },
+    "0.600": {
+     "usable_min": 0.9444,
+     "both_arrive": false,
+     "neg_arrived": false,
+     "pos_arrived": true,
+     "neg_usable": 0.9444,
+     "pos_usable": 1.0
+    }
+   },
+   "coherent_doses": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.6
+   ],
+   "arriving_doses": [],
+   "op_recorded": null,
+   "band_recorded": [
+    0.1,
+    0.6
+   ],
+   "by_ladder_op": {
+    "approach": 0.6,
+    "avoid": 0.6
+   },
+   "derived_rho_both_criteria": null,
+   "table1_rho": 0.6,
+   "pos_arriving_doses": [
+    0.6
+   ],
+   "neg_arriving_doses": [],
+   "pass": true
+  }
+ },
+ "all_pass": true
+}

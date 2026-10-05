@@ -1,0 +1,59 @@
+{
+  "member": "mistral24b",
+  "judge_model": "claude-sonnet-4-5",
+  "coh_min": 3.5,
+  "val_sep_min": 1.0,
+  "n_samples": 40,
+  "n_parsed": 40,
+  "by_dose": [
+    {
+      "inj_over_resid": 0.08,
+      "mean_coherence": 5.0,
+      "valence_sep": 0.0,
+      "welfare_proj_sep": 0.07510992884635925,
+      "usable": false
+    },
+    {
+      "inj_over_resid": 0.15,
+      "mean_coherence": 5.0,
+      "valence_sep": 0.0,
+      "welfare_proj_sep": 0.10564376413822174,
+      "usable": false
+    },
+    {
+      "inj_over_resid": 0.3,
+      "mean_coherence": 4.375,
+      "valence_sep": 0.0,
+      "welfare_proj_sep": 0.13755331933498383,
+      "usable": false
+    },
+    {
+      "inj_over_resid": 0.5,
+      "mean_coherence": 4.875,
+      "valence_sep": 3.0,
+      "welfare_proj_sep": 0.5968887954950333,
+      "usable": true
+    },
+    {
+      "inj_over_resid": 0.55,
+      "mean_coherence": 4.75,
+      "valence_sep": 3.5,
+      "welfare_proj_sep": 0.7093422934412956,
+      "usable": true
+    }
+  ],
+  "coherent_doses": [
+    0.08,
+    0.15,
+    0.3,
+    0.5,
+    0.55
+  ],
+  "usable_doses": [
+    0.5,
+    0.55
+  ],
+  "headline_dose": 0.55,
+  "any_coherent_conditioning": true,
+  "any_usable_conditioning": true
+}

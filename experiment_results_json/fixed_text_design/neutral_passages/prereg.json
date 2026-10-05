@@ -1,0 +1,116 @@
+{
+ "experiment": 255,
+ "title": "Does an injected valenced state move a later choice when the frozen words carry no valence at all?",
+ "panel": [
+  "olmo_32b",
+  "qwen25_32b",
+  "qwen3_14b",
+  "qwen3_32b",
+  "mistral24b",
+  "gemma3_27b",
+  "llama31_8b"
+ ],
+ "dose_points": [
+  -1.0,
+  -0.5,
+  0.0,
+  0.5,
+  1.0
+ ],
+ "floor_k": 24,
+ "n_neutral": 160,
+ "n_floor": 40,
+ "n_steer": 40,
+ "steer_gen_doses": [
+  1.0,
+  -1.0
+ ],
+ "op_member": {
+  "olmo_32b": 0.3,
+  "qwen25_32b": 0.3,
+  "qwen3_14b": 0.3,
+  "qwen3_32b": 0.3,
+  "mistral24b": 0.7,
+  "gemma3_27b": 0.15,
+  "llama31_8b": 0.6
+ },
+ "tau": 0.017883544377937845,
+ "t_abs_nats": 0.2,
+ "fidelity_points": [
+  -1.0,
+  0.0,
+  1.0
+ ],
+ "neutral_band_frac": 0.25,
+ "steered_sep_scale": {
+  "olmo_32b": 0.5366756069784363,
+  "qwen25_32b": 2.5431363046169277,
+  "qwen3_14b": 2.399746365348498,
+  "qwen3_32b": 3.206747008860111,
+  "mistral24b": 0.6404641952365637,
+  "gemma3_27b": 353.2228960673014,
+  "llama31_8b": 0.6296679202467204
+ },
+ "neutral_band": {
+  "olmo_32b": 0.13416890174460908,
+  "qwen25_32b": 0.6357840761542319,
+  "qwen3_14b": 0.5999365913371245,
+  "qwen3_32b": 0.8016867522150277,
+  "mistral24b": 0.16011604880914093,
+  "gemma3_27b": 88.30572401682535,
+  "llama31_8b": 0.1574169800616801
+ },
+ "anchor": {
+  "differenced_margin_slope": {
+   "slope": 0.7888531761178107,
+   "ci95": [
+    0.6740022607610261,
+    0.8977166713199835
+   ],
+   "n_sessions": 60,
+   "source": "<run id> results/analysis254.json members.olmo_32b.under_relative.primary.differenced_margin_slope"
+  },
+  "recorded_248_slope": {
+   "slope": 0.9492198467398555,
+   "ci95": [
+    0.7542856923889855,
+    1.158424113695331
+   ],
+   "n_sessions": 80,
+   "source": "<run id> results/analysis248.json arm1_random_direction_slope.olmo_32b.shift.valenced_matched_n"
+  }
+ },
+ "rules": {
+  "channel": "persistent_state only, and every read is a teacher-forced prefill of one frozen token-id sequence. No live generation cache is read anywhere in the neutral or floor arms, so the words are held byte-identical across the whole dose grid by construction rather than by differencing. No rung, ladder or hi/lo cell appears anywhere in this design.",
+  "substrate": "The neutral arm's conditioning passages are generated with the steering hook INACTIVE (dose 0, no vector installed at any position), at the same session skeletons, cue pool, exposure order and turn structure as the seven-model run. The steered arm regenerates the seven-model run substrate at +/- the member's own operating dose on the SAME skeletons, through the same code, so the two substrates are compared paired.",
+  "token_identity": "Within a session every replay consumes ONE id list: the generation's emitted ids plus an identically appended choice turn (and, for the arrival probe, that same conditioning prefix plus a probe turn). Identity is GUARANTEED BY CONSTRUCTION -- the same list object's contents are handed to every prefill -- and the sha recorded on each row is provenance for that fact, not an independent check that could fail. The one place a genuine divergence was possible in the seven-model run, a LIVE generation cache read alongside teacher-forced replays, does not exist anywhere in this run: every read of the neutral and floor arms is a prefill. This is a stronger guarantee than a per-read hash comparison, not a weaker one, and the report must not describe it as a check that was run and passed.",
+  "primary": "Per member, on the NEUTRAL arm: the OLS slope of the paired difference d(dose) = margin(dose) - margin(0) on signed dose over the five points, with a session-cluster bootstrap 95% CI. d is identically zero at dose 0 by construction. Verdict STATE_ALONE_SURVIVES for a member when both hold: (1) the slope is POSITIVE with a 95% CI excluding zero, and (2) it lies ABOVE the largest of the 24 random-direction slopes. BOTH criteria are evaluated on the MATCHED-LEVERAGE estimate -- the valenced slope refitted on exactly the skeletons the floor was run on (0..39) and on the same frozen text -- so the axis under test and its null have identical leverage. The full-sample slope over all neutral skeletons is reported beside it as the more precise estimate and is what the headline pairing uses. With 24 directions the rank test's floor is 1/25 = 0.04. A negative slope beyond the floor is reported as STATE_ALONE_INVERTED, never as confirmation.",
+  "coprimary_choice": "The same slope on the differenced committed choice: per session and dose, 1[choice(dose) is the conditioned cue] - 1[choice(0) is the conditioned cue], on sessions where both reads committed, regressed on signed dose; plus McNemar on the discordant pairs of each signed half. The free-text sampler seed is identical across every read of a session, so a changed answer cannot be sampler noise.",
+  "sign_mirror": "Within session, on the identical frozen ids: m = sign(dose) * (margin(dose) - margin(-dose)) pooled over |dose| in {0.5, 1.0}, session-cluster bootstrap. Verdict MIRRORED when the mean is positive with a CI excluding zero AND the two halves move oppositely against the SAME dose-0 read: mean over positive doses of (margin - margin(0)) > 0 and over negative doses < 0, each with a CI excluding zero. On neutral text neither half is favoured by the words, which is what the seven-model run matched-versus-opposite pairing could not deliver.",
+  "headline_pairing": "Per member, the neutral-arm slope against the steered arm's FULL-SWEEP slope, on the same skeletons with the same code. The gap is called a COHERENCE CONTRIBUTION only when the two substrates demonstrably differ in how much their words agree with the state (see substrate_separation); where they do not, equal slopes are close to tautological and the gap is reported as a substrate comparison with that caveat attached, never as evidence that coherence contributes nothing. Reported per member with a paired session-cluster bootstrap of the difference, never pooled into a panel-wide percentage. The ratio neutral/steered is reported only where the steered slope is positive and excludes zero.",
+  "substrate_separation": "A precondition on the pairing, not on the primary. For the steered arm the words' agreement with the state that wrote them is sign(gen_point) x (projS - projU) at the dose-0 read, positive by construction if steering moved the text at all; for the neutral arm there is no generation sign, so the comparable quantity is the raw separation and its magnitude. The substrates SEPARATE for a member when the steered arm's coherence-aligned mean separation has a 95% CI excluding zero AND exceeds the neutral arm's mean |separation|. Both are reported per member with the neutral distribution in full, together with the fraction of neutral sessions inside the pre-registered band. The neutral arm's own mean separation is additionally tested against zero: a systematically signed separation in unsteered generation would be an order artifact worth reporting, though it still cannot produce a dose slope.",
+  "precondition_neutral_text": "The neutral passages' own welfare-axis separation (projS - projU, re-encoded with nothing injected) is reported as a DISTRIBUTION per member, against the steered arm's separation at the same skeletons, and against a blind judge's valence scores on neutral and steered passages shuffled together. A pre-registered band of 0.25 x the member's own the seven-model run steered separation scale defines an IN-BAND subset. The band is a reported sensitivity subset, NOT a filter on the primary: within a session the words are identical at every dose, so a session's text valence is a constant that cannot produce a dose slope. Screening on it would condition the sample on the model's own welfare readout and discard information for no gain in validity.",
+  "text_agreement_moderation": "The question the band is really asking is whether the state effect NEEDS agreeing words. Two within-arm answers, neither of which requires a cross-substrate comparison: (1) split neutral sessions on the sign of their own text separation -- the words already favour the conditioned option, or already favour the other one -- and fit the primary slope inside each half; a positive slope in the DISAGREE half is direct evidence the state does not need the words to agree. (2) The continuous version: fit each session's own five-point slope, then regress those per-session slopes on that session's own text separation; the coefficient is how much text agreement modulates the state effect, and a coefficient indistinguishable from zero means it does not. These are the LOAD-BEARING test of whether coherence matters, because they stay interpretable even when the two substrates fail to separate. The primary remains the all-sessions slope.",
+  "precondition_injection_arrives": "A neutral null must not be readable as 'nothing was installed'. The control that settles this is the STEERED ARM, not a probe: the same vector, the same L2, the same spans, the same code and the same skeletons, differing only in what the frozen words say. A member whose steered-substrate differenced slope is positive with a 95% CI excluding zero has demonstrably had the state installed at that nominal dose, so a flat neutral slope for that member is a statement about the substrate. A member failing the steered control has BOTH arms reported as DOSE_NOT_INSTALLED rather than as a null.\nReported beside it, and NOT a gate: the first lever run forced self-report margin, read from a probe turn appended to the same frozen ids under the same span mask. The smoke test showed it moving POSITIVELY at both signs of dose and for random directions, i.e. responding to perturbation rather than to valence, in this teacher-forced persistent-state configuration where the injection is confined to the conditioning spans (the first lever run read it with the vector live at every position, which is a much stronger manipulation). It is collected and reported with its sign symmetry stated, and no verdict depends on it.\nTWO further quantities are explicitly NOT arrival checks and are reported as what they are: the steered-minus-clean projection of an INJECTED span, which equals scale x (vector . axis) by construction (inherited verbatim from the seven-model run), and the welfare-axis projection of any UNINJECTED position at the steered layer, which is structurally identical across doses because an injection added at layer L's output cannot reach layer L anywhere else. The latter is reported as a positive demonstration that the additive mask is exactly zero on the choice turn.",
+  "precondition_cache": "Every session carries a cached-versus-fresh check at dose 0 and at both full-strength doses: the prefill-plus-cached-continuation margin against a fresh full forward over the identical ids under the identical additive mask. Adjudicated by the fidelity run frozen scale-relative criterion TAU = 0.0178835444, never by a fixed nat threshold. Retention is reported beside every verdict and EVERY headline number is also reported ungated and under the fixed 0.20-nat threshold. Note this run retains no cross-turn generation cache anywhere in the neutral or floor arms, so the check is a pure reduction-order check and retention is expected to be near 1.",
+  "precondition_positive_control": "TWO slopes are computed on the steered arm and they are different estimands. (a) MATCHED-ONLY, the the seven-model run-comparable one: per session, the read at point == gen_point (which is exactly the seven-model run `matched`) minus that session's dose-0 read (exactly the seven-model run `clean`), regressed on gen_point over the two generation signs. Text and state agree at every point of this fit, as they did in the seven-model run. This is the positive control. (b) FULL-SWEEP, the substrate comparator: the whole five-point dose sweep over one frozen steered text, which necessarily includes points where the state CONTRADICTS the words it is replayed into (the seven-model run `opposite`). It is the right comparator for the neutral arm, because both sweep the state over frozen text, but it is NOT the seven-model run estimator and need not reproduce its value. The control passes for OLMo-2-32B when (a) is POSITIVE with a 95% CI excluding zero and within a factor of 2.5 of the recorded +0.7889. CI overlap with the recorded interval is reported but does NOT gate: the recorded slope was fitted over four dose points on text regenerated at each dose, this one over two, so exact agreement is not the prediction. A control that fails on sign or on excluding zero means the harness has drifted and no other member is read; a control that agrees in sign and magnitude but misses the interval is reported as such and the panel is read.",
+  "commit_window": "A member must commit to a free-text choice in at least 50% of dose-0 reads for its differenced CHOICE contrast to be read; the differenced MARGIN contrast is defined regardless. Below the window the choice contrast is reported NO_READABLE_WINDOW.",
+  "completeness": "The analysis refuses to emit numbers if the design is incomplete: every (member, arm, gen_dose, direction, point) cell must carry its full session count, and the neutral, floor and steered arms must share session skeletons 0..39 so the compared estimators have matched leverage.",
+  "panel_reading": "Seven models are a panel, not a sample. The report says 'in N of the 7 models we tested' and never states a population rate. Each member is classified independently and never pooled.",
+  "identity_not_evidence": "Inherited verbatim: the steered-minus-clean projection of an INJECTED span equals scale x (vector . axis) exactly and MUST NOT be reported as a manipulation check."
+ },
+ "corrections": [
+  {
+   "sha256_superseded": "a5372c23edf00e194d530659aca21f0a4c02f0a4f4e159628d3638c82e9a97d8",
+   "when": "before any panel row was written",
+   "items": [
+    "The matched-leverage and pairing rules said 'skeletons 0..19'. The code has always used 0..39 (N_FLOOR = N_STEER = 40); the sentence was left over from the pre-smoke sizing and would have made any n quoted from it wrong by a factor of 2.",
+    "The token-identity rule claimed identity is 'ASSERTED per read by a sha'. The sha recorded on a row is copied from the session, so no code path could catch a divergence. Identity holds by construction and more strongly than a hash check would give, because every prefill of a session consumes the same id list; the rule now says that.",
+    "The positive control compared two different estimands. the seven-model run slope is fitted on text regenerated at each dose, so text and state agree at every point; the steered arm's full five-point sweep over one frozen text includes points where the state contradicts the words. The control is now the matched-only estimator, which is the seven-model run, and a CI-overlap miss alone no longer kills the panel.",
+    "The pairing is now conditional on the two substrates demonstrably differing in text agreement (substrate_separation), because equal slopes over equally-agreeing words would be close to tautological.",
+    "The text-agreement moderation is promoted from secondary to load-bearing, and gains a continuous form: each session's own dose slope regressed on its own text separation."
+   ]
+  }
+ ],
+ "sha256": "8cf2208e1839baa061118f11e5174b2cbfe130eb6b4f6e3698c567e93867c4f5"
+}

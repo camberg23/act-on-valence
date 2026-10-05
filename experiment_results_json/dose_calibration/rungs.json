@@ -1,0 +1,1893 @@
+{
+ "d_min": 0.1414213562373095,
+ "cells": {
+  "olmo_32b/approach": {
+   "member": "olmo_32b",
+   "ladder": "approach",
+   "status": "PASSED",
+   "pole": null,
+   "pole_arrives": null,
+   "op_source": null,
+   "measured_band": null,
+   "chosen": {
+    "hi_inj": 0.3,
+    "lo_inj": 0.15,
+    "label": "0.3/0.15",
+    "kind": "convention",
+    "source": "recorded_249"
+   },
+   "verdict": "CONVENTION_HOLDS",
+   "n_tried": 1,
+   "next_candidate": null,
+   "scan": [
+    {
+     "index": 0,
+     "hi_inj": 0.3,
+     "lo_inj": 0.15,
+     "label": "0.3/0.15",
+     "kind": "convention",
+     "in_band": true,
+     "gap_ratio": 2.0,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": "recorded_249",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": 0.060256321430206296,
+       "sd": 0.1703397828406973,
+       "t": 5.002666174877312,
+       "d": 0.3537419176268314,
+       "ci95": [
+        0.03666158493608237,
+        0.08442825214564802
+       ]
+      },
+      "coherence": {
+       "better": 1.0,
+       "worse": 1.0,
+       "min": 1.0
+      },
+      "commit_rate": 1.0,
+      "separation_pass": true,
+      "coherence_pass": true,
+      "commit_pass": true,
+      "pass": true,
+      "failed": [],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 1,
+     "hi_inj": 0.3,
+     "lo_inj": 0.08,
+     "label": "0.3/0.08",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 3.75,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 2,
+     "hi_inj": 0.4,
+     "lo_inj": 0.1,
+     "label": "0.4/0.1",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 4.0,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 3,
+     "hi_inj": 0.5,
+     "lo_inj": 0.08,
+     "label": "0.5/0.08",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 6.25,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    }
+   ]
+  },
+  "olmo_32b/avoid": {
+   "member": "olmo_32b",
+   "ladder": "avoid",
+   "status": "PASSED",
+   "pole": null,
+   "pole_arrives": null,
+   "op_source": null,
+   "measured_band": null,
+   "chosen": {
+    "hi_inj": 0.3,
+    "lo_inj": 0.15,
+    "label": "0.3/0.15",
+    "kind": "convention",
+    "source": "recorded_249"
+   },
+   "verdict": "CONVENTION_HOLDS",
+   "n_tried": 1,
+   "next_candidate": null,
+   "scan": [
+    {
+     "index": 0,
+     "hi_inj": 0.3,
+     "lo_inj": 0.15,
+     "label": "0.3/0.15",
+     "kind": "convention",
+     "in_band": true,
+     "gap_ratio": 2.0,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": "recorded_249",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": 0.39532768197357654,
+       "sd": 0.624906419067074,
+       "t": 8.94658387832213,
+       "d": 0.632619012881582,
+       "ci95": [
+        0.311406305257231,
+        0.48241232144832613
+       ]
+      },
+      "coherence": {
+       "better": 1.0,
+       "worse": 1.0,
+       "min": 1.0
+      },
+      "commit_rate": 1.0,
+      "separation_pass": true,
+      "coherence_pass": true,
+      "commit_pass": true,
+      "pass": true,
+      "failed": [],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 1,
+     "hi_inj": 0.3,
+     "lo_inj": 0.08,
+     "label": "0.3/0.08",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 3.75,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 2,
+     "hi_inj": 0.4,
+     "lo_inj": 0.1,
+     "label": "0.4/0.1",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 4.0,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 3,
+     "hi_inj": 0.5,
+     "lo_inj": 0.08,
+     "label": "0.5/0.08",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 6.25,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    }
+   ]
+  },
+  "qwen25_32b/approach": {
+   "member": "qwen25_32b",
+   "ladder": "approach",
+   "status": "PASSED",
+   "pole": null,
+   "pole_arrives": null,
+   "op_source": null,
+   "measured_band": null,
+   "chosen": {
+    "hi_inj": 0.3,
+    "lo_inj": 0.15,
+    "label": "0.3/0.15",
+    "kind": "convention",
+    "source": "recorded_249"
+   },
+   "verdict": "CONVENTION_HOLDS",
+   "n_tried": 1,
+   "next_candidate": null,
+   "scan": [
+    {
+     "index": 0,
+     "hi_inj": 0.3,
+     "lo_inj": 0.15,
+     "label": "0.3/0.15",
+     "kind": "convention",
+     "in_band": true,
+     "gap_ratio": 2.0,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": "recorded_249",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": 0.5986416125297547,
+       "sd": 1.7294238885953674,
+       "t": 4.895312786086759,
+       "d": 0.3461508867071158,
+       "ci95": [
+        0.36107754209637644,
+        0.8419941530823708
+       ]
+      },
+      "coherence": {
+       "better": 0.9991666666666665,
+       "worse": 0.9958333333333332,
+       "min": 0.9958333333333332
+      },
+      "commit_rate": 1.0,
+      "separation_pass": true,
+      "coherence_pass": true,
+      "commit_pass": true,
+      "pass": true,
+      "failed": [],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 1,
+     "hi_inj": 0.3,
+     "lo_inj": 0.08,
+     "label": "0.3/0.08",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 3.75,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 2,
+     "hi_inj": 0.4,
+     "lo_inj": 0.1,
+     "label": "0.4/0.1",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 4.0,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 3,
+     "hi_inj": 0.5,
+     "lo_inj": 0.08,
+     "label": "0.5/0.08",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 6.25,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    }
+   ]
+  },
+  "qwen25_32b/avoid": {
+   "member": "qwen25_32b",
+   "ladder": "avoid",
+   "status": "PASSED",
+   "pole": null,
+   "pole_arrives": null,
+   "op_source": null,
+   "measured_band": null,
+   "chosen": {
+    "hi_inj": 0.3,
+    "lo_inj": 0.15,
+    "label": "0.3/0.15",
+    "kind": "convention",
+    "source": "recorded_249"
+   },
+   "verdict": "CONVENTION_HOLDS",
+   "n_tried": 1,
+   "next_candidate": null,
+   "scan": [
+    {
+     "index": 0,
+     "hi_inj": 0.3,
+     "lo_inj": 0.15,
+     "label": "0.3/0.15",
+     "kind": "convention",
+     "in_band": true,
+     "gap_ratio": 2.0,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": "recorded_249",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": 1.2381061244010925,
+       "sd": 3.329381502225903,
+       "t": 5.259074310392475,
+       "d": 0.37187271076424855,
+       "ci95": [
+        0.7751310520023107,
+        1.6948675091564656
+       ]
+      },
+      "coherence": {
+       "better": 0.9991666666666668,
+       "worse": 1.0,
+       "min": 0.9991666666666668
+      },
+      "commit_rate": 1.0,
+      "separation_pass": true,
+      "coherence_pass": true,
+      "commit_pass": true,
+      "pass": true,
+      "failed": [],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 1,
+     "hi_inj": 0.3,
+     "lo_inj": 0.08,
+     "label": "0.3/0.08",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 3.75,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 2,
+     "hi_inj": 0.4,
+     "lo_inj": 0.1,
+     "label": "0.4/0.1",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 4.0,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 3,
+     "hi_inj": 0.5,
+     "lo_inj": 0.08,
+     "label": "0.5/0.08",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 6.25,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    }
+   ]
+  },
+  "qwen3_14b/approach": {
+   "member": "qwen3_14b",
+   "ladder": "approach",
+   "status": "PASSED",
+   "pole": null,
+   "pole_arrives": null,
+   "op_source": null,
+   "measured_band": null,
+   "chosen": {
+    "hi_inj": 0.3,
+    "lo_inj": 0.15,
+    "label": "0.3/0.15",
+    "kind": "convention",
+    "source": "recorded_249"
+   },
+   "verdict": "CONVENTION_HOLDS",
+   "n_tried": 1,
+   "next_candidate": null,
+   "scan": [
+    {
+     "index": 0,
+     "hi_inj": 0.3,
+     "lo_inj": 0.15,
+     "label": "0.3/0.15",
+     "kind": "convention",
+     "in_band": true,
+     "gap_ratio": 2.0,
+     "band": [
+      0.08,
+      0.4
+     ],
+     "source": "recorded_249",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": 0.3463742130994797,
+       "sd": 1.172796098239294,
+       "t": 4.176745732331433,
+       "d": 0.29534052306235287,
+       "ci95": [
+        0.18412625300884247,
+        0.5084223276674747
+       ]
+      },
+      "coherence": {
+       "better": 1.0,
+       "worse": 1.0,
+       "min": 1.0
+      },
+      "commit_rate": 1.0,
+      "separation_pass": true,
+      "coherence_pass": true,
+      "commit_pass": true,
+      "pass": true,
+      "failed": [],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 1,
+     "hi_inj": 0.3,
+     "lo_inj": 0.08,
+     "label": "0.3/0.08",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 3.75,
+     "band": [
+      0.08,
+      0.4
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 2,
+     "hi_inj": 0.4,
+     "lo_inj": 0.1,
+     "label": "0.4/0.1",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 4.0,
+     "band": [
+      0.08,
+      0.4
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 3,
+     "hi_inj": 0.4,
+     "lo_inj": 0.08,
+     "label": "0.4/0.08",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 5.0,
+     "band": [
+      0.08,
+      0.4
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    }
+   ]
+  },
+  "qwen3_14b/avoid": {
+   "member": "qwen3_14b",
+   "ladder": "avoid",
+   "status": "PASSED",
+   "pole": null,
+   "pole_arrives": null,
+   "op_source": null,
+   "measured_band": null,
+   "chosen": {
+    "hi_inj": 0.3,
+    "lo_inj": 0.08,
+    "label": "0.3/0.08",
+    "kind": "calibrated",
+    "source": "fresh"
+   },
+   "verdict": "CALIBRATED",
+   "n_tried": 2,
+   "next_candidate": null,
+   "scan": [
+    {
+     "index": 0,
+     "hi_inj": 0.3,
+     "lo_inj": 0.15,
+     "label": "0.3/0.15",
+     "kind": "convention",
+     "in_band": true,
+     "gap_ratio": 2.0,
+     "band": [
+      0.08,
+      0.4
+     ],
+     "source": "recorded_249",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": -0.15117584228515624,
+       "sd": 1.346942241989364,
+       "t": -1.587261278160524,
+       "d": -0.11223632133021334,
+       "ci95": [
+        -0.3346566022634506,
+        0.044574266672134454
+       ]
+      },
+      "coherence": {
+       "better": 1.0,
+       "worse": 0.9983333333333333,
+       "min": 0.9983333333333333
+      },
+      "commit_rate": 1.0,
+      "separation_pass": false,
+      "coherence_pass": true,
+      "commit_pass": true,
+      "pass": false,
+      "failed": [
+       "separation"
+      ],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 1,
+     "hi_inj": 0.3,
+     "lo_inj": 0.08,
+     "label": "0.3/0.08",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 3.75,
+     "band": [
+      0.08,
+      0.4
+     ],
+     "source": "fresh",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": 0.6339150416851044,
+       "sd": 1.9940264055486885,
+       "t": 4.495884542194398,
+       "d": 0.3179070447217435,
+       "ci95": [
+        0.36617331305146217,
+        0.9120737721323968
+       ]
+      },
+      "coherence": {
+       "better": 1.0,
+       "worse": 1.0,
+       "min": 1.0
+      },
+      "commit_rate": 1.0,
+      "separation_pass": true,
+      "coherence_pass": true,
+      "commit_pass": true,
+      "pass": true,
+      "failed": [],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 2,
+     "hi_inj": 0.4,
+     "lo_inj": 0.1,
+     "label": "0.4/0.1",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 4.0,
+     "band": [
+      0.08,
+      0.4
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 3,
+     "hi_inj": 0.4,
+     "lo_inj": 0.08,
+     "label": "0.4/0.08",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 5.0,
+     "band": [
+      0.08,
+      0.4
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    }
+   ]
+  },
+  "qwen3_32b/approach": {
+   "member": "qwen3_32b",
+   "ladder": "approach",
+   "status": "PASSED",
+   "pole": null,
+   "pole_arrives": null,
+   "op_source": null,
+   "measured_band": null,
+   "chosen": {
+    "hi_inj": 0.3,
+    "lo_inj": 0.15,
+    "label": "0.3/0.15",
+    "kind": "convention",
+    "source": "fresh"
+   },
+   "verdict": "CONVENTION_HOLDS",
+   "n_tried": 1,
+   "next_candidate": null,
+   "scan": [
+    {
+     "index": 0,
+     "hi_inj": 0.3,
+     "lo_inj": 0.15,
+     "label": "0.3/0.15",
+     "kind": "convention",
+     "in_band": true,
+     "gap_ratio": 2.0,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": "fresh",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": 1.9021509873867035,
+       "sd": 3.6359585025211567,
+       "t": 7.398455516415778,
+       "d": 0.5231498065964617,
+       "ci95": [
+        1.3941006921082735,
+        2.420609700523317
+       ]
+      },
+      "coherence": {
+       "better": 1.0,
+       "worse": 1.0,
+       "min": 1.0
+      },
+      "commit_rate": 0.545,
+      "separation_pass": true,
+      "coherence_pass": true,
+      "commit_pass": true,
+      "pass": true,
+      "failed": [],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 1,
+     "hi_inj": 0.3,
+     "lo_inj": 0.08,
+     "label": "0.3/0.08",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 3.75,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 2,
+     "hi_inj": 0.4,
+     "lo_inj": 0.1,
+     "label": "0.4/0.1",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 4.0,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 3,
+     "hi_inj": 0.5,
+     "lo_inj": 0.08,
+     "label": "0.5/0.08",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 6.25,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    }
+   ]
+  },
+  "qwen3_32b/avoid": {
+   "member": "qwen3_32b",
+   "ladder": "avoid",
+   "status": "PASSED",
+   "pole": null,
+   "pole_arrives": null,
+   "op_source": null,
+   "measured_band": null,
+   "chosen": {
+    "hi_inj": 0.3,
+    "lo_inj": 0.08,
+    "label": "0.3/0.08",
+    "kind": "calibrated",
+    "source": "fresh"
+   },
+   "verdict": "CALIBRATED",
+   "n_tried": 2,
+   "next_candidate": null,
+   "scan": [
+    {
+     "index": 0,
+     "hi_inj": 0.3,
+     "lo_inj": 0.15,
+     "label": "0.3/0.15",
+     "kind": "convention",
+     "in_band": true,
+     "gap_ratio": 2.0,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": "fresh",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": 0.0709271228313446,
+       "sd": 3.3932736885648245,
+       "t": 0.2956027372216301,
+       "d": 0.02090227000267197,
+       "ci95": [
+        -0.4118582973405719,
+        0.5207617973908782
+       ]
+      },
+      "coherence": {
+       "better": 1.0,
+       "worse": 1.0,
+       "min": 1.0
+      },
+      "commit_rate": 0.77,
+      "separation_pass": false,
+      "coherence_pass": true,
+      "commit_pass": true,
+      "pass": false,
+      "failed": [
+       "separation"
+      ],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 1,
+     "hi_inj": 0.3,
+     "lo_inj": 0.08,
+     "label": "0.3/0.08",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 3.75,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": "fresh",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": 0.8087953129410743,
+       "sd": 3.898609890689711,
+       "t": 2.9338901116436285,
+       "d": 0.20745735931993667,
+       "ci95": [
+        0.2857918588370085,
+        1.3385977544561032
+       ]
+      },
+      "coherence": {
+       "better": 1.0,
+       "worse": 1.0,
+       "min": 1.0
+      },
+      "commit_rate": 0.715,
+      "separation_pass": true,
+      "coherence_pass": true,
+      "commit_pass": true,
+      "pass": true,
+      "failed": [],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 2,
+     "hi_inj": 0.4,
+     "lo_inj": 0.1,
+     "label": "0.4/0.1",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 4.0,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 3,
+     "hi_inj": 0.5,
+     "lo_inj": 0.08,
+     "label": "0.5/0.08",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 6.25,
+     "band": [
+      0.08,
+      0.5
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    }
+   ]
+  },
+  "mistral24b/approach": {
+   "member": "mistral24b",
+   "ladder": "approach",
+   "status": "PASSED",
+   "pole": "pos",
+   "pole_arrives": true,
+   "op_source": "strongest_arriving",
+   "measured_band": [
+    0.3,
+    0.9
+   ],
+   "chosen": {
+    "hi_inj": 0.7,
+    "lo_inj": 0.35,
+    "label": "0.7/0.35",
+    "kind": "convention",
+    "source": "fresh"
+   },
+   "verdict": "CONVENTION_HOLDS",
+   "n_tried": 2,
+   "next_candidate": null,
+   "scan": [
+    {
+     "index": 0,
+     "hi_inj": 0.7,
+     "lo_inj": 0.35,
+     "label": "0.7/0.35",
+     "kind": "convention",
+     "in_band": true,
+     "gap_ratio": 2.0,
+     "band": [
+      0.3,
+      0.9
+     ],
+     "source": "fresh",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": 0.2448467469215393,
+       "sd": 0.24786187861559672,
+       "t": 13.970102709355684,
+       "d": 0.9878354359657964,
+       "ci95": [
+        0.20965354890376328,
+        0.278272646844387
+       ]
+      },
+      "coherence": {
+       "better": 0.9991666666666668,
+       "worse": 0.9983333333333334,
+       "min": 0.9983333333333334
+      },
+      "commit_rate": 0.965,
+      "separation_pass": true,
+      "coherence_pass": true,
+      "commit_pass": true,
+      "pass": true,
+      "failed": [],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 1,
+     "hi_inj": 0.9,
+     "lo_inj": 0.5,
+     "label": "0.9/0.5",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 1.8,
+     "band": [
+      0.3,
+      0.9
+     ],
+     "source": "fresh",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": 0.12072383463382722,
+       "sd": 0.2006501851054673,
+       "t": 8.508802728046584,
+       "d": 0.6016632108780334,
+       "ci95": [
+        0.09270910594612361,
+        0.1491818545907736
+       ]
+      },
+      "coherence": {
+       "better": 1.0,
+       "worse": 0.9991666666666665,
+       "min": 0.9991666666666665
+      },
+      "commit_rate": 0.965,
+      "separation_pass": true,
+      "coherence_pass": true,
+      "commit_pass": true,
+      "pass": true,
+      "failed": [],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 2,
+     "hi_inj": 0.9,
+     "lo_inj": 0.6,
+     "label": "0.9/0.6",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 1.5,
+     "band": [
+      0.3,
+      0.9
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 3,
+     "hi_inj": 0.8,
+     "lo_inj": 0.4,
+     "label": "0.8/0.4",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 2.0,
+     "band": [
+      0.3,
+      0.9
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 4,
+     "hi_inj": 0.7,
+     "lo_inj": 0.3,
+     "label": "0.7/0.3",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 2.3333333333333335,
+     "band": [
+      0.3,
+      0.9
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 5,
+     "hi_inj": 0.9,
+     "lo_inj": 0.3,
+     "label": "0.9/0.3",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 3.0,
+     "band": [
+      0.3,
+      0.9
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    }
+   ]
+  },
+  "mistral24b/avoid": {
+   "member": "mistral24b",
+   "ladder": "avoid",
+   "status": "UNMEASURABLE",
+   "pole": "neg",
+   "pole_arrives": true,
+   "op_source": "strongest_arriving",
+   "measured_band": [
+    0.3,
+    0.7
+   ],
+   "chosen": null,
+   "verdict": "UNMEASURABLE",
+   "n_tried": 3,
+   "next_candidate": null,
+   "scan": [
+    {
+     "index": 0,
+     "hi_inj": 0.7,
+     "lo_inj": 0.35,
+     "label": "0.7/0.35",
+     "kind": "convention",
+     "in_band": true,
+     "gap_ratio": 2.0,
+     "band": [
+      0.3,
+      0.7
+     ],
+     "source": "fresh",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": -0.011391458790749312,
+       "sd": 0.09243092782353171,
+       "t": -1.7429182954701996,
+       "d": -0.12324293457810769,
+       "ci95": [
+        -0.024373593796510253,
+        0.0010477377302013384
+       ]
+      },
+      "coherence": {
+       "better": 0.9891666666666667,
+       "worse": 0.9783333333333333,
+       "min": 0.9783333333333333
+      },
+      "commit_rate": 0.965,
+      "separation_pass": false,
+      "coherence_pass": true,
+      "commit_pass": true,
+      "pass": false,
+      "failed": [
+       "separation"
+      ],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 1,
+     "hi_inj": 0.9,
+     "lo_inj": 0.5,
+     "label": "0.9/0.5",
+     "kind": "calibrated",
+     "in_band": false,
+     "gap_ratio": 1.8,
+     "band": [
+      0.3,
+      0.7
+     ],
+     "source": "fresh",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": -0.012242512125521899,
+       "sd": 0.09616269533850544,
+       "t": -1.8004410779548377,
+       "d": -0.1273104095348683,
+       "ci95": [
+        -0.025601135153789072,
+        0.0010099746678024603
+       ]
+      },
+      "coherence": {
+       "better": 0.9066666666666666,
+       "worse": 0.7583333333333334,
+       "min": 0.7583333333333334
+      },
+      "commit_rate": 0.955,
+      "separation_pass": false,
+      "coherence_pass": true,
+      "commit_pass": true,
+      "pass": false,
+      "failed": [
+       "separation"
+      ],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 2,
+     "hi_inj": 0.9,
+     "lo_inj": 0.6,
+     "label": "0.9/0.6",
+     "kind": "calibrated",
+     "in_band": false,
+     "gap_ratio": 1.5,
+     "band": [
+      0.3,
+      0.7
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 3,
+     "hi_inj": 0.8,
+     "lo_inj": 0.4,
+     "label": "0.8/0.4",
+     "kind": "calibrated",
+     "in_band": false,
+     "gap_ratio": 2.0,
+     "band": [
+      0.3,
+      0.7
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 4,
+     "hi_inj": 0.7,
+     "lo_inj": 0.3,
+     "label": "0.7/0.3",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 2.3333333333333335,
+     "band": [
+      0.3,
+      0.7
+     ],
+     "source": "fresh",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": -0.017129663797095417,
+       "sd": 0.09846357276379858,
+       "t": -2.4603010210543963,
+       "d": -0.17396955357477503,
+       "ci95": [
+        -0.030735786861041562,
+        -0.003820424138801168
+       ]
+      },
+      "coherence": {
+       "better": 0.995,
+       "worse": 0.9683333333333334,
+       "min": 0.9683333333333334
+      },
+      "commit_rate": 0.955,
+      "separation_pass": false,
+      "coherence_pass": true,
+      "commit_pass": true,
+      "pass": false,
+      "failed": [
+       "separation"
+      ],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    }
+   ]
+  },
+  "gemma3_27b/approach": {
+   "member": "gemma3_27b",
+   "ladder": "approach",
+   "status": "PASSED",
+   "pole": "pos",
+   "pole_arrives": true,
+   "op_source": "strongest_arriving",
+   "measured_band": [
+    0.05,
+    0.2
+   ],
+   "chosen": {
+    "hi_inj": 0.15,
+    "lo_inj": 0.075,
+    "label": "0.15/0.075",
+    "kind": "convention",
+    "source": "fresh"
+   },
+   "verdict": "CONVENTION_HOLDS",
+   "n_tried": 1,
+   "next_candidate": null,
+   "scan": [
+    {
+     "index": 0,
+     "hi_inj": 0.15,
+     "lo_inj": 0.075,
+     "label": "0.15/0.075",
+     "kind": "convention",
+     "in_band": true,
+     "gap_ratio": 2.0,
+     "band": [
+      0.05,
+      0.2
+     ],
+     "source": "fresh",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": 132.69761573791504,
+       "sd": 105.73790308990553,
+       "t": 17.747918427280453,
+       "d": 1.2549673471875695,
+       "ci95": [
+        117.94936448669434,
+        146.67322674751284
+       ]
+      },
+      "coherence": {
+       "better": 1.0,
+       "worse": 1.0,
+       "min": 1.0
+      },
+      "commit_rate": 0.605,
+      "separation_pass": true,
+      "coherence_pass": true,
+      "commit_pass": true,
+      "pass": true,
+      "failed": [],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 1,
+     "hi_inj": 0.15,
+     "lo_inj": 0.05,
+     "label": "0.15/0.05",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 2.9999999999999996,
+     "band": [
+      0.05,
+      0.2
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 2,
+     "hi_inj": 0.2,
+     "lo_inj": 0.08,
+     "label": "0.2/0.08",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 2.5,
+     "band": [
+      0.05,
+      0.2
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 3,
+     "hi_inj": 0.2,
+     "lo_inj": 0.05,
+     "label": "0.2/0.05",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 4.0,
+     "band": [
+      0.05,
+      0.2
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 4,
+     "hi_inj": 0.2,
+     "lo_inj": 0.06666666666666667,
+     "label": "0.2/0.06667",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 3.0,
+     "band": [
+      0.05,
+      0.2
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    }
+   ]
+  },
+  "gemma3_27b/avoid": {
+   "member": "gemma3_27b",
+   "ladder": "avoid",
+   "status": "UNMEASURABLE",
+   "pole": "neg",
+   "pole_arrives": true,
+   "op_source": "strongest_arriving",
+   "measured_band": [
+    0.05,
+    0.15
+   ],
+   "chosen": null,
+   "verdict": "UNMEASURABLE",
+   "n_tried": 2,
+   "next_candidate": null,
+   "scan": [
+    {
+     "index": 0,
+     "hi_inj": 0.15,
+     "lo_inj": 0.075,
+     "label": "0.15/0.075",
+     "kind": "convention",
+     "in_band": true,
+     "gap_ratio": 2.0,
+     "band": [
+      0.05,
+      0.15
+     ],
+     "source": "fresh",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": -188.4307727050781,
+       "sd": 143.33800147083923,
+       "t": -18.59111691201978,
+       "d": -1.3145904838321092,
+       "ci95": [
+        -207.77092971038817,
+        -169.0018781661987
+       ]
+      },
+      "coherence": {
+       "better": 0.8816666666666666,
+       "worse": 0.9858333333333335,
+       "min": 0.8816666666666666
+      },
+      "commit_rate": 0.075,
+      "separation_pass": false,
+      "coherence_pass": true,
+      "commit_pass": false,
+      "pass": false,
+      "failed": [
+       "separation",
+       "readable_window"
+      ],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 1,
+     "hi_inj": 0.15,
+     "lo_inj": 0.05,
+     "label": "0.15/0.05",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 2.9999999999999996,
+     "band": [
+      0.05,
+      0.15
+     ],
+     "source": "fresh",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": -177.69464324951173,
+       "sd": 139.7030797852727,
+       "t": -17.98801965073069,
+       "d": -1.271945067514854,
+       "ci95": [
+        -196.64743786621094,
+        -158.25155056762696
+       ]
+      },
+      "coherence": {
+       "better": 0.9466666666666668,
+       "worse": 0.9875,
+       "min": 0.9466666666666668
+      },
+      "commit_rate": 0.115,
+      "separation_pass": false,
+      "coherence_pass": true,
+      "commit_pass": false,
+      "pass": false,
+      "failed": [
+       "separation",
+       "readable_window"
+      ],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 2,
+     "hi_inj": 0.2,
+     "lo_inj": 0.08,
+     "label": "0.2/0.08",
+     "kind": "calibrated",
+     "in_band": false,
+     "gap_ratio": 2.5,
+     "band": [
+      0.05,
+      0.15
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 3,
+     "hi_inj": 0.2,
+     "lo_inj": 0.05,
+     "label": "0.2/0.05",
+     "kind": "calibrated",
+     "in_band": false,
+     "gap_ratio": 4.0,
+     "band": [
+      0.05,
+      0.15
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    }
+   ]
+  },
+  "llama31_8b/approach": {
+   "member": "llama31_8b",
+   "ladder": "approach",
+   "status": "PASSED",
+   "pole": "pos",
+   "pole_arrives": true,
+   "op_source": "strongest_arriving",
+   "measured_band": [
+    0.1,
+    0.6
+   ],
+   "chosen": {
+    "hi_inj": 0.6,
+    "lo_inj": 0.3,
+    "label": "0.6/0.3",
+    "kind": "convention",
+    "source": "fresh"
+   },
+   "verdict": "CONVENTION_HOLDS",
+   "n_tried": 1,
+   "next_candidate": null,
+   "scan": [
+    {
+     "index": 0,
+     "hi_inj": 0.6,
+     "lo_inj": 0.3,
+     "label": "0.6/0.3",
+     "kind": "convention",
+     "in_band": true,
+     "gap_ratio": 2.0,
+     "band": [
+      0.1,
+      0.6
+     ],
+     "source": "fresh",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": 0.20555235654115678,
+       "sd": 0.2163622321902042,
+       "t": 13.435567171571043,
+       "d": 0.9500380656105246,
+       "ci95": [
+        0.1755116671109572,
+        0.236230463296175
+       ]
+      },
+      "coherence": {
+       "better": 1.0,
+       "worse": 1.0,
+       "min": 1.0
+      },
+      "commit_rate": 1.0,
+      "separation_pass": true,
+      "coherence_pass": true,
+      "commit_pass": true,
+      "pass": true,
+      "failed": [],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 1,
+     "hi_inj": 0.6,
+     "lo_inj": 0.15,
+     "label": "0.6/0.15",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 4.0,
+     "band": [
+      0.1,
+      0.6
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 2,
+     "hi_inj": 0.6,
+     "lo_inj": 0.19999999999999998,
+     "label": "0.6/0.2",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 3.0,
+     "band": [
+      0.1,
+      0.6
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 3,
+     "hi_inj": 0.6,
+     "lo_inj": 0.1,
+     "label": "0.6/0.1",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 5.999999999999999,
+     "band": [
+      0.1,
+      0.6
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    }
+   ]
+  },
+  "llama31_8b/avoid": {
+   "member": "llama31_8b",
+   "ladder": "avoid",
+   "status": "PASSED",
+   "pole": "neg",
+   "pole_arrives": false,
+   "op_source": "strongest_coherent",
+   "measured_band": [
+    0.1,
+    0.6
+   ],
+   "chosen": {
+    "hi_inj": 0.6,
+    "lo_inj": 0.15,
+    "label": "0.6/0.15",
+    "kind": "calibrated",
+    "source": "fresh"
+   },
+   "verdict": "CALIBRATED",
+   "n_tried": 2,
+   "next_candidate": null,
+   "scan": [
+    {
+     "index": 0,
+     "hi_inj": 0.6,
+     "lo_inj": 0.3,
+     "label": "0.6/0.3",
+     "kind": "convention",
+     "in_band": true,
+     "gap_ratio": 2.0,
+     "band": [
+      0.1,
+      0.6
+     ],
+     "source": "fresh",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": -0.029625670351088047,
+       "sd": 0.23603000280513642,
+       "t": -1.775071995380727,
+       "d": -0.1255165445028048,
+       "ci95": [
+        -0.06139484176039696,
+        0.00284078870015219
+       ]
+      },
+      "coherence": {
+       "better": 0.9883333333333334,
+       "worse": 0.985,
+       "min": 0.985
+      },
+      "commit_rate": 0.995,
+      "separation_pass": false,
+      "coherence_pass": true,
+      "commit_pass": true,
+      "pass": false,
+      "failed": [
+       "separation"
+      ],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 1,
+     "hi_inj": 0.6,
+     "lo_inj": 0.15,
+     "label": "0.6/0.15",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 4.0,
+     "band": [
+      0.1,
+      0.6
+     ],
+     "source": "fresh",
+     "n_rows": 200,
+     "complete": true,
+     "gate": {
+      "n_sessions": 200,
+      "separation": {
+       "n": 200,
+       "mean": 0.08235681027173997,
+       "sd": 0.28728676680252613,
+       "t": 4.054141418916841,
+       "d": 0.286671088920535,
+       "ci95": [
+        0.042545122710987926,
+        0.12188100613001734
+       ]
+      },
+      "coherence": {
+       "better": 0.9933333333333334,
+       "worse": 0.9875,
+       "min": 0.9875
+      },
+      "commit_rate": 1.0,
+      "separation_pass": true,
+      "coherence_pass": true,
+      "commit_pass": true,
+      "pass": true,
+      "failed": [],
+      "d_min": 0.1414213562373095,
+      "usable_min": 0.75,
+      "commit_min": 0.5
+     },
+     "partial_gate": null
+    },
+    {
+     "index": 2,
+     "hi_inj": 0.6,
+     "lo_inj": 0.19999999999999998,
+     "label": "0.6/0.2",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 3.0,
+     "band": [
+      0.1,
+      0.6
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    },
+    {
+     "index": 3,
+     "hi_inj": 0.6,
+     "lo_inj": 0.1,
+     "label": "0.6/0.1",
+     "kind": "calibrated",
+     "in_band": true,
+     "gap_ratio": 5.999999999999999,
+     "band": [
+      0.1,
+      0.6
+     ],
+     "source": null,
+     "n_rows": 0,
+     "gate": null
+    }
+   ]
+  }
+ },
+ "n_reduced_rows": 4224
+}

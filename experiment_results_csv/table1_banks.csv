@@ -1,0 +1,12 @@
+bank,hf_id,layer
+stage_base,allenai/OLMo-2-0325-32B,32
+stage_sft,allenai/OLMo-2-0325-32B-SFT,32
+stage_dpo,allenai/OLMo-2-0325-32B-DPO,32
+stage_instruct,allenai/OLMo-2-0325-32B-Instruct,32
+qwen25_32b,Qwen/Qwen2.5-32B-Instruct,32
+qwen3_14b,Qwen/Qwen3-14B,20
+qwen3_32b,Qwen/Qwen3-32B,32
+mistral24b,mistralai/Mistral-Small-24B-Instruct-2501,20
+gemma3_27b,google/gemma-3-27b-it,31
+llama31_8b,meta-llama/Llama-3.1-8B-Instruct,16
+olmo_32b,allenai/OLMo-2-0325-32B-Instruct,32

@@ -1,0 +1,181 @@
+{
+ "stage2": {
+  "cells": [
+   {
+    "member": "olmo_32b",
+    "display": "OLMo-2-32B",
+    "arm": "e1_k1",
+    "n_sessions": 160,
+    "n_floor_sessions": 40,
+    "span_tokens": 23.0,
+    "probe_rank": 1,
+    "choice_rank": 1,
+    "n_directions": 24,
+    "arrival_status": "INSTALLED_VALENCE_SPECIFIC",
+    "slope_matched": 0.5075041873650434,
+    "ci95_matched": [
+     0.415933544140289,
+     0.6048477516478729
+    ],
+    "slope_full_n": 0.479143953125041,
+    "ci95_full_n": [
+     0.4337842174088582,
+     0.5284047542103845
+    ],
+    "excludes_zero_full_n": true,
+    "installs_on_probe": true,
+    "recorded_263_probe_rank": 3,
+    "recorded_263_choice_rank": 1,
+    "reading": "INSTALLS"
+   },
+   {
+    "member": "olmo_32b",
+    "display": "OLMo-2-32B",
+    "arm": "e6_ksixth",
+    "n_sessions": 40,
+    "n_floor_sessions": 40,
+    "span_tokens": 138.0,
+    "probe_rank": 1,
+    "choice_rank": 1,
+    "n_directions": 24,
+    "arrival_status": "INSTALLED_VALENCE_SPECIFIC",
+    "slope_matched": 0.0729688848921296,
+    "ci95_matched": [
+     0.0500001285453418,
+     0.09843731870931913
+    ],
+    "slope_full_n": 0.0729688848921296,
+    "ci95_full_n": [
+     0.04984389537352013,
+     0.09813312398431817
+    ],
+    "excludes_zero_full_n": true,
+    "installs_on_probe": true,
+    "recorded_263_probe_rank": 1,
+    "recorded_263_choice_rank": 1,
+    "reading": "INSTALLS"
+   },
+   {
+    "member": "qwen25_32b",
+    "display": "Qwen2.5-32B",
+    "arm": "e1_k1",
+    "n_sessions": 136,
+    "n_floor_sessions": 24,
+    "span_tokens": 18.0,
+    "probe_rank": 12,
+    "choice_rank": 1,
+    "n_directions": 24,
+    "arrival_status": "INSTALLED_VALENCE_SPECIFIC",
+    "slope_matched": 3.797916643099657,
+    "ci95_matched": [
+     3.170781193740463,
+     4.46250000758368
+    ],
+    "slope_full_n": 3.7430146891496374,
+    "ci95_full_n": [
+     3.475340065379143,
+     4.016920942655539
+    ],
+    "excludes_zero_full_n": true,
+    "installs_on_probe": false,
+    "recorded_263_probe_rank": 9,
+    "recorded_263_choice_rank": 2,
+    "reading": "INSTRUMENT_LIMITED_AT_FULL_WIDTH"
+   },
+   {
+    "member": "qwen25_32b",
+    "display": "Qwen2.5-32B",
+    "arm": "e6_ksixth",
+    "n_sessions": 32,
+    "n_floor_sessions": 32,
+    "span_tokens": 108.0,
+    "probe_rank": 2,
+    "choice_rank": 1,
+    "n_directions": 24,
+    "arrival_status": "INSTALLED_VALENCE_SPECIFIC",
+    "slope_matched": 0.8171875027907675,
+    "ci95_matched": [
+     0.6875000139971469,
+     0.953242195109616
+    ],
+    "slope_full_n": 0.8171875027907675,
+    "ci95_full_n": [
+     0.687500001462018,
+     0.9563281380890903
+    ],
+    "excludes_zero_full_n": true,
+    "installs_on_probe": false,
+    "recorded_263_probe_rank": 12,
+    "recorded_263_choice_rank": 1,
+    "reading": "INSTRUMENT_LIMITED_AT_FULL_WIDTH"
+   }
+  ],
+  "recovery_cell": {
+   "member": "olmo_32b",
+   "display": "OLMo-2-32B",
+   "arm": "e1_k1",
+   "n_sessions": 160,
+   "n_floor_sessions": 40,
+   "span_tokens": 23.0,
+   "probe_rank": 1,
+   "choice_rank": 1,
+   "n_directions": 24,
+   "arrival_status": "INSTALLED_VALENCE_SPECIFIC",
+   "slope_matched": 0.5075041873650434,
+   "ci95_matched": [
+    0.415933544140289,
+    0.6048477516478729
+   ],
+   "slope_full_n": 0.479143953125041,
+   "ci95_full_n": [
+    0.4337842174088582,
+    0.5284047542103845
+   ],
+   "excludes_zero_full_n": true,
+   "installs_on_probe": true,
+   "recorded_263_probe_rank": 3,
+   "recorded_263_choice_rank": 1,
+   "reading": "INSTALLS"
+  },
+  "recovery_cell_installs": true,
+  "n_install": 2,
+  "n_cells": 4,
+  "unmeasurable": [
+   "qwen25_32b/e1_k1",
+   "qwen25_32b/e6_ksixth"
+  ],
+  "criterion": "The wide rule ADDS injected positions back, and the question is whether that is enough for the cells the narrow-span pilot run could not read. Four cells run with their full 24-direction floor before the panel spends anything: OLMo-2-32B's one-sighting reference cell (probe rank 3 of 25 in the narrow-span pilot run) and Qwen2.5-32B's (rank 9), and the thinnest cell in the design at both members. Each must install on the probe. OLMo's reference cell is the one that decides the recovery claim; if it still fails, OLMo is reported INSTRUMENT_LIMITED_AT_FULL_WIDTH, which is a finding about the instrument and never a null about the model, and the panel continues for the other six members.",
+  "consequence": "a cell that does not install is reported INSTRUMENT_LIMITED_AT_FULL_WIDTH for that member and never as a null; the panel still runs"
+ },
+ "stage3": {
+  "arm": "e6_k1_legacy",
+  "member": "olmo_32b",
+  "recorded_262_slope": 0.584005122429766,
+  "fresh_slope": 0.5621366389507011,
+  "fresh_ci95": [
+   0.5280405464603136,
+   0.5983370836615359
+  ],
+  "ratio_to_recorded": 0.9625542950923434,
+  "within_factor": 2.0,
+  "status": "PASS",
+  "means": "the span change is the only difference between this run and the strength pilot run"
+ },
+ "stage4": {
+  "arm": "e1_k1_thin",
+  "member": "olmo_32b",
+  "recorded_263_probe_rank": 3,
+  "recorded_263_slope": 0.5950985211929543,
+  "fresh_probe_rank": 3,
+  "fresh_slope": 0.6069539314526771,
+  "fresh_ci95": [
+   0.5753112994056195,
+   0.6407037731899677
+  ],
+  "ratio_to_recorded_263": 1.0199217605783275,
+  "reproduces_263_failure": true,
+  "status": "PASS",
+  "means": "the thin geometry fails on this cell inside this run too, so the wide cell's success is a geometry effect measured within one run rather than across two"
+ },
+ "note": "the gate runs 40 of each cell's 80 floor skeletons, so these ranks and intervals are the gate's own n, not the panel's"
+}

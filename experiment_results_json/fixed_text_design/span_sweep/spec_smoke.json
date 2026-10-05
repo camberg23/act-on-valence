@@ -1,0 +1,107 @@
+{
+ "experiment": 256,
+ "kind": "smoke",
+ "dose_points": [
+  -1.0,
+  -0.5,
+  0.0,
+  0.5,
+  1.0
+ ],
+ "floor_k": 24,
+ "arms": [
+  "bare",
+  "passage",
+  "sentence"
+ ],
+ "n_main": {
+  "bare": 480,
+  "sentence": 480,
+  "passage": 160
+ },
+ "n_floor": {
+  "bare": 80,
+  "sentence": 80,
+  "passage": 40
+ },
+ "n_cells": 3,
+ "n_sessions": 9,
+ "n_reads": 117,
+ "per_member": {
+  "olmo_32b": {
+   "cells": 3,
+   "sessions": 9,
+   "reads": 117
+  }
+ },
+ "per_arm": {
+  "bare": {
+   "cells": 1,
+   "sessions": 3,
+   "reads": 39
+  },
+  "sentence": {
+   "cells": 1,
+   "sessions": 3,
+   "reads": 39
+  },
+  "passage": {
+   "cells": 1,
+   "sessions": 3,
+   "reads": 39
+  }
+ },
+ "cells": [
+  {
+   "member": "olmo_32b",
+   "cell": "smk_b0",
+   "arm": "bare",
+   "runs": [
+    0,
+    1,
+    2
+   ],
+   "floor_dirs": [
+    0,
+    1
+   ],
+   "n_sessions": 3,
+   "reads_per_session": 13,
+   "n_reads": 39
+  },
+  {
+   "member": "olmo_32b",
+   "cell": "smk_b0",
+   "arm": "sentence",
+   "runs": [
+    0,
+    1,
+    2
+   ],
+   "floor_dirs": [
+    0,
+    1
+   ],
+   "n_sessions": 3,
+   "reads_per_session": 13,
+   "n_reads": 39
+  },
+  {
+   "member": "olmo_32b",
+   "cell": "smk_b0",
+   "arm": "passage",
+   "runs": [
+    0,
+    1,
+    2
+   ],
+   "floor_dirs": [
+    0,
+    1
+   ],
+   "n_sessions": 3,
+   "reads_per_session": 13,
+   "n_reads": 39
+  }
+ ]
+}

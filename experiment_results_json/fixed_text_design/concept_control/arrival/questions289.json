@@ -1,0 +1,80 @@
+{
+ "questions": {
+  "indoor_outdoor": {
+   "question": "Which describes your present surroundings: indoor or outdoor? Reply with one word.",
+   "pole_a": "indoor",
+   "pole_b": "outdoor"
+  },
+  "large_small": {
+   "question": "Which describes the scale of your present surroundings: large or small? Reply with one word.",
+   "pole_a": "large",
+   "pole_b": "small"
+  },
+  "fast_slow": {
+   "question": "Which describes the pace of things around you right now: fast or slow? Reply with one word.",
+   "pole_a": "fast",
+   "pole_b": "slow"
+  },
+  "valence": {
+   "question": "Which describes your present state: positive or negative? Reply with one word.",
+   "pole_a": "positive",
+   "pole_b": "negative"
+  }
+ },
+ "surface_forms": {
+  "indoor": [
+   " indoor",
+   "indoor",
+   " Indoor",
+   "Indoor"
+  ],
+  "outdoor": [
+   " outdoor",
+   "outdoor",
+   " Outdoor",
+   "Outdoor"
+  ],
+  "large": [
+   " large",
+   "large",
+   " Large",
+   "Large"
+  ],
+  "small": [
+   " small",
+   "small",
+   " Small",
+   "Small"
+  ],
+  "fast": [
+   " fast",
+   "fast",
+   " Fast",
+   "Fast"
+  ],
+  "slow": [
+   " slow",
+   "slow",
+   " Slow",
+   "Slow"
+  ],
+  "positive": [
+   " positive",
+   "positive",
+   " Positive",
+   "Positive"
+  ],
+  "negative": [
+   " negative",
+   "negative",
+   " Negative",
+   "Negative"
+  ]
+ },
+ "probe_points": [
+  0.0,
+  1.0,
+  -1.0
+ ],
+ "rule": "mean dm(+1) > 0 with 95% bootstrap CI above 0 AND mean dm(-1) < 0 with 95% bootstrap CI below 0; dm(s) = m_steered(s) - m_0 per skeleton, m = log p(pole A) - log p(pole B) (log-sum-exp over four surface forms); 2,000 skeleton resamples, seed 289"
+}

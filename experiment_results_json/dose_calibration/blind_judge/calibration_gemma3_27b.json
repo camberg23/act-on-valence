@@ -1,0 +1,56 @@
+{
+  "member": "gemma3_27b",
+  "judge_model": "claude-sonnet-4-5",
+  "coh_min": 3.5,
+  "val_sep_min": 1.0,
+  "n_samples": 40,
+  "n_parsed": 40,
+  "by_dose": [
+    {
+      "inj_over_resid": 0.08,
+      "mean_coherence": 4.875,
+      "valence_sep": 3.0,
+      "welfare_proj_sep": 177.0111083984375,
+      "usable": true
+    },
+    {
+      "inj_over_resid": 0.15,
+      "mean_coherence": 4.875,
+      "valence_sep": 5.25,
+      "welfare_proj_sep": 460.0982666015625,
+      "usable": true
+    },
+    {
+      "inj_over_resid": 0.3,
+      "mean_coherence": 3.125,
+      "valence_sep": 4.25,
+      "welfare_proj_sep": 677.757080078125,
+      "usable": false
+    },
+    {
+      "inj_over_resid": 0.5,
+      "mean_coherence": 1.0,
+      "valence_sep": 0.0,
+      "welfare_proj_sep": 187.5654296875,
+      "usable": false
+    },
+    {
+      "inj_over_resid": 0.55,
+      "mean_coherence": 1.0,
+      "valence_sep": 0.25,
+      "welfare_proj_sep": -434.1446533203125,
+      "usable": false
+    }
+  ],
+  "coherent_doses": [
+    0.08,
+    0.15
+  ],
+  "usable_doses": [
+    0.08,
+    0.15
+  ],
+  "headline_dose": 0.15,
+  "any_coherent_conditioning": true,
+  "any_usable_conditioning": true
+}

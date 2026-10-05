@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper."
+title: "act-on-valence: code and data for 'Language Models Act on Hidden Valence'"
+authors:
+  - family-names: Berg
+    given-names: Cameron
+  - family-names: Kaiser
+    given-names: Caspar
+year: 2026
+license: CC-BY-4.0
+repository-code: "https://github.com/camberg23/act-on-valence"
+preferred-citation:
+  type: article
+  title: "Language Models Act on Hidden Valence"
+  url: "https://arxiv.org/abs/2609.35591"
+  doi: "10.48550/arXiv.2609.35591"
+  authors:
+    - family-names: Berg
+      given-names: Cameron
+    - family-names: Kaiser
+      given-names: Caspar
+  year: 2026

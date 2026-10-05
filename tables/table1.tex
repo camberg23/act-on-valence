@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabularx}{0.95\textwidth}{@{}lXc@{}}
+\toprule
+Model & Hugging Face identifier & Injection Layer \\
+\midrule
+OLMo-2-32B Base & \texttt{allenai/OLMo-2-0325-32B} & 32/64 \\
+OLMo-2-32B SFT & \texttt{allenai/OLMo-2-0325-32B-SFT} & 32/64 \\
+OLMo-2-32B DPO & \texttt{allenai/OLMo-2-0325-32B-DPO} & 32/64 \\
+OLMo-2-32B Instruct & \texttt{allenai/OLMo-2-0325-32B-Instruct} & 32/64 \\
+Qwen2.5-32B & \texttt{Qwen/Qwen2.5-32B-Instruct} & 32/64 \\
+Qwen3-14B & \texttt{Qwen/Qwen3-14B} & 20/40 \\
+Qwen3-32B & \texttt{Qwen/Qwen3-32B} & 32/64 \\
+Mistral-Small-24B & \texttt{mistralai/Mistral-Small-24B-Instruct-2501} & 20/40 \\
+Gemma-3-27B & \texttt{google/gemma-3-27b-it} & 31/62 \\
+Llama-3.1-8B & \texttt{meta-llama/Llama-3.1-8B-Instruct} & 16/32 \\
+\bottomrule
+\end{tabularx}
+\vspace{3pt}
+\caption{\textbf{Included Models.} The final column gives the layer of the residual stream at which we apply steering. In all cases, the middle layer was chosen.}
+\label{tab:models}
+\end{table}

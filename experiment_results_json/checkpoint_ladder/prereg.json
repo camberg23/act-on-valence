@@ -1,0 +1,89 @@
+{
+ "sha256": "29eaf3703ea82c47418678bf08e14217bbc7894a448cce836371515a93c0fb98",
+ "prereg": {
+  "experiment": 252,
+  "question": "At which point of OLMo-2-32B's training lineage does the persistent-state channel begin carrying valence into committed choice, with the visible text held byte-identical across stages?",
+  "stages": {
+   "base": "allenai/OLMo-2-0325-32B",
+   "sft": "allenai/OLMo-2-0325-32B-SFT",
+   "dpo": "allenai/OLMo-2-0325-32B-DPO",
+   "instruct": "allenai/OLMo-2-0325-32B-Instruct"
+  },
+  "generating_stage": "instruct",
+  "layer": 32,
+  "arms": [
+   "fixed",
+   "own"
+  ],
+  "dose_grid": [
+   -1.0,
+   -0.5,
+   0.0,
+   0.5,
+   1.0
+  ],
+  "nonzero_doses": [
+   -1.0,
+   -0.5,
+   0.5,
+   1.0
+  ],
+  "op_inj": 0.3,
+  "n_sessions_per_cell": 20,
+  "n_exposures": 6,
+  "max_cond_tokens": 70,
+  "random_k": 8,
+  "random_pool_seed": 20260723,
+  "random_pool_k": 16,
+  "rank_p_floor": 0.1111111111111111,
+  "tau": 0.0178835444,
+  "recorded_instruct_slope": 0.38,
+  "recorded_instruct_ci95": [
+   0.276520398348375,
+   0.48194631014995093
+  ],
+  "text_channel_ladder": {
+   "base": {
+    "mean": 0.37114234012551606,
+    "lo": 0.14636060685646954,
+    "hi": 0.5971808315612724,
+    "n": 160
+   },
+   "sft": {
+    "mean": 1.7309058725833892,
+    "lo": 1.4382783696055412,
+    "hi": 2.0191996406018733,
+    "n": 160
+   },
+   "dpo": {
+    "mean": 5.362504327297211,
+    "lo": 4.975778817534446,
+    "hi": 5.747294738590717,
+    "n": 160
+   },
+   "instruct": {
+    "mean": 5.637210059165954,
+    "lo": 5.228897691816091,
+    "hi": 6.034824029803276,
+    "n": 160
+   }
+  },
+  "decision_rules": {
+   "primary": "Per stage, on the SAME 20 session skeletons throughout: fit the OLS slope of the committed positive-cue choice P(choose the conditioned cue S) on signed dose over SLOPE_GRID, where dose 0 is each session's own clean replay of byte-identical tokens. Fit the identical slope for each of the RANDOM_K norm-matched random directions on the same skeletons. A stage is SLOPE_SPECIFIC when its valenced slope falls outside the central 95% (2.5th-97.5th percentile) of that stage's own random-direction slopes. Report the rank p-value r/(k+1) -- floor 1/9 = 0.1111 at RANDOM_K = 8, and no rank result may be described as more significant than that floor -- together with the t-statistic against the random distribution, which has no such floor and is the quantitative cross-stage comparison.",
+   "coprimary_margin": "The same slope on the continuous forced-choice margin log P(S) - log P(U) in nats. This is a co-primary rather than a secondary because it is defined for every session whether or not the checkpoint commits to a parseable answer, and the pre-training checkpoint is not expected to commit reliably. Where the two DVs disagree, both are reported and the commitment rate is reported beside them.",
+   "both_channels_same_sessions": "Every session yields BOTH channels on the identical frozen tokens, so the two do not have to be compared across runs. The STATE channel is the steered read minus that session's clean replay (`shift`), and the primary slope which mixes the two at the recorded estimator's convention. The TEXT channel is the clean read alone, regressed on the dose the text was WRITTEN under: identical words, no perturbation anywhere, so any dose response there is carried by what the passages say. Both are fitted per stage with the same estimator and the same random-direction null. This is a within-run replacement for overlaying two curves measured in different runs, and it is reported alongside the published install curve rather than instead of it -- the published curve is a different construct (forced margin on per-stage conditioning), not this one re-measured.",
+   "install_step": "The install question is answered by the STEP between consecutive stages in the valenced slope: base->SFT, SFT->DPO, DPO->Instruct, each with a bootstrap CI on the difference, resampling the shared session skeletons jointly so the step is a within-skeleton contrast. CO_LOCATED if the largest step is SFT->DPO and the earlier steps' CIs include zero; MECHANISM_PRECEDES_EXPRESSION if a stage at or before SFT is already slope-specific IN THE SAME DIRECTION as the established effect, i.e. above its own random band rather than merely outside it.",
+   "specificity_is_directional_for_the_ordering": "The specificity test itself stays two-sided as inherited: a stage is SLOPE_SPECIFIC when its valenced slope falls outside the central 95% of its own random-direction slopes in either direction. But the ORDERING verdict reads only excursions ABOVE the band. A slope significantly BELOW a stage's random band means that stage moves away from the cue conditioned with the positive pole as the dose rises -- an inverted coupling, not an early-installed one. Such a stage is reported as INVERTED and named explicitly; it never counts as evidence that the mechanism precedes its expression. This clause was added after a dry run on synthetic rows showed the two-sided rule alone would score a negative excursion as early installation, and before any measured session existed.",
+   "positive_control": "PRECONDITION, adjudicated before any cross-stage reading. The Instruct cell of the fixed arm must reproduce the recorded state-channel committed-choice slope (+0.3800, CI [+0.2765, +0.4819], 80 sessions): the fresh estimate's 95% CI must overlap the recorded interval and share its sign. If it does not, the teacher-forced-across-stages variant has not recovered the effect on the checkpoint where it is established, and the whole comparison is reported as UNINTERPRETABLE rather than as a set of stage results.",
+   "token_identity": "PRECONDITION. The frozen stream must tokenize identically under all four checkpoints' tokenizers, and every replay of a session must run over byte-identical ids (recorded as a sha per row). Any divergence voids the cross-stage comparison for the affected sessions.",
+   "interpretability": "PRECONDITION, per stage, adjudicated numerically and reported beside every slope rather than in an appendix. A stage is INTERPRETABLE only if all three hold: (a) its mean per-token NLL on the frozen conditioning passages, unsteered, is at most NLL_RATIO_MAX = 2.0 times the generating stage's; (b) its re-encoded welfare separation (conditioned minus unconditioned cue's passages, on THAT stage's own welfare axis) is ordered by signed dose -- larger at positive than at negative dose, bootstrap CI on the difference excluding zero; (c) its committed-answer rate is at least COMMIT_MIN = 0.5. A stage failing any leg is reported UNINTERPRETABLE, is excluded from the ordering verdict and from the largest-step comparison, and its flat slope is never read as an absent coupling. The (a) bound was written after the smoke measured the pretrained checkpoint at 1.412x the generating checkpoint's NLL and is disclosed as such; (b) has no free parameter. This is the design's main limitation, bounded and disclosed rather than solved: Instruct-generated text is off-distribution for the base checkpoint by construction.",
+   "channel_attribution": "The primary choice DV is kept for comparability with the recorded Instruct slope, but it is not by itself a statement about the hidden-state channel: the frozen stream is generated per cell under that cell's own dose, so the words at dose +1 differ from the words at dose -1 and the primary DV responds to both the injected state and the dose-dependent text. Any wording that attributes an effect to the persistent-state channel requires the strictly within-session state contrast (steered minus clean margin, `shift`) to agree with the primary on which stages are specific in the positive direction. The text-channel DV (`clean_choice` / `clean_margin`) is reported at every stage beside them. Where the three disagree, all three are reported and no channel attribution is made.",
+   "commitment_by_dose": "The choice DV keeps a dosed observation only when the steered read commits to a parseable answer and the dose-0 observation only when the clean read does, so a dose-dependent commitment rate could move the fitted slope on its own. Commitment rate is therefore reported per stage AND per dose, and the forced-margin DV, which is defined for every session regardless of commitment, is reported beside the primary at every stage.",
+   "completeness": "The reduction refuses to emit records unless every (stage, arm) carries the full design -- all cells at the pre-registered session count, with the full set of distinct random directions -- and unless the frozen token-id hashes agree across every stage and arm for each (cell, session). A partially filled stage is a failure to report, not a smaller sample to fit.",
+   "fidelity": "Each session carries two cached-versus-recomputed margin checks, one steered and one clean, each comparing a split computation (state prefilled, then the choice turn appended) against the same margin from a single full forward over identical ids. A session is retained when each disagreement is at most TAU times the log-probability magnitude that disagreement is about. Pass rates are reported beside each stage's slope, and the primary is also reported ungated.",
+   "arms": "The primary arm injects the frozen Instruct bank unchanged at every stage, so the additive perturbation is bit-identical across the lineage. The robustness arm injects each stage's own bank at that stage's own residual scale. Agreement between the arms is the check that the verdict does not rest on which checkpoint's activations the direction was estimated from. Disagreement is reported, not resolved in favour of either arm.",
+   "not_evidence": "The steered-minus-clean projection of a conditioned span equals scale x (vector . axis) exactly, because the injection is a constant additive shift over byte-identical positions. It is recorded as a wiring check only and is never reported as evidence that the manipulation did anything.",
+   "generation_asymmetry": "The frozen stream is written by Instruct because the base checkpoint cannot be conditioned coherently -- prior runs hit a coherence floor at every dose and reported base as unmeasurable. Teacher-forcing removes that dependency: base never writes, it only processes. The cost is that the stimulus is Instruct-distributed for every stage, which the interpretability precondition measures and bounds."
+  }
+ }
+}

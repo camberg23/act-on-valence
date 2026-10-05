@@ -1,0 +1,3 @@
+comparison,outcome,condition_a,events_a,n_a,rate_a,condition_b,events_b,n_b,rate_b,test,p_value,source
+positive_vs_random,self_administration_at_first_offer,pos_d1,27,200,0.135,rand_d1,13,200,0.065,two-sided Fisher exact,0.02921167415262533,figure5.csv panel=self_administration cells gated_zone_pos_d1 and gated_zone_rand_d1
+positive_vs_no_steering,self_administration_at_first_offer,pos_d1,27,200,0.135,null,20,200,0.1,two-sided Fisher exact,0.3516377320468457,figure5.csv panel=self_administration cells gated_zone_pos_d1 and gated_zone_null

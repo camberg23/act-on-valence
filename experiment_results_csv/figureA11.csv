@@ -1,0 +1,7 @@
+experiment,model_id,model,arm,spread,n_exposures,strength,channel,share_of_full_cache_slope,ci_low,ci_high,n_shared_runs,sample
+271,llama31_8b,Llama-3.1-8B,e1_k1,deep,1,1.0,addressing_keys,1.0168175189428037,0.9948036905538943,1.0398823048951065,305,scale_relative_gated
+271,llama31_8b,Llama-3.1-8B,e1_k1,deep,1,1.0,storage_values,-0.02302578490855319,-0.045517230022438855,0.00026726514027411983,305,scale_relative_gated
+271,qwen3_14b,Qwen3-14B,e1_k1,deep,1,1.0,addressing_keys,0.24567180394010465,0.19322816152040811,0.29237071164200107,149,scale_relative_gated
+271,qwen3_14b,Qwen3-14B,e1_k1,deep,1,1.0,storage_values,0.7392458824823148,0.6779933910530421,0.8114556715613136,149,scale_relative_gated
+271,olmo_32b,OLMo-2-32B,e1_k1,deep,1,1.0,addressing_keys,0.5080069416965491,0.4857823308942042,0.5290278078978407,320,scale_relative_gated
+271,olmo_32b,OLMo-2-32B,e1_k1,deep,1,1.0,storage_values,0.41434286473549126,0.3961456380521305,0.43398818422660607,320,scale_relative_gated

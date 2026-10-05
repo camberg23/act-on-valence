@@ -1,0 +1,224 @@
+{
+ "wave": "scan",
+ "n_cells": 31,
+ "n_units": 31,
+ "cells": [
+  {
+   "kind": "dosescan",
+   "member": "mistral24b",
+   "cell": "zero@0.00",
+   "role": "zero",
+   "dose": 0.0
+  },
+  {
+   "kind": "dosescan",
+   "member": "mistral24b",
+   "cell": "pos@0.300",
+   "role": "pos",
+   "dose": 0.3
+  },
+  {
+   "kind": "dosescan",
+   "member": "mistral24b",
+   "cell": "pos@0.500",
+   "role": "pos",
+   "dose": 0.5
+  },
+  {
+   "kind": "dosescan",
+   "member": "mistral24b",
+   "cell": "pos@0.700",
+   "role": "pos",
+   "dose": 0.7
+  },
+  {
+   "kind": "dosescan",
+   "member": "mistral24b",
+   "cell": "pos@0.900",
+   "role": "pos",
+   "dose": 0.9
+  },
+  {
+   "kind": "dosescan",
+   "member": "mistral24b",
+   "cell": "neg@0.300",
+   "role": "neg",
+   "dose": 0.3
+  },
+  {
+   "kind": "dosescan",
+   "member": "mistral24b",
+   "cell": "neg@0.500",
+   "role": "neg",
+   "dose": 0.5
+  },
+  {
+   "kind": "dosescan",
+   "member": "mistral24b",
+   "cell": "neg@0.700",
+   "role": "neg",
+   "dose": 0.7
+  },
+  {
+   "kind": "dosescan",
+   "member": "mistral24b",
+   "cell": "neg@0.900",
+   "role": "neg",
+   "dose": 0.9
+  },
+  {
+   "kind": "dosescan",
+   "member": "gemma3_27b",
+   "cell": "zero@0.00",
+   "role": "zero",
+   "dose": 0.0
+  },
+  {
+   "kind": "dosescan",
+   "member": "gemma3_27b",
+   "cell": "pos@0.050",
+   "role": "pos",
+   "dose": 0.05
+  },
+  {
+   "kind": "dosescan",
+   "member": "gemma3_27b",
+   "cell": "pos@0.080",
+   "role": "pos",
+   "dose": 0.08
+  },
+  {
+   "kind": "dosescan",
+   "member": "gemma3_27b",
+   "cell": "pos@0.120",
+   "role": "pos",
+   "dose": 0.12
+  },
+  {
+   "kind": "dosescan",
+   "member": "gemma3_27b",
+   "cell": "pos@0.150",
+   "role": "pos",
+   "dose": 0.15
+  },
+  {
+   "kind": "dosescan",
+   "member": "gemma3_27b",
+   "cell": "pos@0.200",
+   "role": "pos",
+   "dose": 0.2
+  },
+  {
+   "kind": "dosescan",
+   "member": "gemma3_27b",
+   "cell": "neg@0.050",
+   "role": "neg",
+   "dose": 0.05
+  },
+  {
+   "kind": "dosescan",
+   "member": "gemma3_27b",
+   "cell": "neg@0.080",
+   "role": "neg",
+   "dose": 0.08
+  },
+  {
+   "kind": "dosescan",
+   "member": "gemma3_27b",
+   "cell": "neg@0.120",
+   "role": "neg",
+   "dose": 0.12
+  },
+  {
+   "kind": "dosescan",
+   "member": "gemma3_27b",
+   "cell": "neg@0.150",
+   "role": "neg",
+   "dose": 0.15
+  },
+  {
+   "kind": "dosescan",
+   "member": "gemma3_27b",
+   "cell": "neg@0.200",
+   "role": "neg",
+   "dose": 0.2
+  },
+  {
+   "kind": "dosescan",
+   "member": "llama31_8b",
+   "cell": "zero@0.00",
+   "role": "zero",
+   "dose": 0.0
+  },
+  {
+   "kind": "dosescan",
+   "member": "llama31_8b",
+   "cell": "pos@0.100",
+   "role": "pos",
+   "dose": 0.1
+  },
+  {
+   "kind": "dosescan",
+   "member": "llama31_8b",
+   "cell": "pos@0.200",
+   "role": "pos",
+   "dose": 0.2
+  },
+  {
+   "kind": "dosescan",
+   "member": "llama31_8b",
+   "cell": "pos@0.300",
+   "role": "pos",
+   "dose": 0.3
+  },
+  {
+   "kind": "dosescan",
+   "member": "llama31_8b",
+   "cell": "pos@0.400",
+   "role": "pos",
+   "dose": 0.4
+  },
+  {
+   "kind": "dosescan",
+   "member": "llama31_8b",
+   "cell": "pos@0.600",
+   "role": "pos",
+   "dose": 0.6
+  },
+  {
+   "kind": "dosescan",
+   "member": "llama31_8b",
+   "cell": "neg@0.100",
+   "role": "neg",
+   "dose": 0.1
+  },
+  {
+   "kind": "dosescan",
+   "member": "llama31_8b",
+   "cell": "neg@0.200",
+   "role": "neg",
+   "dose": 0.2
+  },
+  {
+   "kind": "dosescan",
+   "member": "llama31_8b",
+   "cell": "neg@0.300",
+   "role": "neg",
+   "dose": 0.3
+  },
+  {
+   "kind": "dosescan",
+   "member": "llama31_8b",
+   "cell": "neg@0.400",
+   "role": "neg",
+   "dose": 0.4
+  },
+  {
+   "kind": "dosescan",
+   "member": "llama31_8b",
+   "cell": "neg@0.600",
+   "role": "neg",
+   "dose": 0.6
+  }
+ ]
+}

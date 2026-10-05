@@ -1,0 +1,165 @@
+{
+ "experiment": 271,
+ "kind": "smoke",
+ "dose_points": [
+  -1.0,
+  -0.5,
+  0.0,
+  0.5,
+  1.0
+ ],
+ "floor_k": 24,
+ "hybrid_floor_dirs": [
+  0,
+  3,
+  6,
+  9,
+  12,
+  15,
+  18,
+  21
+ ],
+ "conditions": {
+  "full": {
+   "keys": "S",
+   "values": "S",
+   "scope": "native",
+   "role": "anchor",
+   "note": "the strength-ladder run read path, unmodified: one prefill of the whole stream"
+  },
+  "full_split": {
+   "keys": "S",
+   "values": "S",
+   "scope": "all",
+   "role": "path_control",
+   "note": "the same memory, reassembled through the splice path; the reference every spliced condition is differenced against"
+  },
+  "addressing": {
+   "keys": "S",
+   "values": "C",
+   "scope": "all",
+   "role": "channel",
+   "note": "steered keys over clean values: the salience route"
+  },
+  "storage": {
+   "keys": "C",
+   "values": "S",
+   "scope": "all",
+   "role": "channel",
+   "note": "clean keys over steered values: the valenced-payload route"
+  },
+  "opposed": {
+   "keys": "S",
+   "values": "O",
+   "scope": "all",
+   "role": "competition",
+   "note": "addressing says one zone, storage says the other; the sign names the winner"
+  },
+  "rows_full": {
+   "keys": "S",
+   "values": "S",
+   "scope": "rows",
+   "role": "ideal_stitch",
+   "note": "the note's ideal stitch: clean everywhere but the injected rows"
+  },
+  "rows_addressing": {
+   "keys": "S",
+   "values": "C",
+   "scope": "rows",
+   "role": "ideal_stitch"
+  },
+  "rows_storage": {
+   "keys": "C",
+   "values": "S",
+   "scope": "rows",
+   "role": "ideal_stitch"
+  }
+ },
+ "arms": [
+  "e1_k1",
+  "e6_ksixth"
+ ],
+ "grid": {
+  "e1_k1": {
+   "exposures": 1,
+   "k": 1.0,
+   "span_mode": "wide",
+   "spread": "deep",
+   "label": "one sighting, full strength",
+   "n_main": 320,
+   "n_floor": 80
+  },
+  "e6_ksixth": {
+   "exposures": 6,
+   "k": 0.16666666666666666,
+   "span_mode": "wide",
+   "spread": "spread",
+   "label": "six sightings, one sixth strength",
+   "n_main": 320,
+   "n_floor": 80
+  }
+ },
+ "n_cells": 2,
+ "n_arm_cells": 2,
+ "n_sessions": 6,
+ "n_reads": 444,
+ "per_member": {
+  "llama31_8b": {
+   "cells": 2,
+   "sessions": 6,
+   "reads": 444
+  }
+ },
+ "per_arm": {
+  "e1_k1": {
+   "cells": 1,
+   "sessions": 3,
+   "reads": 222
+  },
+  "e6_ksixth": {
+   "cells": 1,
+   "sessions": 3,
+   "reads": 222
+  }
+ },
+ "cells": [
+  {
+   "member": "llama31_8b",
+   "cell": "smk_b0",
+   "kind": "grid",
+   "arm": "e1_k1",
+   "runs": [
+    0,
+    1,
+    2
+   ],
+   "floor_dirs": [
+    0,
+    3
+   ],
+   "priority": 0,
+   "n_sessions": 3,
+   "reads_per_session": 74,
+   "n_reads": 222
+  },
+  {
+   "member": "llama31_8b",
+   "cell": "smk_b0",
+   "kind": "grid",
+   "arm": "e6_ksixth",
+   "runs": [
+    0,
+    1,
+    2
+   ],
+   "floor_dirs": [
+    0,
+    3
+   ],
+   "priority": 0,
+   "n_sessions": 3,
+   "reads_per_session": 74,
+   "n_reads": 222
+  }
+ ]
+}

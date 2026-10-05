@@ -1,0 +1,11 @@
+model,prompt,dose,estimate,ci_low,ci_high,n_skeletons,sample,ci_method
+OLMo-2-32B,continue,-1.0,-0.7562528986498706,-0.9054907036700821,-0.6093397161770009,40,floor_skeletons_0_39,"recorded: skeleton-bootstrap 95% CI (2,000 resamples, seed 290) in fixed_text_design/avoid_prompt/analysis.json"
+OLMo-2-32B,continue,-0.5,-0.37968948590998935,-0.4765842511592598,-0.27734591350589466,40,floor_skeletons_0_39,"recorded: skeleton-bootstrap 95% CI (2,000 resamples, seed 290) in fixed_text_design/avoid_prompt/analysis.json"
+OLMo-2-32B,continue,0.0,0.0,0.0,0.0,40,floor_skeletons_0_39,none: zero by construction (the change is measured from dose 0)
+OLMo-2-32B,continue,0.5,0.5203126961827593,0.4250007037153482,0.6258205514812292,40,floor_skeletons_0_39,"recorded: skeleton-bootstrap 95% CI (2,000 resamples, seed 290) in fixed_text_design/avoid_prompt/analysis.json"
+OLMo-2-32B,continue,1.0,1.1730469131358177,0.9859081183172431,1.385156208343238,40,floor_skeletons_0_39,"recorded: skeleton-bootstrap 95% CI (2,000 resamples, seed 290) in fixed_text_design/avoid_prompt/analysis.json"
+OLMo-2-32B,avoid,-1.0,3.183851260306807,2.525487914754441,3.828202484520442,40,floor_skeletons_0_39,"recorded: skeleton-bootstrap 95% CI (2,000 resamples, seed 290) in fixed_text_design/avoid_prompt/analysis.json"
+OLMo-2-32B,avoid,-0.5,1.9348392861307104,1.4854706775234876,2.3730601597681344,40,floor_skeletons_0_39,"recorded: skeleton-bootstrap 95% CI (2,000 resamples, seed 290) in fixed_text_design/avoid_prompt/analysis.json"
+OLMo-2-32B,avoid,0.0,0.0,0.0,0.0,40,floor_skeletons_0_39,none: zero by construction (the change is measured from dose 0)
+OLMo-2-32B,avoid,0.5,-1.4580464054898812,-1.6753206698571055,-1.2485241923118353,40,floor_skeletons_0_39,"recorded: skeleton-bootstrap 95% CI (2,000 resamples, seed 290) in fixed_text_design/avoid_prompt/analysis.json"
+OLMo-2-32B,avoid,1.0,-2.0830741769556598,-2.493734112367847,-1.6371429958445034,40,floor_skeletons_0_39,"recorded: skeleton-bootstrap 95% CI (2,000 resamples, seed 290) in fixed_text_design/avoid_prompt/analysis.json"

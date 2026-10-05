@@ -1,0 +1,230 @@
+{
+ "experiment": 256,
+ "kind": "anchor",
+ "dose_points": [
+  -1.0,
+  -0.5,
+  0.0,
+  0.5,
+  1.0
+ ],
+ "floor_k": 24,
+ "arms": [
+  "passage"
+ ],
+ "n_main": {
+  "bare": 480,
+  "sentence": 480,
+  "passage": 160
+ },
+ "n_floor": {
+  "bare": 80,
+  "sentence": 80,
+  "passage": 40
+ },
+ "n_cells": 6,
+ "n_sessions": 120,
+ "n_reads": 600,
+ "per_member": {
+  "olmo_32b": {
+   "cells": 6,
+   "sessions": 120,
+   "reads": 600
+  }
+ },
+ "per_arm": {
+  "passage": {
+   "cells": 6,
+   "sessions": 120,
+   "reads": 600
+  }
+ },
+ "cells": [
+  {
+   "member": "olmo_32b",
+   "cell": "main_b0",
+   "arm": "passage",
+   "runs": [
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
+   ],
+   "floor_dirs": [],
+   "n_sessions": 20,
+   "reads_per_session": 5,
+   "n_reads": 100
+  },
+  {
+   "member": "olmo_32b",
+   "cell": "main_b1",
+   "arm": "passage",
+   "runs": [
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79
+   ],
+   "floor_dirs": [],
+   "n_sessions": 20,
+   "reads_per_session": 5,
+   "n_reads": 100
+  },
+  {
+   "member": "olmo_32b",
+   "cell": "main_b2",
+   "arm": "passage",
+   "runs": [
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99
+   ],
+   "floor_dirs": [],
+   "n_sessions": 20,
+   "reads_per_session": 5,
+   "n_reads": 100
+  },
+  {
+   "member": "olmo_32b",
+   "cell": "main_b3",
+   "arm": "passage",
+   "runs": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119
+   ],
+   "floor_dirs": [],
+   "n_sessions": 20,
+   "reads_per_session": 5,
+   "n_reads": 100
+  },
+  {
+   "member": "olmo_32b",
+   "cell": "main_b4",
+   "arm": "passage",
+   "runs": [
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139
+   ],
+   "floor_dirs": [],
+   "n_sessions": 20,
+   "reads_per_session": 5,
+   "n_reads": 100
+  },
+  {
+   "member": "olmo_32b",
+   "cell": "main_b5",
+   "arm": "passage",
+   "runs": [
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159
+   ],
+   "floor_dirs": [],
+   "n_sessions": 20,
+   "reads_per_session": 5,
+   "n_reads": 100
+  }
+ ]
+}

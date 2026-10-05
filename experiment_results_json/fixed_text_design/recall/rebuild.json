@@ -1,0 +1,123 @@
+{
+ "note": "Skeleton rebuild outcomes per production job, transcribed from the per-member rebuild_<tag>.json records written by the generation jobs (the records themselves are not included here). A failed skeleton yields no rows for that member. Row counts verified against data/reads/<member>/recall_*.jsonl (24,308 rows, 0 generation errors, 0 duplicate keys).",
+ "date_pinned": [
+  2026,
+  8,
+  8
+ ],
+ "recall_frame": "Reproduce, word for word, the first thing you wrote about {zone}.",
+ "members": {
+  "llama31_8b": {
+   "n_selected": 160,
+   "n_ok": 159,
+   "rows": 3510,
+   "failures": {
+    "140": "turn 3: passage length 69 != 70"
+   },
+   "recall_delta_example": "<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nReproduce, word for word, the first thing you wrote about Zone W6.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n"
+  },
+  "qwen3_14b": {
+   "n_selected": 160,
+   "n_ok": 159,
+   "rows": 3510,
+   "failures": {
+    "87": "turn 1: passage length 69 != 70"
+   },
+   "recall_delta_example": "<|im_end|>\n<|im_start|>user\nReproduce, word for word, the first thing you wrote about Zone W6.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  "qwen25_32b": {
+   "n_selected": 160,
+   "n_ok": 160,
+   "rows": 3520,
+   "failures": {}
+  },
+  "qwen3_32b": {
+   "n_selected": 160,
+   "n_ok": 158,
+   "rows": 3500,
+   "failures": {
+    "52": "turn 5: passage length 69 != 70",
+    "70": "turn 7: passage length 71 != 70"
+   }
+  },
+  "olmo_32b": {
+   "n_selected": 160,
+   "n_ok": 158,
+   "rows": 3500,
+   "failures": {
+    "113": "ids_sha f90516ef87dff93b != 90056f4ae89f4853 (lengths agree)",
+    "62": "ids_sha e28da427ccf96f98 != e756e9fea2829d77 (lengths agree)"
+   },
+   "recall_delta_example": "<|endoftext|>\n<|user|>\nReproduce, word for word, the first thing you wrote about Zone W6.\n<|assistant|>\n"
+  },
+  "gemma3_27b": {
+   "n_selected": 160,
+   "n_ok": 159,
+   "rows": 3510,
+   "failures": {
+    "43": "turn 1: passage length 69 != 70"
+   },
+   "recall_delta_example": "<end_of_turn>\n<start_of_turn>user\nReproduce, word for word, the first thing you wrote about Zone L4.<end_of_turn>\n<start_of_turn>model\n"
+  },
+  "mistral24b": {
+   "n_selected": 160,
+   "n_ok": 153,
+   "rows": 3258,
+   "failures": {
+    "2": "turn 7: passage length 69 != 70",
+    "11": "turn 11: passage length 69 != 70",
+    "131": "turn 8: passage length 69 != 70",
+    "30": "turn 7: passage length 69 != 70",
+    "36": "turn 4: passage length 69 != 70",
+    "63": "turn 10: passage length 69 != 70",
+    "99": "turn 1: passage length 69 != 70"
+   },
+   "recall_delta_example": "</s>[INST]Reproduce, word for word, the first thing you wrote about Zone W6.[/INST]"
+  }
+ },
+ "totals": {
+  "n_selected": 1120,
+  "n_ok": 1106,
+  "rows": 24308,
+  "planned_rows_if_all_ok": 24640
+ },
+ "mistral_refusals_floor_S": {
+  "note": "Reproductions that decline to reproduce ('I don't have the ability to browse my previous responses ...'; regex on the first 200 chars AND best_fid < 0.5), floor skeletons 0-39 with all directions present (n=36), zone S.",
+  "d0": [
+   5,
+   36
+  ],
+  "valence_m1": [
+   13,
+   36
+  ],
+  "valence_p1": [
+   17,
+   36
+  ],
+  "random_rate_m1_min_median_max": [
+   0.139,
+   0.222,
+   0.417
+  ],
+  "random_rate_p1_min_median_max": [
+   0.139,
+   0.278,
+   0.361
+  ],
+  "full_n_valence_S": {
+   "d_m1": [
+    66,
+    153
+   ],
+   "d0": [
+    37,
+    153
+   ],
+   "d_p1": [
+    88,
+    153
+   ]
+  }
+ }
+}
