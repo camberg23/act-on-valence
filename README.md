@@ -6,7 +6,7 @@ Replication files for ['Language Models Act on Hidden Valence'](https://arxiv.or
 
 ## What this repository contains
 
-This repository contains everything needed to verify the paper's results: the recorded outputs of every experiment, the scripts that turn them into the CSVs, and the scripts that produce every figure and table. It does not contain the code that runs the experiments, which loads the models and applies steering, or the steering vectors themselves.
+This repository contains the recorded results underlying the paper's figures and tables, scripts that turn them into CSVs, and scripts that produce the empirical figures and tables. This repository does not contain code that runs the experiments, which loads the models and applies steering, or the steering vectors themselves.
 
 ## Experiment code and responsible use
 
@@ -36,15 +36,17 @@ The filenames follow the numbering in the paper.
 | 3 | Effects of text and hidden-state channels on choice |
 | 4 | Emergence across OLMo training stages |
 | 5 | Steering removal and self-administration |
-| A1-A14 | Appendix analyses |
+| A1-A17 | Appendix analyses |
 
-Figures 1 and 2 are overview graphics with editable sources in `figures/figure1.svg` and `figures/figure2.svg`. Figures 3-5 and A1-A14 are empirical plots with corresponding scripts in `create_csvs/` and `create_figures/`, and data in `experiment_results_csv/`.
+Figures 1 and 2 are overview graphics with editable sources in `figures/figure1.svg` and `figures/figure2.svg`. Figures 3-5 and A1-A17 are empirical plots with corresponding scripts in `create_csvs/` and `create_figures/`, and data in `experiment_results_csv/`.
+
+Figure A6 combines the continue and avoid questions from the original fixed-text experiments, as described in [`experiment_results_json/fixed_text_design/avoid_prompt/README.md`](experiment_results_json/fixed_text_design/avoid_prompt/README.md). Figures A13 and A14 compare whose visits are steered and what the choice question concerns. Their compressed JSONL records and analysis conventions are described in [`experiment_results_json/whose_valence/README.md`](experiment_results_json/whose_valence/README.md). The scripts read these files directly without unpacking them.
 
 Figure 1 is a schematic and has no underlying data. Figure 2 was drawn with Claude Opus 5.5 from the values in `experiment_results_csv/figure2.csv`, which `create_csvs/figure2.py` collects from the other figure CSVs. `python3 create_figures/check_figure2.py` reads the plotted positions in `figures/figure2.svg` back to data values and checks each against the CSV. In panel 6 the grey band spans plus and minus the largest absolute slope among the 24 random directions. In panel 7 the lines are drawn through the origin with the OLS slopes; `figure2.csv` also lists the fitted intercepts.
 
-(Additionally, `figureA5_olmo_per_dose.csv` and `figureA6_olmo_per_dose.csv` hold OLMo-2-32B's per-dose values behind Figures A5 and A6. For A6, they also contain the 24 random directions at d = -1 and +1.)
+(Additionally, `figureA5_olmo_per_dose.csv` and `figureA7_olmo_per_dose.csv` hold OLMo-2-32B's per-dose values behind Figures A5 and A7. For A7, they also contain the 24 random directions at d = -1 and +1.)
 
-`figure5_tests.csv` provides results for the two Fisher exact tests reported with Figure 5 Panel B in Section 4.4.
+`figure5_tests.csv` provides results for the two Fisher exact tests reported with Figure 5 Panel B in Section 4.5.
 
 | Table | Content | LaTeX | Script |
 |---|---|---|---|
@@ -52,6 +54,7 @@ Figure 1 is a schematic and has no underlying data. Figure 2 was drawn with Clau
 | A1 | Responses to non-valence concept probes | `tables/tableA1.tex` | `create_tables/tableA1.py` (also writes the LaTeX) |
 | A2 | Full-dose ratios | `tables/tableA2.tex` | `create_tables/tableA2.py` |
 | A3 | Cosine similarities between valence vectors across OLMo training stages | `tables/tableA3.tex` | `create_tables/tableA3.py` |
+| A4 | Relative effects of steering Maya's visits under alternative choice prompts | `tables/tableA4.tex` | `create_tables/tableA4.py` (also writes the LaTeX) |
 
 The transcripts printed in Appendix B are in `transcripts/`.
 
@@ -89,7 +92,7 @@ To build a CSV corresponding to a figure, for example:
 python3 create_csvs/figure3.py
 ```
 
-To write the table CSVs to `experiment_results_csv/` and regenerate `tables/tableA1.tex`:
+To write the table CSVs to `experiment_results_csv/` and regenerate `tables/tableA1.tex` and `tables/tableA4.tex`:
 
 ```bash
 python3 create_tables/build_tables.py
@@ -121,7 +124,7 @@ Claude Opus 5, Opus 5.5, and GPT-6 Astra were used to develop the code in this r
 
 ## Negative steering in this paper
 
-`experiment_results_csv/negative_steering_exposure.csv` counts, for each experiment and model reported in the paper, the conversations and turns that received negative valence steering, distinguishing turns the model generated while steered from turns that were steered only while it re-processed fixed text. Most negative steering in this paper is of the second kind. `create_csvs/negative_steering_exposure.py` builds it from `experiment_results_json/`.
+`experiment_results_csv/negative_steering_exposure.csv` counts, for each experiment and model reported in the paper, the conversations and turns that received negative valence steering, distinguishing turns the model generated while steered from turns that were steered only while it re-processed fixed text. For the three whose-valence experiments, it also counts conditions not shown in the paper, marked 'not reported', including the separate self/other removal test. These counts use the supplied summaries where the individual records are not included. Most negative steering in this paper is read-only. `create_csvs/negative_steering_exposure.py` builds the CSV from `experiment_results_json/`. Figure A6 reanalyses existing reads and adds no steering exposure.
 
 ## Licence
 

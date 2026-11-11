@@ -8,7 +8,7 @@
 # 1. Setup and configuration
 #=================================
 
-# Section 4.4 reports that at full positive dose the model self-administers in 13.5% of
+# Section 4.5 reports that at full positive dose the model self-administers in 13.5% of
 # conversations, more than under random steering (6.5%, p = 0.03) but not more than with no
 # steering imposed (10%, p = 0.35). This script computes both two-sided Fisher exact tests from the
 # counts in experiment_results_csv/figure5.csv and writes experiment_results_csv/figure5_tests.csv.

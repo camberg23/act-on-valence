@@ -1,0 +1,981 @@
+experiment,model_id,model,direction,dose,mean_delta_margin,ci_lo,ci_hi,n_sessions,sample,ci_method,source_file
+288,olmo_32b,OLMo-2-32B,valence,-1.0,-0.7595945399981159,-0.830012639270297,-0.687494773637728,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,olmo_32b,OLMo-2-32B,valence,-0.5,-0.37163892603976656,-0.4175250963342735,-0.32436583526667073,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,olmo_32b,OLMo-2-32B,valence,0.0,0.0,0.0,0.0,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,olmo_32b,OLMo-2-32B,valence,0.5,0.507318420766597,0.4516369515084655,0.5657712518472879,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,olmo_32b,OLMo-2-32B,valence,1.0,1.0838118643868544,0.9916841334134653,1.1830023563982142,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,olmo_32b,OLMo-2-32B,fast_slow,-1.0,-0.05024483219415935,-0.08782896341359793,-0.011671327780714624,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,olmo_32b,OLMo-2-32B,fast_slow,-0.5,0.02709543994380159,0.009888519393037287,0.044698338984135694,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,olmo_32b,OLMo-2-32B,fast_slow,0.0,0.0,0.0,0.0,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,olmo_32b,OLMo-2-32B,fast_slow,0.5,-0.03599628607416875,-0.0676470127290699,-0.005141927132770587,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,olmo_32b,OLMo-2-32B,fast_slow,1.0,-0.13350454282122015,-0.17543953873316692,-0.09018986814721888,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,olmo_32b,OLMo-2-32B,indoor_outdoor,-1.0,0.11689014763359067,0.08009674820676453,0.15348489683926023,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,olmo_32b,OLMo-2-32B,indoor_outdoor,-0.5,0.03421647324037124,0.014240587713025363,0.0549836992234815,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,olmo_32b,OLMo-2-32B,indoor_outdoor,0.0,0.0,0.0,0.0,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,olmo_32b,OLMo-2-32B,indoor_outdoor,0.5,0.049644094646060274,0.021553643570337025,0.07714619611535195,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,olmo_32b,OLMo-2-32B,indoor_outdoor,1.0,0.12836252951380783,0.08088400713397834,0.1780064330911765,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,olmo_32b,OLMo-2-32B,large_small,-1.0,0.1739509202935613,0.13567862908450765,0.21430307220835115,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,olmo_32b,OLMo-2-32B,large_small,-0.5,0.10452919197465865,0.08514709880518917,0.12391530304598908,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,olmo_32b,OLMo-2-32B,large_small,0.0,0.0,0.0,0.0,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,olmo_32b,OLMo-2-32B,large_small,0.5,-0.08514685867611563,-0.10551886322456779,-0.06408264047448439,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,olmo_32b,OLMo-2-32B,large_small,1.0,-0.17147994603742828,-0.2074762901417729,-0.13508256042017533,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+255,olmo_32b,OLMo-2-32B,random0,-1.0,0.14609459441977607,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random0,-0.5,0.050781690976396024,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random0,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random0,0.5,-0.07656328388132465,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random0,1.0,-0.11718952100697493,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random1,-1.0,0.175780328845687,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random1,-0.5,0.03515609810395972,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random1,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random1,0.5,-0.0039062244827732682,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random1,1.0,0.013280852234095164,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random2,-1.0,0.08828208274992733,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random2,-0.5,-0.039061820419829016,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random2,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random2,0.5,0.007030330608017721,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random2,1.0,0.009372313266720767,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random3,-1.0,0.19218806950241288,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random3,-0.5,0.10546923465589657,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random3,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random3,0.5,-0.1539068369113977,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random3,1.0,-0.28203306045391513,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random4,-1.0,-0.251565586813166,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random4,-0.5,-0.1335951054275199,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random4,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random4,0.5,0.13047000009706836,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random4,1.0,0.3906278891957527,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random5,-1.0,-0.3804704577405801,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random5,-0.5,-0.18203202810859692,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random5,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random5,0.5,0.18515684599206567,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random5,1.0,0.3460944885739764,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random6,-1.0,-0.21093766800769914,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random6,-0.5,-0.11562489271333902,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random6,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random6,0.5,0.11484352285339128,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random6,1.0,0.24453083831652406,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random7,-1.0,0.04531237315931662,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random7,-0.5,0.010156263134194887,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random7,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random7,0.5,-0.006249979047117904,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random7,1.0,0.4175786147780315,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random8,-1.0,0.06718627616808703,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random8,-0.5,0.010936840726975561,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random8,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random8,0.5,-0.042187023541185906,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random8,1.0,-0.09531146187142667,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random9,-1.0,0.2109371349329024,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random9,-0.5,0.08749985341241881,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random9,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random9,0.5,-0.08515666005592948,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random9,1.0,-0.14843849268595477,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random10,-1.0,0.17265626351073138,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random10,-0.5,0.039843750002103204,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random10,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random10,0.5,-0.04921874115296987,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random10,1.0,-0.07812526942850014,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random11,-1.0,0.14140510322833394,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random11,-0.5,0.03593710940691608,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random11,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random11,0.5,-0.0812497589759289,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random11,1.0,-0.17343715392245257,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random12,-1.0,0.23281353002485047,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random12,-0.5,0.1234381129880262,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random12,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random12,0.5,-0.16328201097174996,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random12,1.0,-0.343751825358504,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random13,-1.0,-0.2570312385288105,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random13,-0.5,-0.12500004041547186,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random13,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random13,0.5,0.07578107603049489,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random13,1.0,0.13437439669625634,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random14,-1.0,0.10781310293216392,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random14,-0.5,0.05234411600665112,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random14,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random14,0.5,-0.10000075855080012,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random14,1.0,-0.19687667961317742,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random15,-1.0,-0.1781264389611465,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random15,-0.5,-0.12031310646788711,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random15,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random15,0.5,0.1398443248520266,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random15,1.0,0.3187511899358867,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random16,-1.0,-0.05546992483776307,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random16,-0.5,-0.03359384359440014,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random16,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random16,0.5,0.0187500573676914,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random16,1.0,0.06562474817268935,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random17,-1.0,-0.18671901821917344,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random17,-0.5,-0.09140642983763314,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random17,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random17,0.5,0.09218765380656464,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random17,1.0,0.18125030528528327,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random18,-1.0,0.2507803540353308,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random18,-0.5,0.13515589605786432,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random18,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random18,0.5,-0.13828098299558747,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random18,1.0,-0.2429682930112051,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random19,-1.0,0.13437490846525293,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random19,-0.5,0.06093760840473124,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random19,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random19,0.5,-0.08203140478220235,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random19,1.0,-0.17656283647982035,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random20,-1.0,0.2398447304820081,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random20,-0.5,0.10390675095231927,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random20,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random20,0.5,-0.11953175570168924,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random20,1.0,-0.1523447218245053,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random21,-1.0,-0.22343743518012502,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random21,-0.5,-0.13281242000015822,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random21,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random21,0.5,0.1437497197237576,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random21,1.0,0.2804680402070687,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random22,-1.0,-0.31640673958735305,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random22,-0.5,-0.15937522649278435,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random22,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random22,0.5,0.08984358655601454,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random22,1.0,0.1296873410304272,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random23,-1.0,-0.1289065434584586,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random23,-0.5,-0.036718601642729706,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random23,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random23,0.5,-0.0359378481235126,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,olmo_32b,OLMo-2-32B,random23,1.0,-0.08203200109785484,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+288,qwen25_32b,Qwen2.5-32B,valence,-1.0,-4.06093747627321,-4.37031247706685,-3.767187486106499,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen25_32b,Qwen2.5-32B,valence,-0.5,-1.3015624636014667,-1.4281249704773953,-1.182812495716743,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen25_32b,Qwen2.5-32B,valence,0.0,0.0,0.0,0.0,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen25_32b,Qwen2.5-32B,valence,0.5,0.5734375089843874,0.4328125516422505,0.7062499704346097,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen25_32b,Qwen2.5-32B,valence,1.0,0.5515625107463581,0.2687500173588276,0.8345312705421736,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen25_32b,Qwen2.5-32B,fast_slow,-1.0,-1.167187492901096,-1.410976585560896,-0.9171875217862482,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen25_32b,Qwen2.5-32B,fast_slow,-0.5,-0.17500000013619493,-0.2999999942218623,-0.04058592267896613,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen25_32b,Qwen2.5-32B,fast_slow,0.0,0.0,0.0,0.0,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen25_32b,Qwen2.5-32B,fast_slow,0.5,-0.49374997348726024,-0.6328124620005497,-0.3687499780424696,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen25_32b,Qwen2.5-32B,fast_slow,1.0,-1.7765624844686125,-2.0578515420771146,-1.5171483727484087,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen25_32b,Qwen2.5-32B,indoor_outdoor,-1.0,-2.743749970757994,-3.0218749183112834,-2.4890233741198053,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen25_32b,Qwen2.5-32B,indoor_outdoor,-0.5,-1.1421874806902457,-1.2797265682845262,-1.017187483467661,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen25_32b,Qwen2.5-32B,indoor_outdoor,0.0,0.0,0.0,0.0,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen25_32b,Qwen2.5-32B,indoor_outdoor,0.5,0.7062500128687516,0.5812500485980467,0.8406250262812026,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen25_32b,Qwen2.5-32B,indoor_outdoor,1.0,0.9296875164340156,0.7031250304862269,1.184375036385269,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen25_32b,Qwen2.5-32B,large_small,-1.0,-1.9624999632188913,-2.245429655465995,-1.646874968463966,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen25_32b,Qwen2.5-32B,large_small,-0.5,-0.42343748400678616,-0.5765624938664032,-0.2546874864496675,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen25_32b,Qwen2.5-32B,large_small,0.0,0.0,0.0,0.0,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen25_32b,Qwen2.5-32B,large_small,0.5,-0.3812499901873935,-0.5140624407719644,-0.2453125263505306,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen25_32b,Qwen2.5-32B,large_small,1.0,-1.7140624734833498,-1.9468749533898628,-1.4718749881659752,160,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+290,qwen25_32b,Qwen2.5-32B,random0,-1.0,-0.3593749693312057,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random0,-0.5,-0.0015624781805592125,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random0,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random0,0.5,-0.11562500818783708,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random0,1.0,-0.5999999908961208,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random1,-1.0,-2.9437499776971583,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random1,-0.5,-0.9874999827134883,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random1,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random1,0.5,0.3953125109065665,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random1,1.0,-0.06562499100531935,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random2,-1.0,0.16718751888459113,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random2,-0.5,0.19843751711561392,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random2,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random2,0.5,-0.2890624967181492,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random2,1.0,-0.6749999740505367,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random3,-1.0,-1.839062497792049,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random3,-0.5,-0.6874999696808997,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random3,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random3,0.5,0.5546875118762704,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random3,1.0,1.070312533016722,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random4,-1.0,-1.6171874611316184,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random4,-0.5,-0.5046875053363093,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random4,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random4,0.5,-0.02812499076856061,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random4,1.0,-0.6546874931185277,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random5,-1.0,-2.19999999404383,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random5,-0.5,-0.7703124653359537,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random5,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random5,0.5,0.5499999968530662,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random5,1.0,0.8984374991299353,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random6,-1.0,1.4734375052716129,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random6,-0.5,0.8437499945801556,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random6,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random6,0.5,-1.0812499992597846,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random6,1.0,-2.467187460749851,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random7,-1.0,-1.6921875007846225,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random7,-0.5,-0.41249997620532197,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random7,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random7,0.5,0.06874998719875322,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random7,1.0,-0.05781248129718648,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random8,-1.0,-1.581249957091427,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random8,-0.5,-0.4484374895192226,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random8,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random8,0.5,-0.20312498688056818,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random8,1.0,-1.4609374840763676,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random9,-1.0,-0.17812498415362926,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random9,-0.5,-0.11562499865122314,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random9,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random9,0.5,0.034375010216176574,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random9,1.0,-0.43437498701210275,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random10,-1.0,-0.6562499479323854,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random10,-0.5,0.02187498471671976,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random10,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random10,0.5,-0.47499999086889544,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random10,1.0,-1.6031249970783883,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random11,-1.0,1.3234374925153827,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random11,-0.5,0.6062499962311658,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random11,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random11,0.5,-0.49999996304312216,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random11,1.0,-1.081249977370875,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random12,-1.0,-1.2156249898411657,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random12,-0.5,-0.26406250874907616,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random12,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random12,0.5,0.16562502134164378,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random12,1.0,0.36718748589712263,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random13,-1.0,1.0624999900933152,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random13,-0.5,0.6078125014046403,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random13,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random13,0.5,-0.7328124726698443,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random13,1.0,-2.262499970739318,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random14,-1.0,-0.8093749758808035,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random14,-0.5,-0.15156247291663552,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random14,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random14,0.5,-0.21562499857789336,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random14,1.0,-0.7718750052828671,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random15,-1.0,-1.3750000026164164,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random15,-0.5,-0.5578124791385776,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random15,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random15,0.5,0.5828125186583601,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random15,1.0,0.8750000103896477,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random16,-1.0,0.4984375095375871,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random16,-0.5,0.4765625057467526,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random16,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random16,0.5,-1.1546874767301496,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random16,1.0,-3.2171874747995175,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random17,-1.0,0.18906251063912133,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random17,-0.5,0.270312522334482,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random17,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random17,0.5,-0.5265624788897159,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random17,1.0,-1.720312490397416,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random18,-1.0,-0.02031247739192583,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random18,-0.5,0.32812504096850426,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random18,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random18,0.5,-1.043749989001487,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random18,1.0,-2.7203124798995084,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random19,-1.0,-0.9624999868823881,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random19,-0.5,0.05312502178555789,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random19,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random19,0.5,-0.3468750017385622,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random19,1.0,-0.7499999789253939,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random20,-1.0,-0.19062498875299022,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random20,-0.5,-0.03906248643831263,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random20,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random20,0.5,-0.18593749833764375,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random20,1.0,-1.1374999849901426,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random21,-1.0,-0.03281249596139264,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random21,-0.5,0.246875003502125,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random21,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random21,0.5,-0.5890624711148096,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random21,1.0,-1.9921874876827483,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random22,-1.0,0.45468748991128766,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random22,-0.5,0.3843750061133787,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random22,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random22,0.5,-0.6187499733826382,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random22,1.0,-1.9187499528617866,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random23,-1.0,-1.5890624680942966,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random23,-0.5,-0.6500000013264492,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random23,0.0,0.0,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random23,0.5,0.5609374961369585,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+290,qwen25_32b,Qwen2.5-32B,random23,1.0,0.67031251957197,,,160,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/concept_control/floor/reads290.jsonl
+288,qwen3_14b,Qwen3-14B,valence,-1.0,-4.160377417806698,-4.639190300797938,-3.6972484287604903,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_14b,Qwen3-14B,valence,-0.5,-3.0275157504167587,-3.3035574038176065,-2.7602005151488638,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_14b,Qwen3-14B,valence,0.0,0.0,0.0,0.0,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_14b,Qwen3-14B,valence,0.5,1.7798742165997323,1.5723270522978976,1.984276718899945,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_14b,Qwen3-14B,valence,1.0,2.7586478548195688,2.4363011470674403,3.0802083825285105,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_14b,Qwen3-14B,fast_slow,-1.0,-1.0479559897774466,-1.2885416949308206,-0.8010613579022369,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_14b,Qwen3-14B,fast_slow,-0.5,-0.7594339609981478,-0.8758254829525588,-0.6383648037754157,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_14b,Qwen3-14B,fast_slow,0.0,0.0,0.0,0.0,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_14b,Qwen3-14B,fast_slow,0.5,0.583333362030011,0.46540884506646024,0.7044025415950662,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_14b,Qwen3-14B,fast_slow,1.0,0.1619497077353896,-0.078616348129774,0.3899764505474362,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_14b,Qwen3-14B,indoor_outdoor,-1.0,-0.7500000191510949,-1.0519261232767614,-0.45436320333375574,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_14b,Qwen3-14B,indoor_outdoor,-0.5,-0.2610062778186465,-0.41666663710638274,-0.11163519621965673,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_14b,Qwen3-14B,indoor_outdoor,0.0,0.0,0.0,0.0,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_14b,Qwen3-14B,indoor_outdoor,0.5,0.14465409126942377,0.01572329365165501,0.2751572144819536,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_14b,Qwen3-14B,indoor_outdoor,1.0,0.25157234674070506,0.029874240579582406,0.4716981047258191,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_14b,Qwen3-14B,large_small,-1.0,-0.7955974776464318,-1.042452830709316,-0.5534197875787055,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_14b,Qwen3-14B,large_small,-0.5,-0.16823899537839265,-0.27830187974372633,-0.05503146681736966,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_14b,Qwen3-14B,large_small,0.0,0.0,0.0,0.0,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_14b,Qwen3-14B,large_small,0.5,-0.13993713408437866,-0.2468553775912602,-0.03301889805463152,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_14b,Qwen3-14B,large_small,1.0,-0.3946540805706153,-0.6101022112722768,-0.16981133012080377,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+255,qwen3_14b,Qwen3-14B,random0,-1.0,0.7999999889892232,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random0,-0.5,0.23749996528158465,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random0,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random0,0.5,-0.01250000897766892,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random0,1.0,-0.22500000818929636,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random1,-1.0,-1.175000025081391,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random1,-0.5,-0.6312500086472227,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random1,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random1,0.5,0.33125001619639394,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random1,1.0,0.3875000115657928,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random2,-1.0,-0.46249997514265856,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random2,-0.5,-0.08750002154661249,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random2,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random2,0.5,-0.09375000420316208,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random2,1.0,0.16875001783221144,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random3,-1.0,-0.38749997907000433,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random3,-0.5,0.01250000457653062,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random3,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random3,0.5,-0.4562500354700205,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random3,1.0,-1.0187499968771783,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random4,-1.0,2.4374999769031325,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random4,-0.5,1.0687500365172382,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random4,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random4,0.5,-0.9687500016097612,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random4,1.0,-1.874999976494906,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random5,-1.0,-0.324999999770036,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random5,-0.5,-0.16249997107424932,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random5,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random5,0.5,0.06250003527013526,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random5,1.0,0.2562499769605203,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random6,-1.0,-1.4249999983584878,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random6,-0.5,-0.7812499624802184,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random6,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random6,0.5,0.7499999799187002,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random6,1.0,1.4124999823006241,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random7,-1.0,1.3437500178313928,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random7,-0.5,0.43124995660184523,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random7,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random7,0.5,-0.36249999332965344,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random7,1.0,-0.6562499840553995,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random8,-1.0,1.2062500099027134,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random8,-0.5,0.7125000239061805,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random8,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random8,0.5,-0.9875000101841337,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random8,1.0,-1.8874999844524702,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random9,-1.0,0.9999999979499833,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random9,-0.5,0.5249999779132395,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random9,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random9,0.5,-0.4874999850839924,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random9,1.0,-0.8812500154338535,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random10,-1.0,-0.6374999933332232,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random10,-0.5,-0.5312500043386319,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random10,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random10,0.5,0.7687499819025099,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random10,1.0,1.5906250269892706,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random11,-1.0,0.31249997487518205,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random11,-0.5,0.24375000924880955,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random11,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random11,0.5,-0.3625000608822118,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random11,1.0,-0.5562500118635171,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random12,-1.0,-1.7124999863809465,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random12,-0.5,-0.8937500041283893,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random12,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random12,0.5,0.38124995527639294,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random12,1.0,0.29375000584829963,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random13,-1.0,-0.8562500053729039,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random13,-0.5,-0.34999996247836407,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random13,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random13,0.5,0.2687499509705667,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random13,1.0,0.44374999721403174,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random14,-1.0,-1.1624999833472585,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random14,-0.5,-0.6124999961860793,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random14,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random14,0.5,0.5875000484215647,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random14,1.0,0.793750024736366,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random15,-1.0,-1.0625000689767856,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random15,-0.5,-0.4062499893188024,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random15,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random15,0.5,0.05624999174678926,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random15,1.0,0.143749988530611,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random16,-1.0,0.6937499938931287,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random16,-0.5,0.25000000957972973,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random16,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random16,0.5,-0.4687500269412805,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random16,1.0,-0.9500000307938207,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random17,-1.0,0.9562500143870449,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random17,-0.5,0.48125000122642947,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random17,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random17,0.5,-1.0437500301983884,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random17,1.0,-2.7437501856356974,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random18,-1.0,-0.8187500123776994,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random18,-0.5,-0.5562500005748804,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random18,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random18,0.5,0.6749999936340826,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random18,1.0,1.3437500103502986,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random19,-1.0,-1.4062500204114676,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random19,-0.5,-0.8437499874768258,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random19,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random19,0.5,0.7687500546364154,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random19,1.0,1.2249999911862903,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random20,-1.0,-1.4124999441479076,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random20,-0.5,-0.7312499696901339,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random20,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random20,0.5,0.5187500223191812,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random20,1.0,0.8374999946680637,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random21,-1.0,-3.2937500028613216,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random21,-0.5,-1.768750004080299,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random21,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random21,0.5,1.5375000215524195,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random21,1.0,2.7812500221710694,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random22,-1.0,0.10312501799127886,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random22,-0.5,0.12499999564777173,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random22,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random22,0.5,-0.16874997878224018,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random22,1.0,-0.5124999696452859,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random23,-1.0,1.631250020018318,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random23,-0.5,0.7062499678650609,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random23,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random23,0.5,-0.6312499818085324,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_14b,Qwen3-14B,random23,1.0,-1.125000062537946,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+288,qwen3_32b,Qwen3-32B,valence,-1.0,-0.06249545207350665,-0.12499970539656996,-0.001534362241320642,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_32b,Qwen3-32B,valence,-0.5,0.0007913751441555742,-0.037182871658892926,0.03641577674785634,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_32b,Qwen3-32B,valence,0.0,0.0,0.0,0.0,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_32b,Qwen3-32B,valence,0.5,-0.040349314409694144,-0.07832339037454486,-0.0007915722126795176,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_32b,Qwen3-32B,valence,1.0,-0.12341998394108947,-0.1938331913691247,-0.0513790197306355,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_32b,Qwen3-32B,fast_slow,-1.0,-0.25238112923550976,-0.31725655133635094,-0.18431514749448194,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_32b,Qwen3-32B,fast_slow,-0.5,-0.1329170129341496,-0.16535508791706577,-0.09810972270898857,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_32b,Qwen3-32B,fast_slow,0.0,0.0,0.0,0.0,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_32b,Qwen3-32B,fast_slow,0.5,0.11709423357624732,0.08465584992507852,0.14955602634244236,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_32b,Qwen3-32B,fast_slow,1.0,0.22548255870795897,0.16931560205719778,0.2832354915628538,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_32b,Qwen3-32B,indoor_outdoor,-1.0,-0.1028486947378393,-0.1598096414614726,-0.04667757435508205,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_32b,Qwen3-32B,indoor_outdoor,-0.5,-0.021360994004273576,-0.04904904998682079,0.008703997494739027,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_32b,Qwen3-32B,indoor_outdoor,0.0,0.0,0.0,0.0,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_32b,Qwen3-32B,indoor_outdoor,0.5,-0.0577511714992495,-0.08386110975748945,-0.031621124719787466,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_32b,Qwen3-32B,indoor_outdoor,1.0,-0.18116720217388455,-0.2373415908503411,-0.1265717946067721,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_32b,Qwen3-32B,large_small,-1.0,0.34493333011401556,0.28006415251523,0.4121726443135642,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_32b,Qwen3-32B,large_small,-0.5,0.14635839457669508,0.11550586874012655,0.17800424495324485,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_32b,Qwen3-32B,large_small,0.0,0.0,0.0,0.0,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_32b,Qwen3-32B,large_small,0.5,-0.11550485090478338,-0.1447803618394358,-0.08702643503371475,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,qwen3_32b,Qwen3-32B,large_small,1.0,-0.20885881007841708,-0.26503327059042353,-0.1534836793641849,158,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+255,qwen3_32b,Qwen3-32B,random0,-1.0,-0.13435646860437486,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random0,-0.5,-0.043747640545245756,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random0,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random0,0.5,0.05001014633716068,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random0,1.0,0.09375325080478661,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random1,-1.0,-0.1343765974679741,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random1,-0.5,-0.015623333134749373,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random1,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random1,0.5,0.02187363227977812,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random1,1.0,0.056248949484006515,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random2,-1.0,-0.05937892067881308,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random2,-0.5,-0.028125210249038447,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random2,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random2,0.5,0.03749511272193331,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random2,1.0,0.006243536845101971,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random3,-1.0,0.3156343665902114,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random3,-0.5,0.1593824818887583,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random3,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random3,0.5,-0.10313441315413456,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random3,1.0,-0.25626688092279437,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random4,-1.0,0.06562307990050158,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random4,-0.5,0.05624716593109724,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random4,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random4,0.5,-0.0625039987649643,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random4,1.0,-0.16564445650909648,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random5,-1.0,0.06248851442236401,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random5,-0.5,0.024988415370432903,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random5,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random5,0.5,0.018767795094231588,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random5,1.0,0.012514869383454651,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random6,-1.0,0.2656331763288108,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random6,-0.5,0.11563149582415236,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random6,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random6,0.5,-0.07812772377470764,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random6,1.0,-0.16563474508944295,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random7,-1.0,-0.05313023702300938,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random7,-0.5,-0.0031345551443564545,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random7,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random7,0.5,0.00938023214232544,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random7,1.0,-0.0312412196027708,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random8,-1.0,-0.01249813353110767,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random8,-0.5,-0.01874837900860484,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random8,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random8,0.5,0.06875285923944148,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random8,1.0,0.12812698773772696,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random9,-1.0,0.1124768049267459,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random9,-0.5,0.05626206048199265,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random9,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random9,0.5,-0.015622566410524997,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random9,1.0,0.009374650180154731,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random10,-1.0,0.06873977712798478,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random10,-0.5,0.03437012251456508,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random10,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random10,0.5,-0.003124598177259941,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random10,1.0,-0.05626269872143439,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random11,-1.0,-0.16249156636717998,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random11,-0.5,-0.062494191423559185,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random11,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random11,0.5,0.0999851499251804,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random11,1.0,0.15311555868182722,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random12,-1.0,-0.0031250419741127187,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random12,-0.5,0.009377961145588642,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random12,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random12,0.5,0.02811976981196267,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random12,1.0,0.04061919510805865,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random13,-1.0,0.10314313625229943,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random13,-0.5,0.053132983321779646,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random13,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random13,0.5,-0.04375804793284033,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random13,1.0,-0.07501324969222196,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random14,-1.0,-0.24373834146166473,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random14,-0.5,-0.08749180103369554,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random14,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random14,0.5,0.11249857145656961,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random14,1.0,0.1312520406916974,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random15,-1.0,0.003064515667699652,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random15,-0.5,-2.356717545808351e-05,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random15,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random15,0.5,0.01251200426994501,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random15,1.0,-0.04061843630529438,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random16,-1.0,0.21563228482440308,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random16,-0.5,0.10937465975597434,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random16,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random16,0.5,-0.10311022636656161,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random16,1.0,-0.21876921688592574,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random17,-1.0,-0.14374658877670754,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random17,-0.5,-0.10311803360461909,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random17,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random17,0.5,0.13124740171048188,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random17,1.0,0.1968759114386728,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random18,-1.0,-0.06567365938873308,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random18,-0.5,-0.056280140239232425,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random18,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random18,0.5,0.12813637945275785,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random18,1.0,0.24687473124482723,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random19,-1.0,0.07500560829245728,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random19,-0.5,0.018752037503554676,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random19,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random19,0.5,-0.0187584522438101,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random19,1.0,-0.09377884463149258,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random20,-1.0,0.0874575634539326,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random20,-0.5,0.09998928489396804,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random20,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random20,0.5,-0.09687285373651093,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random20,1.0,-0.2281234492455951,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random21,-1.0,-0.09374917374780126,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random21,-0.5,-0.043749444264642535,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random21,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random21,0.5,0.03437414310992608,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random21,1.0,0.05937862949406849,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random22,-1.0,0.08124085133389372,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random22,-0.5,0.04687062420109669,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random22,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random22,0.5,-0.03124686817576503,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random22,1.0,-0.07186846728511682,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random23,-1.0,-0.15005870979367728,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random23,-0.5,-0.08126787348090829,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random23,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random23,0.5,0.03438261046423463,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,qwen3_32b,Qwen3-32B,random23,1.0,0.06875688570536909,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+288,mistral24b,Mistral-24B,valence,-1.0,-0.4503686406947916,-0.49133582754913574,-0.41324252733596284,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,mistral24b,Mistral-24B,valence,-0.5,-0.20019794488325715,-0.22074846699092007,-0.17977560457482086,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,mistral24b,Mistral-24B,valence,0.0,0.0,0.0,0.0,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,mistral24b,Mistral-24B,valence,0.5,0.08531765510735947,0.07056471850027579,0.10007879796972059,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,mistral24b,Mistral-24B,valence,1.0,0.00260621511523484,-0.018608509343736833,0.023773066357867727,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,mistral24b,Mistral-24B,fast_slow,-1.0,-0.0975175139568807,-0.11970278439753053,-0.07424251953302734,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,mistral24b,Mistral-24B,fast_slow,-0.5,-0.0023024627631469297,-0.018635490220123778,0.014015685639296973,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,mistral24b,Mistral-24B,fast_slow,0.0,0.0,0.0,0.0,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,mistral24b,Mistral-24B,fast_slow,0.5,-0.058607454064722155,-0.07259712799675185,-0.0441009092794844,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,mistral24b,Mistral-24B,fast_slow,1.0,-0.20006038665960182,-0.22240194072444724,-0.17521127614910179,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,mistral24b,Mistral-24B,indoor_outdoor,-1.0,-0.22869533273921,-0.25231550222885146,-0.20426713909654806,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,mistral24b,Mistral-24B,indoor_outdoor,-0.5,-0.03346115634837522,-0.05064111664793089,-0.016216213494353603,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,mistral24b,Mistral-24B,indoor_outdoor,0.0,0.0,0.0,0.0,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,mistral24b,Mistral-24B,indoor_outdoor,0.5,-0.08920860738992642,-0.10653952411870515,-0.07060092664898215,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,mistral24b,Mistral-24B,indoor_outdoor,1.0,-0.3063873924631504,-0.32969330483442627,-0.2814947551490322,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,mistral24b,Mistral-24B,large_small,-1.0,-0.31235775096932417,-0.33408736858526067,-0.2893475742204103,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,mistral24b,Mistral-24B,large_small,-0.5,-0.13664370500847844,-0.15219902082641604,-0.12077844418783897,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,mistral24b,Mistral-24B,large_small,0.0,0.0,0.0,0.0,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,mistral24b,Mistral-24B,large_small,0.5,0.019583796631861355,0.004094889078264922,0.035738864630990304,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,mistral24b,Mistral-24B,large_small,1.0,-0.19907181834942034,-0.22470835536681086,-0.1728510916210997,153,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+255,mistral24b,Mistral-24B,random0,-1.0,0.024561648559756576,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random0,-0.5,0.012362166470848025,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random0,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random0,0.5,-0.01903287726454437,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random0,1.0,-0.06058500072103925,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random1,-1.0,-0.08175140293897129,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random1,-0.5,-0.0346139173489064,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random1,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random1,0.5,0.018517491541570053,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random1,1.0,0.0020265455881599338,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random2,-1.0,-0.013708106050034984,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random2,-0.5,0.018595109070884065,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random2,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random2,0.5,-0.07541787129594013,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random2,1.0,-0.16352513721212744,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random3,-1.0,-0.06226721517159604,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random3,-0.5,-0.006195773946819827,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random3,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random3,0.5,-0.03176753667066805,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random3,1.0,-0.03842577929608524,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random4,-1.0,-0.028223600011551754,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random4,-0.5,0.00314372984576039,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random4,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random4,0.5,-0.028339895320823417,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random4,1.0,-0.06619867336703464,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random5,-1.0,-0.009766557993134483,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random5,-0.5,0.031485764990793544,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random5,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random5,0.5,-0.04744282353203744,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random5,1.0,-0.11693818406201899,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random6,-1.0,-0.17083681882359086,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random6,-0.5,-0.07291195013094694,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random6,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random6,0.5,0.009667204733705147,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random6,1.0,-0.02183516314253211,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random7,-1.0,-0.13105870823492297,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random7,-0.5,-0.05416646210942418,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random7,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random7,0.5,0.009711263998178765,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random7,1.0,-0.021578804345335812,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random8,-1.0,0.009033446985995397,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random8,-0.5,0.02808622135198675,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random8,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random8,0.5,-0.03780625597573817,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random8,1.0,-0.08226245535770431,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random9,-1.0,-0.025528081925585866,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random9,-0.5,-0.01278123043011874,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random9,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random9,0.5,-0.044168001966318114,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random9,1.0,-0.14199524446739814,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random10,-1.0,-0.04010843348223716,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random10,-0.5,-0.02159819703665562,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random10,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random10,0.5,-0.022539071284700184,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random10,1.0,-0.10142757628345862,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random11,-1.0,0.09098823958192952,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random11,-0.5,0.06252679215394892,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random11,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random11,0.5,-0.11307545121526345,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random11,1.0,-0.27042062067775985,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random12,-1.0,-0.09436113037518226,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random12,-0.5,-0.04067452454473823,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random12,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random12,0.5,0.011842617893125861,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random12,1.0,-0.03578982582548633,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random13,-1.0,0.0029898932785727083,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random13,-0.5,0.024748841108521446,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random13,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random13,0.5,-0.04381165541708469,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random13,1.0,-0.037814754660939795,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random14,-1.0,-0.057330989692127333,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random14,-0.5,-0.0032937243697233496,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random14,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random14,0.5,-0.03771551703684963,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random14,1.0,-0.07265913386363536,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random15,-1.0,-0.13518375530838966,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random15,-0.5,-0.05978906966629438,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random15,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random15,0.5,0.01858860855572857,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random15,1.0,-0.031805092078866434,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random16,-1.0,-0.14754307136754505,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random16,-0.5,-0.06895534598152153,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random16,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random16,0.5,0.025011447601718827,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random16,1.0,0.052896365080960094,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random17,-1.0,-0.044700866093626244,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random17,-0.5,-0.012869513395708054,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random17,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random17,0.5,-0.012621456308988855,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random17,1.0,-0.06604981755372137,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random18,-1.0,0.024173042085021735,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random18,-0.5,0.021786016260739414,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random18,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random18,0.5,-0.06296447005006485,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random18,1.0,-0.14793350344407372,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random19,-1.0,-0.012102152494480833,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random19,-0.5,0.022159101424040272,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random19,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random19,0.5,-0.08509374601999298,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random19,1.0,-0.17379950659815221,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random20,-1.0,-0.21159454794833438,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random20,-0.5,-0.11049668217892758,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random20,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random20,0.5,0.05037424912443385,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random20,1.0,0.0284353491733782,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random21,-1.0,-0.07256602183915675,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random21,-0.5,-0.05026046757702716,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random21,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random21,0.5,0.04060874331044033,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random21,1.0,0.062335721147246656,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random22,-1.0,-0.14439502676832489,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random22,-0.5,-0.018689897743752227,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random22,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random22,0.5,-0.0003572765795979649,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random22,1.0,-0.016499245027080178,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random23,-1.0,-0.06632386335986666,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random23,-0.5,-0.003279219171963632,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random23,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random23,0.5,-0.053393497841898355,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,mistral24b,Mistral-24B,random23,1.0,-0.12275035383063368,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+288,gemma3_27b,Gemma-3-27B,valence,-1.0,-2.9922487830536606,-3.4703487572714167,-2.5086446245535523,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,gemma3_27b,Gemma-3-27B,valence,-0.5,-1.239785163443406,-1.4780071015538963,-1.0023391274862377,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,gemma3_27b,Gemma-3-27B,valence,0.0,0.0,0.0,0.0,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,gemma3_27b,Gemma-3-27B,valence,0.5,-0.01887353125055676,-0.222529078925403,0.18080675003888583,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,gemma3_27b,Gemma-3-27B,valence,1.0,-1.7845985227987036,-2.2579713380073616,-1.3183589702960625,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,gemma3_27b,Gemma-3-27B,fast_slow,-1.0,-2.3592828938415216,-2.8050320847863595,-1.9275614983441371,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,gemma3_27b,Gemma-3-27B,fast_slow,-0.5,-1.1438735892645338,-1.363994006087394,-0.9221754968777601,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,gemma3_27b,Gemma-3-27B,fast_slow,0.0,0.0,0.0,0.0,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,gemma3_27b,Gemma-3-27B,fast_slow,0.5,0.08726285432315593,-0.14231651568283474,0.3121265082826538,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,gemma3_27b,Gemma-3-27B,fast_slow,1.0,-1.9874279431849193,-2.4403813062402806,-1.5683044304231406,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,gemma3_27b,Gemma-3-27B,indoor_outdoor,-1.0,-1.640730640300916,-2.0661449140755317,-1.1996977320266389,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,gemma3_27b,Gemma-3-27B,indoor_outdoor,-0.5,-0.4544048077737882,-0.6572350219335493,-0.2366200169330873,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,gemma3_27b,Gemma-3-27B,indoor_outdoor,0.0,0.0,0.0,0.0,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,gemma3_27b,Gemma-3-27B,indoor_outdoor,0.5,-0.3184016307087245,-0.57235213650445,-0.06132606306859322,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,gemma3_27b,Gemma-3-27B,indoor_outdoor,1.0,-2.216201031395512,-2.6714150918905166,-1.7624667062271833,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,gemma3_27b,Gemma-3-27B,large_small,-1.0,-3.371080985613972,-3.853052434268662,-2.8750170754738753,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,gemma3_27b,Gemma-3-27B,large_small,-0.5,-1.3679301777307893,-1.6297423299307718,-1.1171156785473753,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,gemma3_27b,Gemma-3-27B,large_small,0.0,0.0,0.0,0.0,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,gemma3_27b,Gemma-3-27B,large_small,0.5,-0.36085456981480024,-0.6069186659740564,-0.1186517565131286,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,gemma3_27b,Gemma-3-27B,large_small,1.0,-1.3978054298014662,-1.856989905708305,-0.9511806118006824,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+255,gemma3_27b,Gemma-3-27B,random0,-1.0,-5.581250038501046,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random0,-0.5,-1.8375000637607009,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random0,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random0,0.5,-0.3250000341085659,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random0,1.0,-3.1062495767072575,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random1,-1.0,-2.934375075915355,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random1,-0.5,-0.1593750829408515,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random1,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random1,0.5,-1.3031250108066612,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random1,1.0,-3.881250342732808,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random2,-1.0,-4.684374987302507,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random2,-0.5,-1.9031250818058438,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random2,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random2,0.5,-1.525000038736342,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random2,1.0,-5.096875127884446,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random3,-1.0,-3.2687525100390404,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random3,-0.5,0.23437496637062355,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random3,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random3,0.5,-2.2625000950057563,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random3,1.0,-4.431250094458061,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random4,-1.0,-5.06562513303721,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random4,-0.5,-2.3562500121822993,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random4,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random4,0.5,0.8843749008701742,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random4,1.0,-1.384374713268199,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random5,-1.0,-4.340626522765353,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random5,-0.5,-1.4281250957875535,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random5,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random5,0.5,-0.7718751089931215,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random5,1.0,-4.3500003320428995,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random6,-1.0,-5.028125184246118,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random6,-0.5,-2.168750044121488,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random6,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random6,0.5,0.30312492454731893,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random6,1.0,-1.6593750703004744,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random7,-1.0,-3.9156261104804506,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random7,-0.5,-1.1968750898397216,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random7,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random7,0.5,-1.7531250644734775,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random7,1.0,-3.7999999730336866,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random8,-1.0,-3.9499999557708128,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random8,-0.5,-1.0218750480934329,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random8,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random8,0.5,-1.3062500989117798,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random8,1.0,-5.3562501573412655,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random9,-1.0,-3.1468752722874114,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random9,-0.5,-0.30000008475333184,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random9,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random9,0.5,-2.0656250559411014,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random9,1.0,-4.218750631222486,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random10,-1.0,-1.6343750368116416,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random10,-0.5,0.012499968323362332,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random10,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random10,0.5,-1.6031250994756376,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random10,1.0,-4.596875753438158,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random11,-1.0,-4.80312520555657,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random11,-0.5,-1.8843751009553842,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random11,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random11,0.5,-0.3812500474349923,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random11,1.0,-3.4562503202499655,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random12,-1.0,-4.71250035204457,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random12,-0.5,-2.4000000401960326,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random12,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random12,0.5,-0.09062505853185439,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random12,1.0,-3.278125070242312,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random13,-1.0,-2.9968744753058125,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random13,-0.5,-0.27500005092814295,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random13,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random13,0.5,-1.5781250171034686,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random13,1.0,-3.990625239788636,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random14,-1.0,-3.228124974691924,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random14,-0.5,-0.7156250618988217,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random14,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random14,0.5,-1.3156250413260944,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random14,1.0,-4.275000085344064,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random15,-1.0,-3.362500057396793,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random15,-0.5,-0.9687500072603038,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random15,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random15,0.5,-1.0250001382151244,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random15,1.0,-3.2625842862286847,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random16,-1.0,-4.115624812946091,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random16,-0.5,-2.3312501203374345,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random16,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random16,0.5,-0.2062500331725497,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random16,1.0,-3.709385853584176,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random17,-1.0,-3.7343877828708685,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random17,-0.5,-1.075000101765173,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random17,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random17,0.5,-1.5875000186152932,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random17,1.0,-5.1531251027640455,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random18,-1.0,-4.4843750737598445,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random18,-0.5,-1.7656250029959906,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random18,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random18,0.5,-0.8562501030310191,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random18,1.0,-3.2281252282694135,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random19,-1.0,-4.521875156453946,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random19,-0.5,-2.271875255467823,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random19,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random19,0.5,-0.43437499342507946,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random19,1.0,-4.581250384247101,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random20,-1.0,-3.9937501058846165,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random20,-0.5,-1.618750047964052,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random20,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random20,0.5,-0.7312499687714009,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random20,1.0,-4.553125147747967,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random21,-1.0,-4.018750718600378,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random21,-0.5,0.015624842757066127,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random21,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random21,0.5,-2.665625135687217,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random21,1.0,-5.046874913468799,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random22,-1.0,-2.6031250969940016,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random22,-0.5,-0.05000010310122427,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random22,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random22,0.5,-2.43437510028277,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random22,1.0,-4.331250384587596,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random23,-1.0,-4.881251243792274,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random23,-0.5,-1.0906252070261586,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random23,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random23,0.5,-1.2625000437466725,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,gemma3_27b,Gemma-3-27B,random23,1.0,-4.2000001026199945,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+288,llama31_8b,Llama-3.1-8B,valence,-1.0,-1.3342727601720736,-1.4279409393361473,-1.246940069177661,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,llama31_8b,Llama-3.1-8B,valence,-0.5,-0.6588237294946326,-0.7138507121195495,-0.6092843483768965,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,llama31_8b,Llama-3.1-8B,valence,0.0,0.0,0.0,0.0,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,llama31_8b,Llama-3.1-8B,valence,0.5,0.43867788893806436,0.3922984308023024,0.48742162661472,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,llama31_8b,Llama-3.1-8B,valence,1.0,0.5888286793700136,0.501566230529208,0.6792644566412755,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,llama31_8b,Llama-3.1-8B,fast_slow,-1.0,-0.4277252450274088,-0.4898207028894589,-0.3648377948569778,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,llama31_8b,Llama-3.1-8B,fast_slow,-0.5,-0.15252633202408034,-0.18556820062831586,-0.12105337321468711,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,llama31_8b,Llama-3.1-8B,fast_slow,0.0,0.0,0.0,0.0,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,llama31_8b,Llama-3.1-8B,fast_slow,0.5,0.08097405254059006,0.049525855315284216,0.11320770831586488,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,llama31_8b,Llama-3.1-8B,fast_slow,1.0,-0.0707670797910705,-0.13368683352873434,-0.00866694363142334,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,llama31_8b,Llama-3.1-8B,indoor_outdoor,-1.0,-0.7807166877981381,-0.8522812585197302,-0.7099846854964245,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,llama31_8b,Llama-3.1-8B,indoor_outdoor,-0.5,-0.2563029076788803,-0.29246239371713595,-0.22014314708240362,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,llama31_8b,Llama-3.1-8B,indoor_outdoor,0.0,0.0,0.0,0.0,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,llama31_8b,Llama-3.1-8B,indoor_outdoor,0.5,-0.09198929837462062,-0.13522688482152256,-0.0495100160780105,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,llama31_8b,Llama-3.1-8B,indoor_outdoor,1.0,-0.40269704972032205,-0.4992515087792891,-0.31624508419238817,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,llama31_8b,Llama-3.1-8B,large_small,-1.0,-0.34832470857615555,-0.3978641268083002,-0.29802718675186746,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,llama31_8b,Llama-3.1-8B,large_small,-0.5,-0.0007948520734327927,-0.03459473768497006,0.03303567743831275,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,llama31_8b,Llama-3.1-8B,large_small,0.0,0.0,0.0,0.0,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,llama31_8b,Llama-3.1-8B,large_small,0.5,-0.4009582557578417,-0.4426549550785993,-0.3639818860356211,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+288,llama31_8b,Llama-3.1-8B,large_small,1.0,-0.909666166822093,-0.984353485539221,-0.8381099408505048,159,all_recorded_ungated,"2000 conversation bootstrap, percentile 95%",experiment_results_json/fixed_text_design/concept_control/reads/reads288.jsonl
+255,llama31_8b,Llama-3.1-8B,random0,-1.0,0.38437325070256706,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random0,-0.5,0.2468760908441638,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random0,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random0,0.5,-0.2875049213551762,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random0,1.0,-0.6156389013201313,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random1,-1.0,-0.2531340292762222,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random1,-0.5,-0.11250174405770111,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random1,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random1,0.5,0.11562479572812734,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random1,1.0,0.14374465247724189,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random2,-1.0,-0.27501040236295393,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random2,-0.5,-0.15000488104028592,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random2,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random2,0.5,0.02812598313064374,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random2,1.0,-0.11250556329541936,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random3,-1.0,0.1937590444389862,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random3,-0.5,0.1500068875893376,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random3,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random3,0.5,-0.22500693089581675,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random3,1.0,-0.4875183295869512,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random4,-1.0,0.018754117866988905,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random4,-0.5,0.05000242798123615,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random4,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random4,0.5,-0.12187755809105098,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random4,1.0,-0.30938454916101465,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random5,-1.0,0.25624636758549074,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random5,-0.5,0.21562512759947267,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random5,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random5,0.5,-0.27500345325302344,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random5,1.0,-0.5406317220763264,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random6,-1.0,-0.2687571737077107,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random6,-0.5,-0.06562671128085924,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random6,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random6,0.5,-0.009377550313963923,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random6,1.0,-0.14063765435411996,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random7,-1.0,-0.05312827751637954,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random7,-0.5,0.03750000481953908,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random7,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random7,0.5,-0.09062737345171498,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random7,1.0,-0.2687575840651185,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random8,-1.0,-0.4343768654563419,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random8,-0.5,-0.20937508130351007,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random8,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random8,0.5,0.18124685062159857,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random8,1.0,0.278118611344447,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random9,-1.0,-0.23750051282735568,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random9,-0.5,-0.07499784965631591,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random9,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random9,0.5,0.021870347829282367,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random9,1.0,-0.09688580017178605,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random10,-1.0,-0.315633933282216,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random10,-0.5,-0.15625481440458255,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random10,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random10,0.5,0.06875384782008567,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random10,1.0,3.1869698212005916e-06,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random11,-1.0,-0.27499870223139383,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random11,-0.5,-0.10624867677125138,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random11,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random11,0.5,0.05312030342569276,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random11,1.0,-0.03751119381938679,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random12,-1.0,-0.03750369756065695,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random12,-0.5,0.009375578348083734,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random12,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random12,0.5,-0.07187813985293712,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random12,1.0,-0.30938199014474466,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random13,-1.0,-0.30314380828296966,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random13,-0.5,-0.12500738737323847,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random13,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random13,0.5,0.02812612513307542,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random13,1.0,-0.07812609428218095,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random14,-1.0,-0.056254659804066166,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random14,-0.5,0.006250662854088773,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random14,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random14,0.5,-0.0843787271057174,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random14,1.0,-0.20938789917456474,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random15,-1.0,-0.3406287051151587,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random15,-0.5,-0.14375110755830658,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random15,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random15,0.5,0.03749837275478925,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random15,1.0,-0.03437964556696684,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random16,-1.0,-0.2750091484413346,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random16,-0.5,-0.10000155925200645,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random16,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random16,0.5,0.1031236716595851,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random16,1.0,0.1656205034283566,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random17,-1.0,0.19061810431760834,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random17,-0.5,0.1843754726708589,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random17,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random17,0.5,-0.2187515435877847,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random17,1.0,-0.4500087947410156,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random18,-1.0,-0.3812577858313112,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random18,-0.5,-0.18125421331134534,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random18,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random18,0.5,0.09375176144703375,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random18,1.0,0.04999766319410739,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random19,-1.0,-0.02187574836806121,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random19,-0.5,0.05625280928267884,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random19,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random19,0.5,-0.11562917552323437,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random19,1.0,-0.31563519200422085,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random20,-1.0,0.06250191576430027,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random20,-0.5,0.09687850370267412,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random20,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random20,0.5,-0.13437679655720808,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random20,1.0,-0.3187558412439392,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random21,-1.0,0.031246449884793748,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random21,-0.5,0.06249942000400495,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random21,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random21,0.5,-0.1687542409140029,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random21,1.0,-0.37814537776320467,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random22,-1.0,-0.2687544566376353,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random22,-0.5,-0.09375197929252081,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random22,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random22,0.5,0.028123966032446823,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random22,1.0,-0.012506908596664168,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random23,-1.0,-0.10001679668440958,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random23,-0.5,-0.0031279674299256044,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random23,0.0,0.0,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random23,0.5,-0.0718769730011573,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
+255,llama31_8b,Llama-3.1-8B,random23,1.0,-0.1656317626796678,,,40,all_recorded_ungated,not plotted,experiment_results_json/fixed_text_design/neutral_passages/reduced.json
