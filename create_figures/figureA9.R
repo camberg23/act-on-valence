@@ -1,7 +1,7 @@
 ##########################################
 # AI WELFARE PROJECT
 ##########################################
-# Appendix Figure A9: Effect of the number of exposures
+# Appendix Figure A9: Injected span
 ##########################################
 
 #=================================
@@ -26,17 +26,16 @@ theme_set(
       panel.grid.minor = element_blank(),
       panel.grid.major.x = element_blank(),
       legend.position = "bottom",
-      legend.title = element_blank(),
-      legend.text = element_text(size = 11),
+      legend.text = element_text(size = 10.5),
+      legend.title = element_text(size = 11, face = "bold"),
       plot.background = element_rect(fill = "white", colour = NA),
       panel.background = element_rect(fill = "white", colour = NA)
     )
 )
 
-primary_colour <- hcl.colors(9, palette = "Heat")[4]
-series_colours <- c("valenced" = primary_colour, "largest_random_direction" = "grey45")
-series_labels <- c("valenced" = "Valenced direction", "largest_random_direction" = "Largest random-direction slope")
 model_order <- c("OLMo-2-32B", "Qwen2.5-32B", "Qwen3-14B", "Qwen3-32B", "Mistral-24B", "Gemma-3-27B", "Llama-3.1-8B")
+span_order <- c("bare", "sentence", "passage")
+span_colours <- setNames(hcl.colors(5, palette = "Heat")[c(5, 3, 1)], span_order)
 
 #=================================
 # 2. Data loading and preparation
@@ -48,17 +47,24 @@ data <- read_csv(
 ) %>%
   mutate(
     model = factor(model, levels = model_order),
-    series = factor(series, levels = c("valenced", "largest_random_direction"))
+    span = factor(span, levels = span_order),
+    floor_status = factor(
+      if_else(clears_random_floor == 1, "Clears random-direction floor", "Does not clear floor"),
+      levels = c("Clears random-direction floor", "Does not clear floor")
+    )
   )
 
 stopifnot(
-  nrow(data) == 56,
+  nrow(data) == 21,
   n_distinct(data$model) == 7,
-  setequal(data$n_exposures, c(1, 2, 3, 6))
+  n_distinct(data$span) == 3
 )
 
-valenced_data <- data %>%
-  filter(series == "valenced")
+span_labels <- data %>%
+  group_by(span) %>%
+  summarise(mean_tokens = round(mean(steered_span_tokens)), .groups = "drop") %>%
+  mutate(label = str_c(str_to_title(span), "\n(", mean_tokens, " tokens)")) %>%
+  {setNames(.$label, .$span)}
 
 panel_labels <- setNames(
   str_c("Panel ", LETTERS[1:7], ": ", model_order),
@@ -71,30 +77,40 @@ panel_labels <- setNames(
 
 figureA9 <- ggplot(
   data,
-  aes(x = n_exposures, y = estimate, colour = series, group = series)
+  aes(x = span, y = estimate, fill = span)
 ) +
-  geom_hline(yintercept = 0, colour = "grey80", linewidth = 0.5) +
+  geom_hline(yintercept = 0, colour = "grey75", linewidth = 0.5) +
+  geom_col(width = 0.72, colour = "grey20", linewidth = 0.35) +
   geom_errorbar(
-    data = valenced_data,
     aes(ymin = ci_low, ymax = ci_high),
-    width = 0.12,
-    linewidth = 0.75
+    width = 0.16,
+    linewidth = 0.7
   ) +
-  geom_line(linewidth = 1.15) +
-  geom_point(size = 3) +
+  geom_point(
+    aes(shape = floor_status),
+    size = 2.4,
+    stroke = 0.8,
+    fill = "white",
+    colour = "black"
+  ) +
   facet_wrap(
     ~model,
-    ncol = 4,
+    ncol = 3,
     scales = "free_y",
     labeller = as_labeller(panel_labels)
   ) +
-  scale_colour_manual(values = series_colours, labels = series_labels) +
-  scale_x_continuous(breaks = c(1, 2, 3, 6)) +
+  scale_fill_manual(values = span_colours, guide = "none") +
+  scale_shape_manual(
+    values = c("Clears random-direction floor" = 21, "Does not clear floor" = 4),
+    drop = FALSE
+  ) +
+  scale_x_discrete(labels = span_labels) +
   labs(
-    x = "Number of exposures to each zone",
+    x = "Injected span and mean number of injected tokens",
     y = expression(bold("Slope of "*Delta*" choice margin on steering dose (nats)")),
-    colour = NULL
-  )
+    shape = "Valenced direction"
+  ) +
+  guides(shape = guide_legend(nrow = 1))
 
 #=================================
 # 4. Save figure
@@ -103,8 +119,8 @@ figureA9 <- ggplot(
 ggsave(
   "figures/figureA9.png",
   figureA9,
-  width = 13,
-  height = 7.5,
+  width = 12,
+  height = 9,
   dpi = 300,
   bg = "white"
 )

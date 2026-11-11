@@ -1,7 +1,7 @@
 ##########################################
 # AI WELFARE PROJECT
 ##########################################
-# Appendix Figure A10: Concentration and strength of injection
+# Appendix Figure A10: Effect of the number of exposures
 ##########################################
 
 #=================================
@@ -10,7 +10,6 @@
 
 library(tidyverse)
 library(ggplot2)
-library(patchwork)
 
 # Run this script from the repository root directory.
 dir.create("figures", showWarnings = FALSE)
@@ -34,17 +33,10 @@ theme_set(
     )
 )
 
-heat_colours <- hcl.colors(9, palette = "Heat")
-condition_colours <- c(
-  "six_sightings_one_sixth_strength" = heat_colours[5],
-  "one_sighting_full_strength" = heat_colours[2]
-)
-condition_labels <- c(
-  "six_sightings_one_sixth_strength" = "Six sightings at one-sixth strength",
-  "one_sighting_full_strength" = "One sighting at full strength"
-)
+primary_colour <- hcl.colors(9, palette = "Heat")[4]
+series_colours <- c("valenced" = primary_colour, "largest_random_direction" = "grey45")
+series_labels <- c("valenced" = "Valenced direction", "largest_random_direction" = "Largest random-direction slope")
 model_order <- c("OLMo-2-32B", "Qwen2.5-32B", "Qwen3-14B", "Qwen3-32B", "Mistral-24B", "Gemma-3-27B", "Llama-3.1-8B")
-ladder_model_order <- c("OLMo-2-32B", "Qwen3-14B", "Llama-3.1-8B")
 
 #=================================
 # 2. Data loading and preparation
@@ -53,92 +45,66 @@ ladder_model_order <- c("OLMo-2-32B", "Qwen3-14B", "Llama-3.1-8B")
 data <- read_csv(
   "experiment_results_csv/figureA10.csv",
   show_col_types = FALSE
-)
-
-stopifnot(
-  nrow(data) == 38,
-  setequal(data$panel, c("constant_total_comparison", "six_sighting_strength_ladder"))
-)
-
-panel_a_data <- data %>%
-  filter(panel == "constant_total_comparison") %>%
+) %>%
   mutate(
     model = factor(model, levels = model_order),
-    condition = factor(condition, levels = names(condition_colours))
+    series = factor(series, levels = c("valenced", "largest_random_direction"))
   )
 
-panel_b_data <- data %>%
-  filter(panel == "six_sighting_strength_ladder") %>%
-  mutate(model = factor(model, levels = ladder_model_order))
+stopifnot(
+  nrow(data) == 56,
+  n_distinct(data$model) == 7,
+  setequal(data$n_exposures, c(1, 2, 3, 6))
+)
+
+valenced_data <- data %>%
+  filter(series == "valenced")
+
+panel_labels <- setNames(
+  str_c("Panel ", LETTERS[1:7], ": ", model_order),
+  model_order
+)
 
 #=================================
-# 3. Panel A: Concentrated versus diffuse injection
+# 3. Create figure
 #=================================
 
-bar_position <- position_dodge(width = 0.82)
-
-panel_a <- ggplot(
-  panel_a_data,
-  aes(x = model, y = estimate, fill = condition)
+figureA10 <- ggplot(
+  data,
+  aes(x = n_exposures, y = estimate, colour = series, group = series)
 ) +
-  geom_hline(yintercept = 0, colour = "grey70", linewidth = 0.55) +
-  geom_col(
-    position = bar_position,
-    width = 0.75,
-    colour = "grey20",
-    linewidth = 0.35
-  ) +
+  geom_hline(yintercept = 0, colour = "grey80", linewidth = 0.5) +
   geom_errorbar(
+    data = valenced_data,
     aes(ymin = ci_low, ymax = ci_high),
-    position = bar_position,
     width = 0.12,
-    linewidth = 0.8
+    linewidth = 0.75
   ) +
-  scale_fill_manual(values = condition_colours, labels = condition_labels) +
+  geom_line(linewidth = 1.15) +
+  geom_point(size = 3) +
+  facet_wrap(
+    ~model,
+    ncol = 4,
+    scales = "free_y",
+    labeller = as_labeller(panel_labels)
+  ) +
+  scale_colour_manual(values = series_colours, labels = series_labels) +
+  scale_x_continuous(breaks = c(1, 2, 3, 6)) +
   labs(
-    title = "Panel A: Effect of concentrated vs diffuse injection",
-    x = NULL,
+    x = "Number of exposures to each zone",
     y = expression(bold("Slope of "*Delta*" choice margin on steering dose (nats)")),
-    fill = NULL
-  ) +
-  theme(axis.text.x = element_text(angle = 35, hjust = 1))
+    colour = NULL
+  )
 
 #=================================
-# 4. Panel B: Per-sighting strength
+# 4. Save figure
 #=================================
-
-strength_breaks <- c(1 / 32, 1 / 24, 1 / 16, 1 / 12, 1 / 8, 1 / 6, 1 / sqrt(6), 1)
-strength_labels <- c("1/32", "1/24", "1/16", "1/12", "1/8", "1/6", "1/sqrt(6)", "1")
-
-panel_b <- ggplot(
-  panel_b_data,
-  aes(x = strength, y = estimate, group = model)
-) +
-  geom_hline(yintercept = 0, colour = "grey75", linewidth = 0.5) +
-  geom_errorbar(aes(ymin = ci_low, ymax = ci_high), width = 0.03, linewidth = 0.75) +
-  geom_line(colour = heat_colours[4], linewidth = 1.15) +
-  geom_point(colour = heat_colours[4], size = 3) +
-  facet_wrap(~model, nrow = 1, scales = "free_y") +
-  scale_x_log10(breaks = strength_breaks, labels = strength_labels) +
-  labs(
-    title = "Panel B: Effect of varying per-sighting strength",
-    x = "Steering-vector norm at each sighting (relative to full strength)",
-    y = expression(bold("Slope of "*Delta*" choice margin on steering dose (nats)"))
-  ) +
-  theme(axis.text.x = element_text(angle = 35, hjust = 1))
-
-#=================================
-# 5. Combine and save figure
-#=================================
-
-figureA10 <- panel_a / panel_b +
-  plot_layout(heights = c(1.15, 1))
 
 ggsave(
   "figures/figureA10.png",
   figureA10,
-  width = 12,
-  height = 10,
+  width = 13,
+  height = 7.5,
   dpi = 300,
   bg = "white"
 )

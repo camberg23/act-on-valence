@@ -88,7 +88,7 @@ text{font-family:Helvetica,Arial,sans-serif;fill:#252525}
 <rect x="46.00" y="493" width="28" height="28" rx="3" fill="#E08E5C"/><text x="60.0" y="513" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#FFFFFF">4</text>
 <text class="h" x="86" y="516">Steering barely affects verbatim recall</text>
 <text class="g" x="46" y="846">Asked to repeat its descriptions word for word, its recall stays high</text>
-<text class="g" x="46" y="870">and broadly constant across steering doses. See Figure A6.</text>
+<text class="g" x="46" y="870">and broadly constant across steering doses. See Figure A7.</text>
 <line x1="106" y1="596.85" x2="586.67" y2="596.85" stroke="#DDDDDD" stroke-width="1.5"/>
 <polyline fill="none" stroke="#E08E5C" stroke-width="4" points="106,602.56 346.33,596.85 586.67,606.16"/>
 <circle cx="106" cy="602.56" r="5.5" fill="#E08E5C"/>
@@ -156,9 +156,9 @@ text{font-family:Helvetica,Arial,sans-serif;fill:#252525}
 <rect x="1287.33" y="493" width="28" height="28" rx="3" fill="#E08E5C"/><text x="1301.3333333333333" y="513" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#FFFFFF">6</text>
 <text class="h" x="1327.33" y="516">Only the valence direction has this effect</text>
 <text class="g" x="1287.33" y="846">Other concept directions of equal strength do not consistently</text>
-<text class="g" x="1287.33" y="870">move choice. See Figure A14.</text>
+<text class="g" x="1287.33" y="870">move choice. See Figure A17.</text>
 <rect x="1439.3333333333333" y="561" width="207.4826381252596" height="215" fill="#EDEDED" rx="4"/>
-<text class="ax" x="1543.074652395963" y="553" text-anchor="middle">range of random directions</text>
+<text class="ax" x="1543.074652395963" y="553" text-anchor="middle">± largest random slope</text>
 <line x1="1543.074652395963" y1="561" x2="1543.074652395963" y2="782" stroke="#BDBDBD" stroke-width="1.5"/>
 <rect x="1543.074652395963" y="576.38" width="260.1938274320064" height="28.98" rx="3" fill="#E08E5C"/>
 <text class="labo" x="1427.3333333333333" y="597.52" text-anchor="end">valence</text>
@@ -178,7 +178,7 @@ text{font-family:Helvetica,Arial,sans-serif;fill:#252525}
 <rect x="46.00" y="945" width="28" height="28" rx="3" fill="#E08E5C"/><text x="60.0" y="965" text-anchor="middle" style="font-size:17px;font-weight:700;fill:#FFFFFF">7</text>
 <text class="h" x="86" y="968">Flipping the question flips the preference</text>
 <text class="g" x="46" y="1298">With the question reversed, the same hidden state pushes choice</text>
-<text class="g" x="46" y="1322">the other way. Lines are OLS fits. See Figure A5.</text>
+<text class="g" x="46" y="1322">the other way. OLS slopes, drawn through the origin. See Figure A5.</text>
 <line x1="106" y1="1120.5" x2="586.67" y2="1120.5" stroke="#BBBBBB" stroke-width="1.5"/>
 <line x1="346.33" y1="1017" x2="346.33" y2="1224" stroke="#BBBBBB" stroke-width="1.5"/>
 <line x1="341.61" y1="1211.82" x2="351.06" y2="1211.82" stroke="#BBBBBB" stroke-width="1.5"/><text class="ax" x="336.88" y="1217.36" text-anchor="end">−3</text>

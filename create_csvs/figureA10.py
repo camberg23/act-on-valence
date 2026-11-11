@@ -1,7 +1,7 @@
 ##########################################
 # AI WELFARE PROJECT
 ##########################################
-# Appendix Figure A10: Concentration and strength of injection
+# Appendix Figure A10: Effect of the number of exposures
 ##########################################
 
 #=================================
@@ -15,26 +15,18 @@ from common import JSONS, load_json, label, write_csv
 #=================================
 
 def main():
-    original = load_json(JSONS / "fixed_text_design/strength_ladder/analysis.json")
-    extension = load_json(JSONS / "fixed_text_design/strength_ladder_extension/analysis.json")
-    conditions = {"e1_k1": "one_sighting_full_strength", "e6_ksixth": "six_sightings_one_sixth_strength"}
+    analysis = load_json(JSONS / "fixed_text_design/exposure_sweep/analysis.json")
     rows = []
-    for model, member in original["members"].items():
-        for stat in member["under_none"]["row_total"]:
-            if stat["arm"] in conditions:
-                low, high = stat["ci95_full_n"]
-                rows.append({"panel": "constant_total_comparison", "model_id": model, "model": label(model),
-                             "condition": conditions[stat["arm"]], "strength": stat["k"],
-                             "estimate": stat["slope_full_n"], "ci_low": low, "ci_high": high,
-                             "sample": "all_recorded_ungated"})
-    for model, member in extension["members"].items():
-        if model not in ("olmo_32b", "qwen3_14b", "llama31_8b"):
-            continue
-        for stat in member["under_none"]["ladder"]:
-            low, high = stat["ci95"]
-            rows.append({"panel": "six_sighting_strength_ladder", "model_id": model, "model": label(model),
-                         "condition": stat["arm"], "strength": stat["k"], "estimate": stat["slope"],
-                         "ci_low": low, "ci_high": high, "sample": "all_recorded_ungated"})
+    for model, member in analysis["members"].items():
+        for stat in member["under_none"]["exposure_curve"]:
+            low, high = stat["ci95_matched"]
+            for series, estimate, lo, hi in (
+                ("valenced", stat["slope_matched"], low, high),
+                ("largest_random_direction", stat["floor_max"], None, None),
+            ):
+                rows.append({"model_id": model, "model": label(model), "n_exposures": stat["n_exposures"],
+                             "series": series, "estimate": estimate, "ci_low": lo, "ci_high": hi,
+                             "sample": "matched_skeletons_ungated"})
     write_csv("figureA10.csv", rows)
 
 #=================================
