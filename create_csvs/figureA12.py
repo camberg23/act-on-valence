@@ -1,34 +1,44 @@
 ##########################################
 # AI WELFARE PROJECT
 ##########################################
-# Appendix Figure A12: Checkpoint-specific vectors
+# Appendix Figure A12: Addressing and storage halves of the cache
 ##########################################
 
 #=================================
 # 1. Setup and configuration
 #=================================
 
-from common import JSONS, load_json, ci, write_csv
+from common import JSONS, load_json, label, ci, write_csv
 
 #=================================
 # 2. Data preparation
 #=================================
 
 def main():
-    analysis = load_json(JSONS / "checkpoint_ladder/analysis.json")
-    stages = analysis["arms"]["own"]["per_stage"]
+    data = load_json(JSONS / "fixed_text_design/kv_splice/analysis.json")
     rows = []
-    for order, stage in enumerate(("base", "sft", "dpo", "instruct"), start=1):
-        for key, channel in (("shift", "hidden_state"), ("clean_margin", "text")):
-            stat = stages[stage][key]["valenced"]
-            low, high = ci(stat)
-            rows.append({
-                "experiment": 252, "model_id": "olmo_lineage", "model": "OLMo-2-32B lineage",
-                "arm": "own", "stage": stage, "channel": channel, "estimate": stat["slope"],
-                "ci_low": low, "ci_high": high, "n_sessions": stat["n_sessions"],
-                "sample": "all_recorded_ungated", "stage_order": order,
-                "panel": "hidden_state_channel" if channel == "hidden_state" else "text_channel",
-            })
+    for model_id, member in data["members"].items():
+        for arm, result in member["arms"].items():
+            if result["n_exposures"] != 1 or result["k"] != 1:
+                continue
+            for channel_key, channel_label in (("share_addressing", "addressing_keys"), ("share_storage", "storage_values")):
+                stat = result["channels"][channel_key]
+                lo, hi = ci(stat)
+                rows.append({
+                    "experiment": 271,
+                    "model_id": model_id,
+                    "model": label(model_id),
+                    "arm": arm,
+                    "spread": result.get("spread"),
+                    "n_exposures": result.get("n_exposures"),
+                    "strength": result.get("k"),
+                    "channel": channel_label,
+                    "share_of_full_cache_slope": stat.get("value"),
+                    "ci_low": lo,
+                    "ci_high": hi,
+                    "n_shared_runs": result["channels"].get("n_shared_runs"),
+                    "sample": "scale_relative_gated",
+                })
     write_csv("figureA12.csv", rows)
 
 #=================================

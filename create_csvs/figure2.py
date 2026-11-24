@@ -11,7 +11,7 @@
 # Figure 2 is a hand-drawn SVG (figures/figure2.svg, rendered as figures/figure2.png).
 # This script writes every value drawn in its nine panels to experiment_results_csv/figure2.csv,
 # taken from the committed figure CSVs (and, for panel 4, the recorded recall analysis that
-# figureA6_olmo_per_dose.csv is built from). create_figures/check_figure2.py converts the SVG's
+# figureA7_olmo_per_dose.csv is built from). create_figures/check_figure2.py converts the SVG's
 # coordinates back to data values and compares them with this CSV.
 
 import csv
@@ -99,10 +99,10 @@ def figure3_panels():
 def recall_panel():
     """Panel 4: change in best-matching-passage recall of the conditioned zone from d = 0, on the
     40 floor skeletons (0-39) shared with the 24 random directions. The changes are the recorded
-    ones in recall/analysis.json; figureA6_olmo_per_dose.csv carries the absolute scores at d = -1
+    ones in recall/analysis.json; figureA7_olmo_per_dose.csv carries the absolute scores at d = -1
     and +1 on the same skeletons, and both imply the same d = 0 baseline."""
     floor = load_json(JSONS / "fixed_text_design/recall/analysis.json")["members"][MODEL]["valence"]["S"]["floor"]
-    absolute = {float(r["dose"]): float(r["estimate"]) for r in read_csv("figureA6_olmo_per_dose.csv")
+    absolute = {float(r["dose"]): float(r["estimate"]) for r in read_csv("figureA7_olmo_per_dose.csv")
                 if r["score"] == "best_matching_passage" and r["series"] == "valence_floor_skeletons"}
     change = {dose: floor[f"best_fid_{dose:+.1f}"]["mean"] for dose in (-1.0, 1.0)}
     assert all(floor[f"best_fid_{dose:+.1f}"]["n"] == 40 for dose in (-1.0, 1.0))
@@ -110,7 +110,7 @@ def recall_panel():
     assert abs(baseline[-1.0] - baseline[1.0]) < 1e-12
     quantity = "change in conditioned-zone recall (best-matching passage) from d = 0, 40 floor skeletons"
     source = ("recall/analysis.json members.olmo_32b.valence.S.floor best_fid_{-1.0,+1.0}.mean; "
-              "equals figureA6_olmo_per_dose.csv valence_floor_skeletons minus the d = 0 mean")
+              "equals figureA7_olmo_per_dose.csv valence_floor_skeletons minus the d = 0 mean")
     rows = [row(4, "valenced", "valence", dose, dose_label(dose), change[dose] if dose else 0.0, "similarity (0-1)",
                 quantity, source if dose else "zero by construction (change from d = 0)") for dose in (-1.0, 0.0, 1.0)]
     rows.append(row(4, "baseline", "none", 0.0, "0", baseline[1.0], "similarity (0-1)",
@@ -118,10 +118,10 @@ def recall_panel():
     return rows
 
 def concept_panel():
-    """Panel 6: OLS slopes over the five doses for valence and the three concepts, Figure A14
+    """Panel 6: OLS slopes over the five doses for valence and the three concepts, Figure A17
     (OLMo-2-32B), and the 24 random directions. The grey band drawn in the SVG spans plus and minus
     the largest absolute random slope; the observed minimum and maximum are listed for reference."""
-    data = [r for r in read_csv("figureA14.csv") if r["model_id"] == MODEL]
+    data = [r for r in read_csv("figureA17.csv") if r["model_id"] == MODEL]
     curves = {}
     for r in data:
         curves.setdefault(r["direction"], []).append((float(r["dose"]), float(r["mean_delta_margin"])))
@@ -129,7 +129,7 @@ def concept_panel():
     randoms = {d: s for d, s in slopes.items() if d.startswith("random")}
     assert len(randoms) == 24 and all(len(curves[d]) == 5 for d in slopes)
     quantity = "OLS slope of the change in choice margin on dose (fixed text)"
-    source = "figureA14.csv model_id=olmo_32b, OLS over doses -1 to +1"
+    source = "figureA17.csv model_id=olmo_32b, OLS over doses -1 to +1"
     rows = [row(6, "concept", c, "", c, slopes[c], "nats per unit dose", quantity, source) for c in CONCEPTS]
     largest = max(abs(s) for s in randoms.values())
     rows.append(row(6, "random_band", "random_abs_max", "", "band low", -largest, "nats per unit dose",

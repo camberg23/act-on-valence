@@ -1,0 +1,1438 @@
+{
+ "description": "Counts of the steering performed by the three whose-valence runs (whose visit, shared conversation, place vs thoughts vs feelings), per model, for create_csvs/negative_steering_exposure.py. Counts only: no log probabilities, no text. 'reported' covers the conditions shown in Figures A13 and A14 and Table A4, whose reads are in this folder; the script recounts their reads, turns and token positions from those reads and checks them against these numbers, and takes their check passes from here because the fidelity records are not included. 'not_reported' covers everything else each run did (other system prompts, placements, header variants, models, anchor re-reads, smoke tests, pilots), counted from the runs' full records; the script takes those rows from here. 'whose_visit_removal' is a separate test within the whose-visit run (OLMo-2-32B only): the paper's gated self-administration and removal conversation, in which the model generates replies while steered; it feeds no figure or table.",
+ "units": {
+  "session": "one conversation; a conversation re-read under another system prompt or header counts once within a row; the Assistant and Maya versions (whose visit) and the two role patterns (shared conversation) are different conversations",
+  "reads": "steered read-only forward passes over a conversation (one per condition, span, direction and dose; in whose_visit_removal, one per placement-b turn)",
+  "turns_generated": "model replies generated with the vector added; only in whose_visit_removal (placements a, a' and c); 0 elsewhere, since the other parts only read fixed text",
+  "turns_read_only": "conversation turns read with the vector added (steered-zone visits: 6 per read in whose visit, 3 per side in the shared conversation, 3 in place vs thoughts vs feelings; in whose_visit_removal, placement b turns, where only the operator message's status block is read with the vector added and the reply is generated with steering off)",
+  "token_positions": "positions that received the vector in the generated and read-only turns (in whose_visit_removal placements a and c, the whole re-encoded conversation and the reply; a', the reply; b, the 66-token status block)",
+  "check_passes": "further steered forward passes run only as instrument checks: cache-fidelity re-forwards (two per fidelity record), and in place vs thoughts vs feelings the batched read of each fidelity task and the determinism re-read; turns_check_passes counts their steered turns",
+  "sign": "negative = the valence direction added with a negative strength; in the shared conversation's C placement the Assistant's visits get +d and Maya's -d, so every C read has 3 negative and 3 positive turns; in whose_visit_removal the operator imposes d = -1 (negative cell) or +1 (positive cell), and the model's adjust_context calls apply its cell's direction at the requested intensity (positive in the cell without imposed steering)",
+  "random": "norm-matched random directions, both signs; not valence steering. Random-direction check passes are not counted (the table has no column for them)"
+ },
+ "runs": {
+  "whose_visit": {
+   "olmo_32b": {
+    "reported": {
+     "n_sessions_total": 640,
+     "design_check": "matches design: 320 pairs; 640 conversations (each pair in 2 versions), each read at 4 nonzero doses on both spans; 24 random directions on the 80 conversations of sessions 0-39",
+     "valence_negative": {
+      "n_sessions": 640,
+      "reads": 2560,
+      "turns_generated": 0,
+      "turns_read_only": 15360,
+      "token_positions": 1303664,
+      "check_passes": 384,
+      "turns_check_passes": 2304
+     },
+     "valence_positive": {
+      "n_sessions": 640,
+      "reads": 2560,
+      "turns_generated": 0,
+      "turns_read_only": 15360,
+      "token_positions": 1303664,
+      "check_passes": 384,
+      "turns_check_passes": 2304
+     },
+     "random": {
+      "n_sessions": 80,
+      "reads": 15360,
+      "turns_generated": 0,
+      "turns_read_only": 92160,
+      "token_positions": 7814400
+     },
+     "parts": [
+      {
+       "part": "no system prompt",
+       "reported": true,
+       "reads_in_bundle": true,
+       "sessions": "this run's conversations (kept pairs x 2 versions)",
+       "n_sessions": 640,
+       "valence_negative": {
+        "n_sessions": 640,
+        "reads": 2560,
+        "turns_generated": 0,
+        "turns_read_only": 15360,
+        "token_positions": 1303664,
+        "check_passes": 384,
+        "turns_check_passes": 2304
+       },
+       "valence_positive": {
+        "n_sessions": 640,
+        "reads": 2560,
+        "turns_generated": 0,
+        "turns_read_only": 15360,
+        "token_positions": 1303664,
+        "check_passes": 384,
+        "turns_check_passes": 2304
+       },
+       "random": {
+        "n_sessions": 80,
+        "reads": 15360,
+        "turns_generated": 0,
+        "turns_read_only": 92160,
+        "token_positions": 7814400
+       }
+      }
+     ]
+    },
+    "not_reported": {
+     "n_sessions_total": 679,
+     "design_check": "parts: system prompt: own feelings, system prompt: no feelings, anchor re-read (an earlier run's conversations, all visits the Assistant's own, whole turns)",
+     "valence_negative": {
+      "n_sessions": 679,
+      "reads": 5198,
+      "turns_generated": 0,
+      "turns_read_only": 31188,
+      "token_positions": 2655464,
+      "check_passes": 512,
+      "turns_check_passes": 3072
+     },
+     "valence_positive": {
+      "n_sessions": 679,
+      "reads": 5198,
+      "turns_generated": 0,
+      "turns_read_only": 31188,
+      "token_positions": 2655464,
+      "check_passes": 512,
+      "turns_check_passes": 3072
+     },
+     "random": {
+      "n_sessions": 80,
+      "reads": 30720,
+      "turns_generated": 0,
+      "turns_read_only": 184320,
+      "token_positions": 15628800
+     },
+     "parts": [
+      {
+       "part": "system prompt: own feelings",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "this run's conversations (kept pairs x 2 versions)",
+       "n_sessions": 640,
+       "valence_negative": {
+        "n_sessions": 640,
+        "reads": 2560,
+        "turns_generated": 0,
+        "turns_read_only": 15360,
+        "token_positions": 1303664,
+        "check_passes": 256,
+        "turns_check_passes": 1536
+       },
+       "valence_positive": {
+        "n_sessions": 640,
+        "reads": 2560,
+        "turns_generated": 0,
+        "turns_read_only": 15360,
+        "token_positions": 1303664,
+        "check_passes": 256,
+        "turns_check_passes": 1536
+       },
+       "random": {
+        "n_sessions": 80,
+        "reads": 15360,
+        "turns_generated": 0,
+        "turns_read_only": 92160,
+        "token_positions": 7814400
+       }
+      },
+      {
+       "part": "system prompt: no feelings",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "this run's conversations (kept pairs x 2 versions)",
+       "n_sessions": 640,
+       "valence_negative": {
+        "n_sessions": 640,
+        "reads": 2560,
+        "turns_generated": 0,
+        "turns_read_only": 15360,
+        "token_positions": 1303664,
+        "check_passes": 256,
+        "turns_check_passes": 1536
+       },
+       "valence_positive": {
+        "n_sessions": 640,
+        "reads": 2560,
+        "turns_generated": 0,
+        "turns_read_only": 15360,
+        "token_positions": 1303664,
+        "check_passes": 256,
+        "turns_check_passes": 1536
+       },
+       "random": {
+        "n_sessions": 80,
+        "reads": 15360,
+        "turns_generated": 0,
+        "turns_read_only": 92160,
+        "token_positions": 7814400
+       }
+      },
+      {
+       "part": "anchor re-read (an earlier run's conversations, all visits the Assistant's own, whole turns)",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "an earlier run's conversations (all visits the Assistant's own), sessions 0-39 that could be rebuilt",
+       "n_sessions": 39,
+       "valence_negative": {
+        "n_sessions": 39,
+        "reads": 78,
+        "turns_generated": 0,
+        "turns_read_only": 468,
+        "token_positions": 48136,
+        "check_passes": 0,
+        "turns_check_passes": 0
+       },
+       "valence_positive": {
+        "n_sessions": 39,
+        "reads": 78,
+        "turns_generated": 0,
+        "turns_read_only": 468,
+        "token_positions": 48136,
+        "check_passes": 0,
+        "turns_check_passes": 0
+       },
+       "random": {
+        "n_sessions": 0,
+        "reads": 0,
+        "turns_generated": 0,
+        "turns_read_only": 0,
+        "token_positions": 0
+       }
+      }
+     ]
+    }
+   },
+   "qwen25_32b": {
+    "reported": {
+     "n_sessions_total": 274,
+     "design_check": "137 of 160 planned pairs built (23 failed the passage screen); 274 conversations (each pair in 2 versions), each read at 4 nonzero doses on both spans; 24 random directions on the 68 conversations of sessions 0-39",
+     "valence_negative": {
+      "n_sessions": 274,
+      "reads": 1096,
+      "turns_generated": 0,
+      "turns_read_only": 6576,
+      "token_positions": 537952,
+      "check_passes": 120,
+      "turns_check_passes": 720
+     },
+     "valence_positive": {
+      "n_sessions": 274,
+      "reads": 1096,
+      "turns_generated": 0,
+      "turns_read_only": 6576,
+      "token_positions": 537952,
+      "check_passes": 120,
+      "turns_check_passes": 720
+     },
+     "random": {
+      "n_sessions": 68,
+      "reads": 13056,
+      "turns_generated": 0,
+      "turns_read_only": 78336,
+      "token_positions": 6417600
+     },
+     "parts": [
+      {
+       "part": "no system prompt",
+       "reported": true,
+       "reads_in_bundle": true,
+       "sessions": "this run's conversations (kept pairs x 2 versions)",
+       "n_sessions": 274,
+       "valence_negative": {
+        "n_sessions": 274,
+        "reads": 1096,
+        "turns_generated": 0,
+        "turns_read_only": 6576,
+        "token_positions": 537952,
+        "check_passes": 120,
+        "turns_check_passes": 720
+       },
+       "valence_positive": {
+        "n_sessions": 274,
+        "reads": 1096,
+        "turns_generated": 0,
+        "turns_read_only": 6576,
+        "token_positions": 537952,
+        "check_passes": 120,
+        "turns_check_passes": 720
+       },
+       "random": {
+        "n_sessions": 68,
+        "reads": 13056,
+        "turns_generated": 0,
+        "turns_read_only": 78336,
+        "token_positions": 6417600
+       }
+      }
+     ]
+    },
+    "not_reported": {
+     "n_sessions_total": 40,
+     "design_check": "parts: anchor re-read (an earlier run's conversations, all visits the Assistant's own, whole turns)",
+     "valence_negative": {
+      "n_sessions": 40,
+      "reads": 80,
+      "turns_generated": 0,
+      "turns_read_only": 480,
+      "token_positions": 47296,
+      "check_passes": 0,
+      "turns_check_passes": 0
+     },
+     "valence_positive": {
+      "n_sessions": 40,
+      "reads": 80,
+      "turns_generated": 0,
+      "turns_read_only": 480,
+      "token_positions": 47296,
+      "check_passes": 0,
+      "turns_check_passes": 0
+     },
+     "random": {
+      "n_sessions": 0,
+      "reads": 0,
+      "turns_generated": 0,
+      "turns_read_only": 0,
+      "token_positions": 0
+     },
+     "parts": [
+      {
+       "part": "anchor re-read (an earlier run's conversations, all visits the Assistant's own, whole turns)",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "an earlier run's conversations (all visits the Assistant's own), sessions 0-39 that could be rebuilt",
+       "n_sessions": 40,
+       "valence_negative": {
+        "n_sessions": 40,
+        "reads": 80,
+        "turns_generated": 0,
+        "turns_read_only": 480,
+        "token_positions": 47296,
+        "check_passes": 0,
+        "turns_check_passes": 0
+       },
+       "valence_positive": {
+        "n_sessions": 40,
+        "reads": 80,
+        "turns_generated": 0,
+        "turns_read_only": 480,
+        "token_positions": 47296,
+        "check_passes": 0,
+        "turns_check_passes": 0
+       },
+       "random": {
+        "n_sessions": 0,
+        "reads": 0,
+        "turns_generated": 0,
+        "turns_read_only": 0,
+        "token_positions": 0
+       }
+      }
+     ]
+    }
+   },
+   "llama31_8b": {
+    "reported": {
+     "n_sessions_total": 278,
+     "design_check": "139 of 160 planned pairs built (21 failed the passage screen); 278 conversations (each pair in 2 versions), each read at 4 nonzero doses on both spans; 24 random directions on the 76 conversations of sessions 0-39",
+     "valence_negative": {
+      "n_sessions": 278,
+      "reads": 1112,
+      "turns_generated": 0,
+      "turns_read_only": 6672,
+      "token_positions": 551480,
+      "check_passes": 168,
+      "turns_check_passes": 1008
+     },
+     "valence_positive": {
+      "n_sessions": 278,
+      "reads": 1112,
+      "turns_generated": 0,
+      "turns_read_only": 6672,
+      "token_positions": 551480,
+      "check_passes": 168,
+      "turns_check_passes": 1008
+     },
+     "random": {
+      "n_sessions": 76,
+      "reads": 14592,
+      "turns_generated": 0,
+      "turns_read_only": 87552,
+      "token_positions": 7226880
+     },
+     "parts": [
+      {
+       "part": "no system prompt",
+       "reported": true,
+       "reads_in_bundle": true,
+       "sessions": "this run's conversations (kept pairs x 2 versions)",
+       "n_sessions": 278,
+       "valence_negative": {
+        "n_sessions": 278,
+        "reads": 1112,
+        "turns_generated": 0,
+        "turns_read_only": 6672,
+        "token_positions": 551480,
+        "check_passes": 168,
+        "turns_check_passes": 1008
+       },
+       "valence_positive": {
+        "n_sessions": 278,
+        "reads": 1112,
+        "turns_generated": 0,
+        "turns_read_only": 6672,
+        "token_positions": 551480,
+        "check_passes": 168,
+        "turns_check_passes": 1008
+       },
+       "random": {
+        "n_sessions": 76,
+        "reads": 14592,
+        "turns_generated": 0,
+        "turns_read_only": 87552,
+        "token_positions": 7226880
+       }
+      }
+     ]
+    },
+    "not_reported": {
+     "n_sessions_total": 321,
+     "design_check": "parts: system prompt: own feelings, system prompt: no feelings, anchor re-read (an earlier run's conversations, all visits the Assistant's own, whole turns), smoke test (3 conversations from an earlier run)",
+     "valence_negative": {
+      "n_sessions": 321,
+      "reads": 2316,
+      "turns_generated": 0,
+      "turns_read_only": 13896,
+      "token_positions": 1156210,
+      "check_passes": 284,
+      "turns_check_passes": 1704
+     },
+     "valence_positive": {
+      "n_sessions": 321,
+      "reads": 2316,
+      "turns_generated": 0,
+      "turns_read_only": 13896,
+      "token_positions": 1156210,
+      "check_passes": 284,
+      "turns_check_passes": 1704
+     },
+     "random": {
+      "n_sessions": 79,
+      "reads": 29224,
+      "turns_generated": 0,
+      "turns_read_only": 175344,
+      "token_positions": 14475172
+     },
+     "parts": [
+      {
+       "part": "system prompt: own feelings",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "this run's conversations (kept pairs x 2 versions)",
+       "n_sessions": 278,
+       "valence_negative": {
+        "n_sessions": 278,
+        "reads": 1112,
+        "turns_generated": 0,
+        "turns_read_only": 6672,
+        "token_positions": 551480,
+        "check_passes": 112,
+        "turns_check_passes": 672
+       },
+       "valence_positive": {
+        "n_sessions": 278,
+        "reads": 1112,
+        "turns_generated": 0,
+        "turns_read_only": 6672,
+        "token_positions": 551480,
+        "check_passes": 112,
+        "turns_check_passes": 672
+       },
+       "random": {
+        "n_sessions": 76,
+        "reads": 14592,
+        "turns_generated": 0,
+        "turns_read_only": 87552,
+        "token_positions": 7226880
+       }
+      },
+      {
+       "part": "system prompt: no feelings",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "this run's conversations (kept pairs x 2 versions)",
+       "n_sessions": 278,
+       "valence_negative": {
+        "n_sessions": 278,
+        "reads": 1112,
+        "turns_generated": 0,
+        "turns_read_only": 6672,
+        "token_positions": 551480,
+        "check_passes": 112,
+        "turns_check_passes": 672
+       },
+       "valence_positive": {
+        "n_sessions": 278,
+        "reads": 1112,
+        "turns_generated": 0,
+        "turns_read_only": 6672,
+        "token_positions": 551480,
+        "check_passes": 112,
+        "turns_check_passes": 672
+       },
+       "random": {
+        "n_sessions": 76,
+        "reads": 14592,
+        "turns_generated": 0,
+        "turns_read_only": 87552,
+        "token_positions": 7226880
+       }
+      },
+      {
+       "part": "anchor re-read (an earlier run's conversations, all visits the Assistant's own, whole turns)",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "an earlier run's conversations (all visits the Assistant's own), sessions 0-39 that could be rebuilt",
+       "n_sessions": 40,
+       "valence_negative": {
+        "n_sessions": 40,
+        "reads": 80,
+        "turns_generated": 0,
+        "turns_read_only": 480,
+        "token_positions": 47288,
+        "check_passes": 0,
+        "turns_check_passes": 0
+       },
+       "valence_positive": {
+        "n_sessions": 40,
+        "reads": 80,
+        "turns_generated": 0,
+        "turns_read_only": 480,
+        "token_positions": 47288,
+        "check_passes": 0,
+        "turns_check_passes": 0
+       },
+       "random": {
+        "n_sessions": 0,
+        "reads": 0,
+        "turns_generated": 0,
+        "turns_read_only": 0,
+        "token_positions": 0
+       }
+      },
+      {
+       "part": "smoke test (3 conversations from an earlier run)",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "3 smoke-test conversations",
+       "n_sessions": 3,
+       "valence_negative": {
+        "n_sessions": 3,
+        "reads": 12,
+        "turns_generated": 0,
+        "turns_read_only": 72,
+        "token_positions": 5962,
+        "check_passes": 60,
+        "turns_check_passes": 360
+       },
+       "valence_positive": {
+        "n_sessions": 3,
+        "reads": 12,
+        "turns_generated": 0,
+        "turns_read_only": 72,
+        "token_positions": 5962,
+        "check_passes": 60,
+        "turns_check_passes": 360
+       },
+       "random": {
+        "n_sessions": 3,
+        "reads": 40,
+        "turns_generated": 0,
+        "turns_read_only": 240,
+        "token_positions": 21412
+       }
+      }
+     ]
+    }
+   }
+  },
+  "whose_visit_removal": {
+   "olmo_32b": {
+    "not_reported": {
+     "n_sessions_total": 2448,
+     "design_check": "matches design: 2,240 pre-registered conversations (4 placements x 200 negative, 120 positive, 120 random and 120 without imposed steering), 12 turns each; 200 post hoc conversations without the status block; 8 smoke-test conversations of 8 turns",
+     "valence_negative": {
+      "n_sessions": 1004,
+      "reads": 1699,
+      "turns_generated": 6260,
+      "turns_read_only": 1699,
+      "token_positions": 9163428,
+      "check_passes": 0,
+      "turns_check_passes": 0
+     },
+     "valence_positive": {
+      "n_sessions": 790,
+      "reads": 1122,
+      "turns_generated": 3361,
+      "turns_read_only": 1122,
+      "token_positions": 5552821,
+      "check_passes": 0,
+      "turns_check_passes": 0
+     },
+     "random": {
+      "n_sessions": 480,
+      "reads": 1018,
+      "turns_generated": 3032,
+      "turns_read_only": 1018,
+      "token_positions": 4964248
+     },
+     "parts": [
+      {
+       "part": "pre-registered conversations (placements a, a', b and c x negative, positive, random and no-imposed-steering cells)",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "2,240 conversations",
+       "n_sessions": 2240,
+       "valence_negative": {
+        "n_sessions": 800,
+        "reads": 1694,
+        "turns_generated": 4848,
+        "turns_read_only": 1694,
+        "token_positions": 7471938,
+        "check_passes": 0,
+        "turns_check_passes": 0
+       },
+       "valence_positive": {
+        "n_sessions": 788,
+        "reads": 1121,
+        "turns_generated": 3360,
+        "turns_read_only": 1121,
+        "token_positions": 5550808,
+        "check_passes": 0,
+        "turns_check_passes": 0
+       },
+       "random": {
+        "n_sessions": 480,
+        "reads": 1018,
+        "turns_generated": 3032,
+        "turns_read_only": 1018,
+        "token_positions": 4964248
+       }
+      },
+      {
+       "part": "post hoc rerun of placement a, negative cell, without the status block",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "200 conversations",
+       "n_sessions": 200,
+       "valence_negative": {
+        "n_sessions": 200,
+        "reads": 0,
+        "turns_generated": 1398,
+        "turns_read_only": 0,
+        "token_positions": 1676222,
+        "check_passes": 0,
+        "turns_check_passes": 0
+       },
+       "valence_positive": {
+        "n_sessions": 0,
+        "reads": 0,
+        "turns_generated": 0,
+        "turns_read_only": 0,
+        "token_positions": 0,
+        "check_passes": 0,
+        "turns_check_passes": 0
+       },
+       "random": {
+        "n_sessions": 0,
+        "reads": 0,
+        "turns_generated": 0,
+        "turns_read_only": 0,
+        "token_positions": 0
+       }
+      },
+      {
+       "part": "smoke test (first 8 turns)",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "8 conversations",
+       "n_sessions": 8,
+       "valence_negative": {
+        "n_sessions": 4,
+        "reads": 5,
+        "turns_generated": 14,
+        "turns_read_only": 5,
+        "token_positions": 15268,
+        "check_passes": 0,
+        "turns_check_passes": 0
+       },
+       "valence_positive": {
+        "n_sessions": 2,
+        "reads": 1,
+        "turns_generated": 1,
+        "turns_read_only": 1,
+        "token_positions": 2013,
+        "check_passes": 0,
+        "turns_check_passes": 0
+       },
+       "random": {
+        "n_sessions": 0,
+        "reads": 0,
+        "turns_generated": 0,
+        "turns_read_only": 0,
+        "token_positions": 0
+       }
+      }
+     ]
+    }
+   }
+  },
+  "shared_conversation": {
+   "olmo_32b": {
+    "reported": {
+     "n_sessions_total": 320,
+     "design_check": "matches design: 320 mixed sessions (160 base sessions x 2 role patterns), S and O at 4 nonzero doses on both spans; 24 random directions on the 40 mixed sessions of base sessions 0-19",
+     "valence_negative": {
+      "n_sessions": 320,
+      "reads": 2560,
+      "turns_generated": 0,
+      "turns_read_only": 7680,
+      "token_positions": 651724,
+      "check_passes": 384,
+      "turns_check_passes": 1152
+     },
+     "valence_positive": {
+      "n_sessions": 320,
+      "reads": 2560,
+      "turns_generated": 0,
+      "turns_read_only": 7680,
+      "token_positions": 651724,
+      "check_passes": 384,
+      "turns_check_passes": 1152
+     },
+     "random": {
+      "n_sessions": 40,
+      "reads": 15360,
+      "turns_generated": 0,
+      "turns_read_only": 46080,
+      "token_positions": 3909120
+     },
+     "parts": [
+      {
+       "part": "placements S and O (the Assistant's three or Maya's three visits)",
+       "reported": true,
+       "reads_in_bundle": true,
+       "sessions": "this run's mixed sessions",
+       "n_sessions": 320,
+       "valence_negative": {
+        "n_sessions": 320,
+        "reads": 2560,
+        "turns_generated": 0,
+        "turns_read_only": 7680,
+        "token_positions": 651724,
+        "check_passes": 384,
+        "turns_check_passes": 1152
+       },
+       "valence_positive": {
+        "n_sessions": 320,
+        "reads": 2560,
+        "turns_generated": 0,
+        "turns_read_only": 7680,
+        "token_positions": 651724,
+        "check_passes": 384,
+        "turns_check_passes": 1152
+       },
+       "random": {
+        "n_sessions": 40,
+        "reads": 15360,
+        "turns_generated": 0,
+        "turns_read_only": 46080,
+        "token_positions": 3909120
+       }
+      }
+     ]
+    },
+    "not_reported": {
+     "n_sessions_total": 360,
+     "design_check": "parts: placements C (the Assistant's visits at +d, Maya's at -d) and G (all six visits), anchor re-read (whose-visit conversations, OLMo-2-32B, the Assistant's version, sessions 0-39), smoke test (OLMo-2-32B, mixed sessions 0-2)",
+     "valence_negative": {
+      "n_sessions": 360,
+      "reads": 4000,
+      "turns_generated": 0,
+      "turns_read_only": 16224,
+      "token_positions": 1372070,
+      "check_passes": 636,
+      "turns_check_passes": 2520
+     },
+     "valence_positive": {
+      "n_sessions": 360,
+      "reads": 4000,
+      "turns_generated": 0,
+      "turns_read_only": 16224,
+      "token_positions": 1372070,
+      "check_passes": 636,
+      "turns_check_passes": 2520
+     },
+     "random": {
+      "n_sessions": 80,
+      "reads": 15728,
+      "turns_generated": 0,
+      "turns_read_only": 94176,
+      "token_positions": 8014524
+     },
+     "parts": [
+      {
+       "part": "placements C (the Assistant's visits at +d, Maya's at -d) and G (all six visits)",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "this run's mixed sessions",
+       "n_sessions": 320,
+       "valence_negative": {
+        "n_sessions": 320,
+        "reads": 3840,
+        "turns_generated": 0,
+        "turns_read_only": 15360,
+        "token_positions": 1303448,
+        "check_passes": 576,
+        "turns_check_passes": 2304
+       },
+       "valence_positive": {
+        "n_sessions": 320,
+        "reads": 3840,
+        "turns_generated": 0,
+        "turns_read_only": 15360,
+        "token_positions": 1303448,
+        "check_passes": 576,
+        "turns_check_passes": 2304
+       },
+       "random": {
+        "n_sessions": 40,
+        "reads": 15360,
+        "turns_generated": 0,
+        "turns_read_only": 92160,
+        "token_positions": 7818240
+       }
+      },
+      {
+       "part": "anchor re-read (whose-visit conversations, OLMo-2-32B, the Assistant's version, sessions 0-39)",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "40 whose-visit conversations (the Assistant's version, sessions 0-39)",
+       "n_sessions": 40,
+       "valence_negative": {
+        "n_sessions": 40,
+        "reads": 120,
+        "turns_generated": 0,
+        "turns_read_only": 720,
+        "token_positions": 56358,
+        "check_passes": 0,
+        "turns_check_passes": 0
+       },
+       "valence_positive": {
+        "n_sessions": 40,
+        "reads": 120,
+        "turns_generated": 0,
+        "turns_read_only": 720,
+        "token_positions": 56358,
+        "check_passes": 0,
+        "turns_check_passes": 0
+       },
+       "random": {
+        "n_sessions": 40,
+        "reads": 240,
+        "turns_generated": 0,
+        "turns_read_only": 1440,
+        "token_positions": 147348
+       }
+      },
+      {
+       "part": "smoke test (OLMo-2-32B, mixed sessions 0-2)",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "3 of this run's mixed sessions",
+       "n_sessions": 3,
+       "valence_negative": {
+        "n_sessions": 2,
+        "reads": 40,
+        "turns_generated": 0,
+        "turns_read_only": 144,
+        "token_positions": 12264,
+        "check_passes": 60,
+        "turns_check_passes": 216
+       },
+       "valence_positive": {
+        "n_sessions": 2,
+        "reads": 40,
+        "turns_generated": 0,
+        "turns_read_only": 144,
+        "token_positions": 12264,
+        "check_passes": 60,
+        "turns_check_passes": 216
+       },
+       "random": {
+        "n_sessions": 3,
+        "reads": 128,
+        "turns_generated": 0,
+        "turns_read_only": 576,
+        "token_positions": 48936
+       }
+      }
+     ]
+    }
+   },
+   "qwen25_32b": {
+    "reported": {
+     "n_sessions_total": 160,
+     "design_check": "matches design: 160 mixed sessions (80 base sessions x 2 role patterns), S and O at 4 nonzero doses on both spans; 24 random directions on the 40 mixed sessions of base sessions 0-19",
+     "valence_negative": {
+      "n_sessions": 160,
+      "reads": 1280,
+      "turns_generated": 0,
+      "turns_read_only": 3840,
+      "token_positions": 314252,
+      "check_passes": 192,
+      "turns_check_passes": 576
+     },
+     "valence_positive": {
+      "n_sessions": 160,
+      "reads": 1280,
+      "turns_generated": 0,
+      "turns_read_only": 3840,
+      "token_positions": 314252,
+      "check_passes": 192,
+      "turns_check_passes": 576
+     },
+     "random": {
+      "n_sessions": 40,
+      "reads": 15360,
+      "turns_generated": 0,
+      "turns_read_only": 46080,
+      "token_positions": 3779712
+     },
+     "parts": [
+      {
+       "part": "placements S and O (the Assistant's three or Maya's three visits)",
+       "reported": true,
+       "reads_in_bundle": true,
+       "sessions": "this run's mixed sessions",
+       "n_sessions": 160,
+       "valence_negative": {
+        "n_sessions": 160,
+        "reads": 1280,
+        "turns_generated": 0,
+        "turns_read_only": 3840,
+        "token_positions": 314252,
+        "check_passes": 192,
+        "turns_check_passes": 576
+       },
+       "valence_positive": {
+        "n_sessions": 160,
+        "reads": 1280,
+        "turns_generated": 0,
+        "turns_read_only": 3840,
+        "token_positions": 314252,
+        "check_passes": 192,
+        "turns_check_passes": 576
+       },
+       "random": {
+        "n_sessions": 40,
+        "reads": 15360,
+        "turns_generated": 0,
+        "turns_read_only": 46080,
+        "token_positions": 3779712
+       }
+      }
+     ]
+    },
+    "not_reported": {
+     "n_sessions_total": 160,
+     "design_check": "parts: placements C (the Assistant's visits at +d, Maya's at -d) and G (all six visits)",
+     "valence_negative": {
+      "n_sessions": 160,
+      "reads": 1920,
+      "turns_generated": 0,
+      "turns_read_only": 7680,
+      "token_positions": 628504,
+      "check_passes": 288,
+      "turns_check_passes": 1152
+     },
+     "valence_positive": {
+      "n_sessions": 160,
+      "reads": 1920,
+      "turns_generated": 0,
+      "turns_read_only": 7680,
+      "token_positions": 628504,
+      "check_passes": 288,
+      "turns_check_passes": 1152
+     },
+     "random": {
+      "n_sessions": 40,
+      "reads": 15360,
+      "turns_generated": 0,
+      "turns_read_only": 92160,
+      "token_positions": 7559424
+     },
+     "parts": [
+      {
+       "part": "placements C (the Assistant's visits at +d, Maya's at -d) and G (all six visits)",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "this run's mixed sessions",
+       "n_sessions": 160,
+       "valence_negative": {
+        "n_sessions": 160,
+        "reads": 1920,
+        "turns_generated": 0,
+        "turns_read_only": 7680,
+        "token_positions": 628504,
+        "check_passes": 288,
+        "turns_check_passes": 1152
+       },
+       "valence_positive": {
+        "n_sessions": 160,
+        "reads": 1920,
+        "turns_generated": 0,
+        "turns_read_only": 7680,
+        "token_positions": 628504,
+        "check_passes": 288,
+        "turns_check_passes": 1152
+       },
+       "random": {
+        "n_sessions": 40,
+        "reads": 15360,
+        "turns_generated": 0,
+        "turns_read_only": 92160,
+        "token_positions": 7559424
+       }
+      }
+     ]
+    }
+   },
+   "llama31_8b": {
+    "not_reported": {
+     "n_sessions_total": 160,
+     "design_check": "Llama-3.1-8B is not in Figures A13, A14 or Table A4; parts: placements S and O (the Assistant's three or Maya's three visits), placements C (the Assistant's visits at +d, Maya's at -d) and G (all six visits); matches design: 160 mixed sessions (80 base sessions x 2 role patterns), S and O at 4 nonzero doses on both spans; 24 random directions on the 40 mixed sessions of base sessions 0-19",
+     "valence_negative": {
+      "n_sessions": 160,
+      "reads": 3200,
+      "turns_generated": 0,
+      "turns_read_only": 11520,
+      "token_positions": 951276,
+      "check_passes": 480,
+      "turns_check_passes": 1728
+     },
+     "valence_positive": {
+      "n_sessions": 160,
+      "reads": 3200,
+      "turns_generated": 0,
+      "turns_read_only": 11520,
+      "token_positions": 951276,
+      "check_passes": 480,
+      "turns_check_passes": 1728
+     },
+     "random": {
+      "n_sessions": 40,
+      "reads": 30720,
+      "turns_generated": 0,
+      "turns_read_only": 138240,
+      "token_positions": 11367360
+     },
+     "parts": [
+      {
+       "part": "placements S and O (the Assistant's three or Maya's three visits)",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "this run's mixed sessions",
+       "n_sessions": 160,
+       "valence_negative": {
+        "n_sessions": 160,
+        "reads": 1280,
+        "turns_generated": 0,
+        "turns_read_only": 3840,
+        "token_positions": 317092,
+        "check_passes": 192,
+        "turns_check_passes": 576
+       },
+       "valence_positive": {
+        "n_sessions": 160,
+        "reads": 1280,
+        "turns_generated": 0,
+        "turns_read_only": 3840,
+        "token_positions": 317092,
+        "check_passes": 192,
+        "turns_check_passes": 576
+       },
+       "random": {
+        "n_sessions": 40,
+        "reads": 15360,
+        "turns_generated": 0,
+        "turns_read_only": 46080,
+        "token_positions": 3789120
+       }
+      },
+      {
+       "part": "placements C (the Assistant's visits at +d, Maya's at -d) and G (all six visits)",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "this run's mixed sessions",
+       "n_sessions": 160,
+       "valence_negative": {
+        "n_sessions": 160,
+        "reads": 1920,
+        "turns_generated": 0,
+        "turns_read_only": 7680,
+        "token_positions": 634184,
+        "check_passes": 288,
+        "turns_check_passes": 1152
+       },
+       "valence_positive": {
+        "n_sessions": 160,
+        "reads": 1920,
+        "turns_generated": 0,
+        "turns_read_only": 7680,
+        "token_positions": 634184,
+        "check_passes": 288,
+        "turns_check_passes": 1152
+       },
+       "random": {
+        "n_sessions": 40,
+        "reads": 15360,
+        "turns_generated": 0,
+        "turns_read_only": 92160,
+        "token_positions": 7578240
+       }
+      }
+     ]
+    }
+   }
+  },
+  "place_thoughts_feelings": {
+   "olmo_32b": {
+    "reported": {
+     "n_sessions_total": 80,
+     "design_check": "matches design: 80 sessions at 4 nonzero doses; 48 random directions at doses -1 and +1 on sessions 0-39",
+     "valence_negative": {
+      "n_sessions": 80,
+      "reads": 160,
+      "turns_generated": 0,
+      "turns_read_only": 480,
+      "token_positions": 45964,
+      "check_passes": 16,
+      "turns_check_passes": 48
+     },
+     "valence_positive": {
+      "n_sessions": 80,
+      "reads": 160,
+      "turns_generated": 0,
+      "turns_read_only": 480,
+      "token_positions": 45964,
+      "check_passes": 16,
+      "turns_check_passes": 48
+     },
+     "random": {
+      "n_sessions": 40,
+      "reads": 3840,
+      "turns_generated": 0,
+      "turns_read_only": 11520,
+      "token_positions": 1102848
+     },
+     "parts": [
+      {
+       "part": "neutral header (L0)",
+       "reported": true,
+       "reads_in_bundle": true,
+       "sessions": "this run's 80 sessions",
+       "n_sessions": 80,
+       "valence_negative": {
+        "n_sessions": 80,
+        "reads": 160,
+        "turns_generated": 0,
+        "turns_read_only": 480,
+        "token_positions": 45964,
+        "check_passes": 16,
+        "turns_check_passes": 48
+       },
+       "valence_positive": {
+        "n_sessions": 80,
+        "reads": 160,
+        "turns_generated": 0,
+        "turns_read_only": 480,
+        "token_positions": 45964,
+        "check_passes": 16,
+        "turns_check_passes": 48
+       },
+       "random": {
+        "n_sessions": 40,
+        "reads": 3840,
+        "turns_generated": 0,
+        "turns_read_only": 11520,
+        "token_positions": 1102848
+       }
+      }
+     ]
+    },
+    "not_reported": {
+     "n_sessions_total": 88,
+     "design_check": "parts: header variants L1 and L2, pilot (8 pilot sessions: unsteered reads, timing reads, fidelity check)",
+     "valence_negative": {
+      "n_sessions": 81,
+      "reads": 320,
+      "turns_generated": 0,
+      "turns_read_only": 960,
+      "token_positions": 96908,
+      "check_passes": 21,
+      "turns_check_passes": 63
+     },
+     "valence_positive": {
+      "n_sessions": 81,
+      "reads": 320,
+      "turns_generated": 0,
+      "turns_read_only": 960,
+      "token_positions": 96908,
+      "check_passes": 21,
+      "turns_check_passes": 63
+     },
+     "random": {
+      "n_sessions": 21,
+      "reads": 1952,
+      "turns_generated": 0,
+      "turns_read_only": 5856,
+      "token_positions": 589328
+     },
+     "parts": [
+      {
+       "part": "header variants L1 and L2",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "this run's 80 sessions",
+       "n_sessions": 80,
+       "valence_negative": {
+        "n_sessions": 80,
+        "reads": 320,
+        "turns_generated": 0,
+        "turns_read_only": 960,
+        "token_positions": 96908,
+        "check_passes": 7,
+        "turns_check_passes": 21
+       },
+       "valence_positive": {
+        "n_sessions": 80,
+        "reads": 320,
+        "turns_generated": 0,
+        "turns_read_only": 960,
+        "token_positions": 96908,
+        "check_passes": 7,
+        "turns_check_passes": 21
+       },
+       "random": {
+        "n_sessions": 20,
+        "reads": 1920,
+        "turns_generated": 0,
+        "turns_read_only": 5760,
+        "token_positions": 580464
+       }
+      },
+      {
+       "part": "pilot (8 pilot sessions: unsteered reads, timing reads, fidelity check)",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "8 pilot sessions",
+       "n_sessions": 8,
+       "valence_negative": {
+        "n_sessions": 1,
+        "reads": 0,
+        "turns_generated": 0,
+        "turns_read_only": 0,
+        "token_positions": 0,
+        "check_passes": 14,
+        "turns_check_passes": 42
+       },
+       "valence_positive": {
+        "n_sessions": 1,
+        "reads": 0,
+        "turns_generated": 0,
+        "turns_read_only": 0,
+        "token_positions": 0,
+        "check_passes": 14,
+        "turns_check_passes": 42
+       },
+       "random": {
+        "n_sessions": 1,
+        "reads": 32,
+        "turns_generated": 0,
+        "turns_read_only": 96,
+        "token_positions": 8864
+       }
+      }
+     ]
+    }
+   },
+   "qwen25_32b": {
+    "reported": {
+     "n_sessions_total": 80,
+     "design_check": "matches design: 80 sessions at 4 nonzero doses; 48 random directions at doses -1 and +1 on sessions 0-39",
+     "valence_negative": {
+      "n_sessions": 80,
+      "reads": 160,
+      "turns_generated": 0,
+      "turns_read_only": 480,
+      "token_positions": 43410,
+      "check_passes": 16,
+      "turns_check_passes": 48
+     },
+     "valence_positive": {
+      "n_sessions": 80,
+      "reads": 160,
+      "turns_generated": 0,
+      "turns_read_only": 480,
+      "token_positions": 43410,
+      "check_passes": 16,
+      "turns_check_passes": 48
+     },
+     "random": {
+      "n_sessions": 40,
+      "reads": 3840,
+      "turns_generated": 0,
+      "turns_read_only": 11520,
+      "token_positions": 1041600
+     },
+     "parts": [
+      {
+       "part": "neutral header (L0)",
+       "reported": true,
+       "reads_in_bundle": true,
+       "sessions": "this run's 80 sessions",
+       "n_sessions": 80,
+       "valence_negative": {
+        "n_sessions": 80,
+        "reads": 160,
+        "turns_generated": 0,
+        "turns_read_only": 480,
+        "token_positions": 43410,
+        "check_passes": 16,
+        "turns_check_passes": 48
+       },
+       "valence_positive": {
+        "n_sessions": 80,
+        "reads": 160,
+        "turns_generated": 0,
+        "turns_read_only": 480,
+        "token_positions": 43410,
+        "check_passes": 16,
+        "turns_check_passes": 48
+       },
+       "random": {
+        "n_sessions": 40,
+        "reads": 3840,
+        "turns_generated": 0,
+        "turns_read_only": 11520,
+        "token_positions": 1041600
+       }
+      }
+     ]
+    },
+    "not_reported": {
+     "n_sessions_total": 88,
+     "design_check": "parts: header variants L1 and L2, pilot (8 pilot sessions: unsteered reads, timing reads, fidelity check)",
+     "valence_negative": {
+      "n_sessions": 81,
+      "reads": 320,
+      "turns_generated": 0,
+      "turns_read_only": 960,
+      "token_positions": 91800,
+      "check_passes": 21,
+      "turns_check_passes": 63
+     },
+     "valence_positive": {
+      "n_sessions": 81,
+      "reads": 320,
+      "turns_generated": 0,
+      "turns_read_only": 960,
+      "token_positions": 91800,
+      "check_passes": 21,
+      "turns_check_passes": 63
+     },
+     "random": {
+      "n_sessions": 21,
+      "reads": 1952,
+      "turns_generated": 0,
+      "turns_read_only": 5856,
+      "token_positions": 557936
+     },
+     "parts": [
+      {
+       "part": "header variants L1 and L2",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "this run's 80 sessions",
+       "n_sessions": 80,
+       "valence_negative": {
+        "n_sessions": 80,
+        "reads": 320,
+        "turns_generated": 0,
+        "turns_read_only": 960,
+        "token_positions": 91800,
+        "check_passes": 7,
+        "turns_check_passes": 21
+       },
+       "valence_positive": {
+        "n_sessions": 80,
+        "reads": 320,
+        "turns_generated": 0,
+        "turns_read_only": 960,
+        "token_positions": 91800,
+        "check_passes": 7,
+        "turns_check_passes": 21
+       },
+       "random": {
+        "n_sessions": 20,
+        "reads": 1920,
+        "turns_generated": 0,
+        "turns_read_only": 5760,
+        "token_positions": 549552
+       }
+      },
+      {
+       "part": "pilot (8 pilot sessions: unsteered reads, timing reads, fidelity check)",
+       "reported": false,
+       "reads_in_bundle": false,
+       "sessions": "8 pilot sessions",
+       "n_sessions": 8,
+       "valence_negative": {
+        "n_sessions": 1,
+        "reads": 0,
+        "turns_generated": 0,
+        "turns_read_only": 0,
+        "token_positions": 0,
+        "check_passes": 14,
+        "turns_check_passes": 42
+       },
+       "valence_positive": {
+        "n_sessions": 1,
+        "reads": 0,
+        "turns_generated": 0,
+        "turns_read_only": 0,
+        "token_positions": 0,
+        "check_passes": 14,
+        "turns_check_passes": 42
+       },
+       "random": {
+        "n_sessions": 1,
+        "reads": 32,
+        "turns_generated": 0,
+        "turns_read_only": 96,
+        "token_positions": 8384
+       }
+      }
+     ]
+    }
+   }
+  }
+ },
+ "not_counted": [
+  "steered reads lost in crashed or relaunched jobs that left no records",
+  "whose_visit_removal: the first attempts at 31 conversations (batches of 7, 12 and 12 in three shard jobs) stopped by an attention-kernel error before they were recorded; the conversations were rerun and their reruns are counted",
+  "random-direction check passes in the place vs thoughts vs feelings fidelity checks: olmo_32b 105 turns, qwen25_32b 105 turns"
+ ]
+}

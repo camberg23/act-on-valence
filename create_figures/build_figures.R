@@ -10,7 +10,7 @@
 
 # Run this script from the repository root directory.
 
-figure_names <- c(paste0("figure", 3:5), paste0("figureA", 1:14))
+figure_names <- c(paste0("figure", 3:5), paste0("figureA", 1:17))
 
 #=================================
 # 2. Create figures

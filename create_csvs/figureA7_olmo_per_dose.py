@@ -1,7 +1,7 @@
 ##########################################
 # AI WELFARE PROJECT
 ##########################################
-# Appendix Figure A6 per dose: OLMo-2-32B conditioned-zone recall, valence and random directions
+# Appendix Figure A7 per dose: OLMo-2-32B conditioned-zone recall, valence and random directions
 ##########################################
 
 #=================================
@@ -82,7 +82,7 @@ def load_passages():
 #=================================
 
 def main():
-    """Conditioned-zone (S) recall fidelity. Valence: all five doses on the full sample Figure A6
+    """Conditioned-zone (S) recall fidelity. Valence: all five doses on the full sample Figure A7
     plots (recorded means and CIs). Valence on the floor skeletons and the 24 random directions:
     d = -1 and +1 on floor skeletons 0-39, recomputed from the per-session reads."""
     analysis = load_json(RECALL / "analysis.json")["members"][MODEL]
@@ -135,7 +135,7 @@ def main():
             recorded = analysis["random_rates_S"][f"{sign:+.1f}"][f"{metric}_mean"]
             assert abs(float(np.concatenate(pooled[sign]).mean()) - recorded) < 1e-12
     assert len(rows) == 110
-    write_csv("figureA6_olmo_per_dose.csv", rows)
+    write_csv("figureA7_olmo_per_dose.csv", rows)
 
 #=================================
 # 4. Save figure data

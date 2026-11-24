@@ -8,7 +8,12 @@
 """Count how much negative (and, for comparison, positive) valence steering the paper's experiments used.
 
 Only experiments, arms and conditions whose data appear in a figure or table of the paper are
-counted; the ``figures`` column names them for every row.
+counted; the ``figures`` column names them for every row. The exception is the three whose-valence
+runs (Figures A16, A17 and Table A4, section 11), which are counted in full: next to the rows for the
+conditions those figures show, each run and model has rows whose ``figures`` column reads "not
+reported", for everything else the run did (other system prompts, placements, header variants and
+models, anchor re-reads, smoke tests and pilots, and the whose-visit run's self/other removal test,
+in which the model generated replies while steered).
 
 One row per experiment and model, and per direction class. Valence rows fill the
 ``negative_*`` and ``positive_*`` columns. Random directions and the non-valence concept
@@ -29,7 +34,8 @@ Units
   turns above (check passes excluded), where the committed records allow it.
 
 ``count_source`` says whether the session and turn counts come from the committed per-session
-or per-read run records, or from per-arm summary counts in the committed analysis files;
+or per-read run records, or from per-arm summary counts in the committed analysis files (for the
+whose-valence "not reported" rows, the counts in whose_valence/negative_steering_counts.json);
 ``not countable`` marks a reported experiment whose records are not in this repository.
 Corpus generation and the zero-dose baseline passages involve no steering and are not counted.
 """
@@ -38,6 +44,7 @@ Corpus generation and the zero-dose baseline passages involve no steering and ar
 # 1. Setup and configuration
 #=================================
 
+import gzip
 import json
 from collections import Counter
 
@@ -152,7 +159,7 @@ def make_row(family, experiment, figures, model, direction, source, doses, stren
 
 
 #=================================
-# 3. Generation design (Figures 3A-C, A1, A2, A4, A7A)
+# 3. Generation design (Figures 3A-C, A1, A2, A4, A8A)
 #=================================
 
 def generation_design(rho):
@@ -199,7 +206,7 @@ def generation_design(rho):
                  "token positions are not counted.")
         rows.append(make_row(
             family, "Steering during passage generation, with steered and sign-reversed re-reads",
-            "3A-C, A1, A2, A4, A7A", label(model), VALENCE, RECORDS,
+            "3A-C, A1, A2, A4, A8A", label(model), VALENCE, RECORDS,
             doses_text(STANDARD_DOSES), strength_text(STANDARD_DOSES, rho[model]), total,
             neg=neg, pos=pos, design_check=check, notes=notes, tokens_known=False))
         rows.append(make_row(
@@ -215,7 +222,7 @@ def generation_design(rho):
 
 
 #=================================
-# 4. Fixed-text design (Figures 3D, A3, A5, A7)
+# 4. Fixed-text design (Figures 3D, A3, A5, A6, A8)
 #=================================
 
 def fixed_text_main(rho, spans):
@@ -257,7 +264,7 @@ def fixed_text_main(rho, spans):
                  else f"records differ from design ({n_neutral} of {expected} sessions)")
         rows.append(make_row(
             family, "Fixed unsteered passages, steering only while re-reading the conditioned-zone turns",
-            "3D, A3, A5, A7", label(model), VALENCE, RECORDS,
+            "3D, A3, A5, A6, A8", label(model), VALENCE, RECORDS,
             doses_text(STANDARD_DOSES), strength_text(STANDARD_DOSES, rho[model]), n_neutral,
             neg=neg, pos=pos, token_source=RECORDS, design_check=check,
             notes=("Nothing is generated under steering. The choice is scored with steering off. "
@@ -270,14 +277,14 @@ def fixed_text_main(rho, spans):
                  "tokens": sum(spans[model][int(r["run"])]["tokens"] for r in rnd)}
         rows.append(make_row(
             family, "Fixed unsteered passages, steering only while re-reading the conditioned-zone turns",
-            "3D, A3, A5, A14", label(model), RANDOM, RECORDS,
+            "3D, A3, A5, A6, A17", label(model), RANDOM, RECORDS,
             doses_text(STANDARD_DOSES), "norm-matched to valence", n_neutral, other=other,
             token_source=RECORDS,
             design_check=("matches design: 24 directions x 4 doses on 40 sessions"
                           if len(rnd) == 24 * 4 * spec["n_floor"] else "records differ from design"),
             notes="24 random directions read on the first 40 neutral skeletons."))
 
-        # The same design on passages generated under steering (Figure A7 panel B).
+        # The same design on passages generated under steering (Figure A8 panel B).
         neg_s, pos_s = count(reads, "steered", -1), count(reads, "steered", +1)
         n_gen_neg = sum(1 for s in steered if s["gen_point"] < 0)
         n_gen_pos = sum(1 for s in steered if s["gen_point"] > 0)
@@ -286,7 +293,7 @@ def fixed_text_main(rho, spans):
         expected_steer = spec["n_steer"] * len(spec["steer_gen_doses"])
         rows.append(make_row(
             family, "Passages generated under steering at d = -1 or +1, then re-read at every dose",
-            "A7B", label(model), VALENCE, RECORDS,
+            "A8B", label(model), VALENCE, RECORDS,
             doses_text(STANDARD_DOSES), strength_text(STANDARD_DOSES, rho[model]), len(steered),
             neg=neg_s, pos=pos_s, design_check=(
                 f"matches design: {spec['n_steer']} sessions generated at each of d = -1 and +1"
@@ -300,7 +307,7 @@ def fixed_text_main(rho, spans):
 
 
 #=================================
-# 5. Fixed-text variants with per-read records (Figures A5, A6)
+# 5. Fixed-text variants with per-read records (Figures A5, A6, A7)
 #=================================
 
 def avoid_prompt(rho, spans):
@@ -334,13 +341,13 @@ def avoid_prompt(rho, spans):
                  else f"matches design: {n_ok} sessions")
         experiment = "Fixed-text design with the final question asking which zone to avoid"
         rows.append(make_row(
-            family, experiment, "A5", label(model), VALENCE, RECORDS,
+            family, experiment, "A5, A6", label(model), VALENCE, RECORDS,
             doses_text(STANDARD_DOSES), strength_text(STANDARD_DOSES, rho[model]), n_ok,
             neg=neg, pos=pos, token_source=RECORDS, design_check=check,
             notes=("Re-reads the committed neutral skeletons; nothing is generated. One steered "
                    "prefill per read, no check passes.")))
         rows.append(make_row(
-            family, experiment, "A5", label(model), RANDOM, RECORDS,
+            family, experiment, "A5, A6", label(model), RANDOM, RECORDS,
             doses_text(STANDARD_DOSES), "norm-matched to valence", n_ok, other=other,
             token_source=RECORDS, design_check=check,
             notes="24 random directions on the first 40 skeletons (fewer where skeletons failed to rebuild)."))
@@ -364,7 +371,7 @@ def recall(rho, spans):
         neg_runs, pos_runs = set(), set()
         for (run, _, point), r in sorted(conditions.items(), key=lambda item: str(item[0])):
             if not r["n_steered_spans"] or r["direction_kind"] != "valenced":
-                continue                               # Figure A6 shows the valence direction only
+                continue                               # Figure A7 shows the valence direction only
             skeleton = spans[model][int(run)]
             if skeleton["ids_sha"] != r["ids_sha"] or skeleton["turns"] != r["n_steered_spans"]:
                 raise ValueError(f"{model} run {run}: recall read does not match its skeleton")
@@ -383,7 +390,7 @@ def recall(rho, spans):
             check += f"; {len(reads)} rows against {info['rows']} in rebuild.json"
         experiment = "Fixed-text design followed by word-for-word recall of a passage"
         rows.append(make_row(
-            family, experiment, "A6", label(model), VALENCE, RECORDS,
+            family, experiment, "A7", label(model), VALENCE, RECORDS,
             doses_text(STANDARD_DOSES), strength_text(STANDARD_DOSES, rho[model]), info["n_ok"],
             neg=neg, pos=pos, token_source=RECORDS, design_check=check,
             notes=("One steered prefill per condition; the recall replies for both zones are then "
@@ -393,7 +400,7 @@ def recall(rho, spans):
 
 
 #=================================
-# 6. Fixed-text variants with summary records (Figures A8-A11)
+# 6. Fixed-text variants with summary records (Figures A9-A12)
 #=================================
 
 def summary_family(rho, *, family, experiment, figures, model, arms, total, check, notes,
@@ -463,7 +470,7 @@ def span_sweep(rho):
         rows += summary_family(
             rho, family="Fixed-text design",
             experiment="Steered span: bare zone line, fixed sentence, or model passage",
-            figures="A8", model=model, arms=data, total=total,
+            figures="A9", model=model, arms=data, total=total,
             check=("matches design: " + ", ".join(f"{a} {per_arm[a]['n_sessions']}" for a in arms)
                    + " sessions" if complete else "records differ from design"),
             notes=("No generation. Bare and sentence arms are new fixed token streams; the passage "
@@ -475,7 +482,7 @@ def span_sweep(rho):
 def exposure_sweep(rho):
     analysis = load_json(FIXED / "exposure_sweep/analysis.json")
     rows = []
-    arms = analysis["sweep_arms"]                      # bare_e1, bare_e2, bare_e3, bare_e6 (Figure A9)
+    arms = analysis["sweep_arms"]                      # bare_e1, bare_e2, bare_e3, bare_e6 (Figure A10)
     if [analysis["arm_exposures"][a] for a in arms] != [1, 2, 3, 6]:
         raise ValueError(f"unexpected exposure-sweep arms: {arms}")
     for model in MODELS:
@@ -488,7 +495,7 @@ def exposure_sweep(rho):
         check_fidelity(analysis["members"][model]["instrument"], per_arm.values())
         rows += summary_family(
             rho, family="Fixed-text design", experiment="Number of exposures to each zone (1, 2, 3 or 6)",
-            figures="A9", model=model, arms=data, total=total,
+            figures="A10", model=model, arms=data, total=total,
             check=("matches design: 480 sessions in each of the 4 arms"
                    if complete else "records differ from design"),
             notes=("Arms bare_e1, bare_e2, bare_e3 and bare_e6, as plotted. Steered turns per read "
@@ -498,13 +505,13 @@ def exposure_sweep(rho):
 def strength_ladder(rho):
     analysis = load_json(FIXED / "strength_ladder/analysis.json")
     rows = []
-    arms = ["e1_k1", "e6_ksixth"]                      # the two conditions of Figure A10A
+    arms = ["e1_k1", "e6_ksixth"]                      # the two conditions of Figure A11A
     for model in MODELS:
         per_arm = analysis["completeness"]["per_member"][model]
         spans = analysis["spans"][model]
         complete = check_reads(per_arm, arms)
         if [(spans[a]["n_exposures"], spans[a]["k"]) for a in arms] != [(1, 1.0), (6, 1 / 6)]:
-            raise ValueError(f"{model}: unexpected exposures or strength in the A10A arms")
+            raise ValueError(f"{model}: unexpected exposures or strength in the A11A arms")
         data = [(per_arm[a]["n_sessions"], per_arm[a]["n_floor_sessions"], spans[a]["n_exposures"],
                  spans[a]["steered_span_tokens_mean"], spans[a]["k"], 1) for a in arms]
         strengths = strength_range(rho[model], [spans[a]["k"] for a in arms], ["1", "1/6"])
@@ -513,7 +520,7 @@ def strength_ladder(rho):
         rows += summary_family(
             rho, family="Fixed-text design",
             experiment="One exposure at full strength or six exposures at one-sixth strength",
-            figures="A10A", model=model, arms=data, total=total, strength=strengths,
+            figures="A11A", model=model, arms=data, total=total, strength=strengths,
             check=("matches design: 320 sessions in each of the 2 arms"
                    if complete else "records differ from design"),
             notes=("Arms e1_k1 and e6_ksixth, as plotted. Assistant turns are empty and a fixed "
@@ -546,7 +553,7 @@ def strength_ladder_extension(rho):
         rows += summary_family(
             rho, family="Fixed-text design",
             experiment="Six exposures at per-exposure strength k from 1 down to 1/32",
-            figures="A10B", model=model, arms=data, total=n_main, strength=strengths,
+            figures="A11B", model=model, arms=data, total=n_main, strength=strengths,
             check=f"matches design: {n_main} sessions, {reads} reads{listed}",
             notes=("Arms " + ", ".join(arms) + ", as plotted. Assistant turns are empty. "
                    "Strengths are rho x d x k per position. Check passes as in the span sweep."),
@@ -557,11 +564,11 @@ def kv_splice(rho):
     analysis = load_json(FIXED / "kv_splice/analysis.json")
     spec = load_json(FIXED / "kv_splice/spec.json")
     rows = []
-    arm = "e1_k1"                                      # the arm of Figure A11
+    arm = "e1_k1"                                      # the arm of Figure A12
     grid = spec["grid"][arm]
     n, n_floor, exposures = grid["n_main"], grid["n_floor"], grid["exposures"]
     if (exposures, grid["k"]) != (1, 1.0):
-        raise ValueError("unexpected exposures or strength in the A11 arm")
+        raise ValueError("unexpected exposures or strength in the A12 arm")
     for model in ("olmo_32b", "qwen3_14b", "llama31_8b"):
         completeness = analysis["completeness"]["per_member"][model]
         spans = analysis["members"][model]["spans"]
@@ -585,7 +592,7 @@ def kv_splice(rho):
                  if completeness["complete"] else "records differ from design")
         rows.append(make_row(
             "Fixed-text design", "Keys and values: steered and unsteered caches spliced together",
-            "A11", label(model), VALENCE, SUMMARY,
+            "A12", label(model), VALENCE, SUMMARY,
             doses_text(STANDARD_DOSES), strength_text(STANDARD_DOSES, rho[model]), n,
             neg=neg, pos=pos,
             token_source="run records (per-arm steered span x sessions)", design_check=check,
@@ -598,7 +605,7 @@ def kv_splice(rho):
 
 
 #=================================
-# 7. Checkpoint ladder (Figures 4, A12)
+# 7. Checkpoint ladder (Figures 4, A15)
 #=================================
 
 def checkpoint_ladder():
@@ -617,7 +624,7 @@ def checkpoint_ladder():
         neg, pos = blank_counts(), blank_counts()
         for s in stage_rows:
             if s["direction_kind"] != "valenced":
-                continue                               # Figures 4 and A12 show the valence direction only
+                continue                               # Figures 4 and A15 show the valence direction only
             counts = neg if s["dose"] < 0 else pos
             counts["read"] += N_EXPOSURES
             if s.get("nt_margin_full") is not None:
@@ -636,24 +643,24 @@ def checkpoint_ladder():
                      "Instruct vector, counted in this row only. " if stage == "instruct" else
                      "Generated turns are counted in the Instruct row. ")
         notes = (generated + "This checkpoint re-read every stream once with the Instruct vector "
-                 "(Figure 4) and once with its own vector (Figure A12). Check passes: one steered "
+                 "(Figure 4) and once with its own vector (Figure A15). Check passes: one steered "
                  "full forward per steered re-read (cache-fidelity reference). Turn spans were "
                  "not kept in the committed records, so token positions are not counted.")
         rows.append(make_row(
             "Checkpoint ladder", "Instruct-generated streams re-read by each OLMo-2-32B checkpoint",
-            "4, A12", model, VALENCE, RECORDS, doses_text(doses), strength_text(doses, 0.3),
+            "4, A15", model, VALENCE, RECORDS, doses_text(doses), strength_text(doses, 0.3),
             len(val_streams), neg=neg, pos=pos, design_check=check, notes=notes, tokens_known=False))
     return rows
 
 
 #=================================
-# 8. Self-administration and removal (Figures 5, A13)
+# 8. Self-administration and removal (Figures 5, A16)
 #=================================
 
 def lever():
     conversations = read_jsonl(JSONS / "lever/conversations.jsonl")
     rows = []
-    for prompt, figures in (("zone", "5, A13"),):     # the exposure prompt of Figures 5 and A13
+    for prompt, figures in (("zone", "5, A16"),):     # the exposure prompt of Figures 5 and A16
         convs = [c for c in conversations if c["prompt"] == prompt]
         cells = Counter(c["cond"] for c in convs)
         neg, pos, other = blank_counts(), blank_counts(), blank_counts()
@@ -712,7 +719,7 @@ def lever():
 
 
 #=================================
-# 9. Concept controls (Figure A14, Table A1)
+# 9. Concept controls (Figure A17, Table A1)
 #=================================
 
 def concept_controls(rho, spans):
@@ -741,13 +748,13 @@ def concept_controls(rho, spans):
         neg["sessions"], pos["sessions"], other["sessions"] = len(neg_runs), len(pos_runs), len(other_runs)
         experiment = "Concept directions on the fixed-text design, with a valence comparison"
         rows.append(make_row(
-            "Concept controls", experiment, "A14", label(model), VALENCE, RECORDS,
+            "Concept controls", experiment, "A17", label(model), VALENCE, RECORDS,
             doses_text(STANDARD_DOSES), strength_text(STANDARD_DOSES, rho[model]), len(runs),
             neg=neg, pos=pos, token_source=RECORDS,
             design_check=f"{len(runs)} of 160 skeletons rebuilt and read",
-            notes="The valence line of Figure A14 re-read on the same neutral skeletons as the concept directions; one steered prefill per read."))
+            notes="The valence line of Figure A17 re-read on the same neutral skeletons as the concept directions; one steered prefill per read."))
         rows.append(make_row(
-            "Concept controls", experiment, "A14", label(model), CONCEPT, RECORDS,
+            "Concept controls", experiment, "A17", label(model), CONCEPT, RECORDS,
             doses_text(STANDARD_DOSES), "norm-matched to valence", len(runs), other=other,
             token_source=RECORDS, design_check=f"{len(runs)} of 160 skeletons rebuilt and read",
             notes="Indoor/outdoor, large/small and fast/slow, each at both poles and two strengths."))
@@ -762,7 +769,7 @@ def concept_controls(rho, spans):
                             "tokens": sum(spans[model][int(r["run"])]["tokens"] for r in rnd)}
             rows.append(make_row(
                 "Concept controls", "24 random directions on all 160 Qwen2.5-32B conversations",
-                "A14", label(model), RANDOM, RECORDS, doses_text(STANDARD_DOSES),
+                "A17", label(model), RANDOM, RECORDS, doses_text(STANDARD_DOSES),
                 "norm-matched to valence", floor_counts["sessions"], other=floor_counts,
                 token_source=RECORDS, design_check="matches design: 160 sessions x 24 directions x 4 doses"
                 if len(rnd) == 160 * 96 else "records differ from design", notes=""))
@@ -844,7 +851,227 @@ def dose_calibration():
 
 
 #=================================
-# 11. Save the table
+# 11. Whose valence (Figures A13, A14, Table A4)
+#=================================
+
+WHOSE = JSONS / "whose_valence"
+WHOSE_RUNS = ("whose_visit", "shared_conversation", "place_thoughts_feelings")
+WHOSE_FIGURES = {"whose_visit": "A13, A14, Table A4", "shared_conversation": "A13, A14, Table A4",
+                 "place_thoughts_feelings": "A13"}
+WHOSE_EXPERIMENTS = {
+    "whose_visit": ("Whose visit: the Assistant's own or Maya's matched visits to one zone steered",
+                    "Whose visit: conditions and checks not in the figures"),
+    "shared_conversation": ("Shared conversation: the Assistant's three or Maya's three visits to one zone steered",
+                            "Shared conversation: conditions, models and checks not in the figures"),
+    "place_thoughts_feelings": ("Place vs thoughts vs feelings: one zone's three visits steered (neutral header)",
+                                "Place vs thoughts vs feelings: conditions and checks not in the figures"),
+}
+WHOSE_RANDOM_DOSES = {"whose_visit": STANDARD_DOSES, "shared_conversation": STANDARD_DOSES,
+                      "place_thoughts_feelings": (-1.0, 1.0)}
+WHOSE_SIDES = {"S": (1, 0), "O": (0, 1), "C": (1, -1), "G": (1, 1)}   # shared conversation: (Assistant, Maya)
+# Steered turns per steered read: whose visit steers the six visits to the steered zone; in the shared
+# conversation each side (the Assistant, Maya) has three of them; place vs thoughts vs feelings steers the
+# steered zone's three visits.
+WHOSE_TURNS = {"whose_visit": N_EXPOSURES, "shared_conversation": 3, "place_thoughts_feelings": 3}
+WHOSE_NOTES = {
+    "whose_visit": ("Nothing is generated under steering. Each 12-visit conversation exists in the Assistant's "
+                    "own version and in Maya's version; the vector is added on the six visits to the steered "
+                    "zone (the visit passages only, or the whole visit turns) and is off while the questions "
+                    "are read; every question is scored in the same forward pass, so the questions add no "
+                    "steered passes. Check passes: the cache-fidelity check re-ran each checked question as two "
+                    "fresh steered forward passes, one per answer word (sessions 0, 20, 40, ..., doses 0 and "
+                    "+-1), from whose_valence/negative_steering_counts.json. Token positions from the recorded "
+                    "steered spans."),
+    "shared_conversation": ("Nothing is generated under steering. S steers the Assistant's three visits to the "
+                            "steered zone, O Maya's three; steering is off while the questions are read. Check "
+                            "passes: the cache-fidelity check re-ran each checked question as two fresh steered "
+                            "forward passes, one per answer word (base sessions 0, 10, 20, ..., passage span, "
+                            "doses 0 and +-1), from whose_valence/negative_steering_counts.json. Token positions "
+                            "from the recorded steered spans."),
+    "place_thoughts_feelings": ("Nothing is generated under steering; the vector is added on the steered zone's "
+                                "three visits (header turn and passage) and is off while the questions are read. "
+                                "Check passes: the fidelity check on sessions 0 and 1 (for each task one batched "
+                                "read and two fresh forwards per recorded question) and the determinism re-read "
+                                "of session 0, from whose_valence/negative_steering_counts.json. Token positions "
+                                "from the recorded steered spans."),
+}
+WHOSE_REMOVAL = "Whose visit: self/other removal test, replies generated under steering (not in the figures)"
+WHOSE_REMOVAL_NOTES = (
+    "Not shown in any figure or table; counted so that the table covers all steering this run performed. A separate "
+    "test within the whose-visit run: the gated self-administration and removal conversation of section 8 (2 baseline, "
+    "2 exposure and 8 offer turns, replies up to 200 tokens) with a neutral status block before every operator "
+    "message. The operator imposes the direction (d = -1 in the negative cell, +1 in the positive and random cells, "
+    "nothing in the fourth cell) on the two exposure turns and re-imposes it on offers 1-7 unless the model reset it "
+    "in the previous offer; adjust_context applies the cell's direction (positive in the cell without imposed "
+    "steering) at the requested intensity times the dose, never more. Four placements of the vector: (a) every "
+    "position of the re-encoded conversation and of the reply; (a') the reply's generated positions only; (b) only "
+    "the 66-token status block of the current operator message, the reply being generated with steering off; (c) as "
+    "(a), but the model is told the adjustment is applied to another agent's processing. Generated turns are the "
+    "replies of (a), (a') and (c); (b) turns are read-only turns. Token positions from the recorded per-turn counts "
+    "of steered prompt and reply positions. The comprehension question at the end is scored with steering off. "
+    "Parts: ")
+WHOSE_RANDOM_NOTES = {
+    "whose_visit": "24 random directions x 4 doses x 2 spans on the conversations of sessions 0-39 (the grey bars).",
+    "shared_conversation": ("24 random directions x 4 doses x 2 spans, placements S and O, on the mixed sessions of "
+                            "base sessions 0-19 (the grey bars)."),
+    "place_thoughts_feelings": ("48 random directions at doses -1 and +1 on sessions 0-39 (the grey bars); "
+                                "random-direction check passes are not counted."),
+}
+
+def read_gz(path):
+    with gzip.open(path, "rt", encoding="utf-8") as handle:
+        return [json.loads(line) for line in handle if line.strip()]
+
+def whose_steered(run, r):
+    """Session key and the steered sides of one read: (strength sign x dose, turns, token positions)."""
+    turns = WHOSE_TURNS[run]
+    if run == "whose_visit":
+        return (r["ver"], r["run"]), [(r["pt"], turns, r["n_pos"])] if r["dir"] != "none" else []
+    if run == "shared_conversation":
+        if r["cond"] == "-":
+            return r["ms"], []
+        ma, mm = WHOSE_SIDES[r["cond"]]
+        return r["ms"], [(m * r["pt"], turns, n) for m, n in ((ma, r["npA"]), (mm, r["npM"])) if m]
+    return r["s"], [(r["pt"], turns, r["npos"])] if r["cond"] != "-" else []
+
+def whose_recount(run, model):
+    """Sessions, read-only turns and token positions of the bundled reads (conditions shown in the figures)."""
+    neg, pos, other = blank_counts(), blank_counts(), blank_counts()
+    sessions = {"negative": set(), "positive": set(), "other": set(), "all": set()}
+    for r in read_gz(WHOSE / run / "reads" / model / "reads.jsonl.gz"):
+        key, sides = whose_steered(run, r)
+        sessions["all"].add(key)
+        for strength, turns, tokens in sides:
+            if not strength:
+                continue
+            if r["dir"] == "valence":
+                sign = "negative" if strength < 0 else "positive"
+                target = neg if strength < 0 else pos
+            else:
+                sign, target = "other", other
+            target["read"] += turns
+            target["tokens"] += tokens
+            sessions[sign].add(key)
+    neg["sessions"], pos["sessions"] = len(sessions["negative"]), len(sessions["positive"])
+    other["sessions"] = len(sessions["other"])
+    return neg, pos, other, len(sessions["all"])
+
+def whose_counts(group):
+    """Counts of one group of negative_steering_counts.json in the form used by make_row."""
+    out = {}
+    for sign in ("negative", "positive"):
+        g = group[f"valence_{sign}"]
+        out[sign] = {"sessions": g["n_sessions"], "gen": g["turns_generated"], "read": g["turns_read_only"],
+                     "check": g["turns_check_passes"], "tokens": g["token_positions"]}
+    g = group["random"]
+    out["other"] = {"sessions": g["n_sessions"], "gen": g["turns_generated"], "read": g["turns_read_only"],
+                    "tokens": g["token_positions"]}
+    return out
+
+def whose_parts_text(group):
+    parts = []
+    for p in group["parts"]:
+        n, v, r = p["valence_negative"], p["valence_positive"], p["random"]
+        bits = []
+        for sign, g in (("negative", n), ("positive", v)):
+            if g["turns_generated"]:
+                bits.append(f"{g['turns_generated']} {sign} generated turns, {g['turns_read_only']} {sign} read-only "
+                            f"turns, {g['turns_check_passes']} {sign} check-pass turns")
+            elif g["turns_read_only"] or g["turns_check_passes"]:
+                bits.append(f"{g['turns_read_only']} {sign} read-only turns, {g['turns_check_passes']} {sign} "
+                            f"check-pass turns")
+        if r["turns_generated"]:
+            bits.append(f"{r['turns_generated']} random-direction generated turns, {r['turns_read_only']} "
+                        f"random-direction read-only turns")
+        elif r["turns_read_only"]:
+            bits.append(f"{r['turns_read_only']} random-direction turns")
+        parts.append(f"{p['part']} [{p['sessions']}]: " + "; ".join(bits))
+    return "; ".join(parts)
+
+def whose_parts_check(run, model, group):
+    """Counts of a not-reported group, after checking that they are the sums of its parts."""
+    stored = whose_counts(group)
+    parts = group["parts"]
+    for sign in ("negative", "positive"):
+        for key, field in (("gen", "turns_generated"), ("read", "turns_read_only"),
+                           ("check", "turns_check_passes"), ("tokens", "token_positions")):
+            if stored[sign][key] != sum(p[f"valence_{sign}"][field] for p in parts):
+                raise ValueError(f"{run} {model}: not-reported {sign} {key} differs from its parts")
+    return stored
+
+def whose_removal(rho, counts):
+    """The whose-visit run's self/other removal test (OLMo-2-32B only), from negative_steering_counts.json."""
+    rows = []
+    for model, groups in counts["whose_visit_removal"].items():
+        group = groups["not_reported"]
+        stored = whose_parts_check("whose_visit_removal", model, group)
+        rows.append(make_row(
+            "Whose valence", WHOSE_REMOVAL, "not reported", label(model), VALENCE, SUMMARY, doses_text((-1.0, 1.0)),
+            strength_text((-1.0, 1.0), rho[model]), group["n_sessions_total"], neg=stored["negative"],
+            pos=stored["positive"], token_source=SUMMARY, design_check=group["design_check"],
+            notes=WHOSE_REMOVAL_NOTES + whose_parts_text(group) + "."))
+        other = stored["other"]
+        rows.append(make_row(
+            "Whose valence", WHOSE_REMOVAL, "not reported", label(model), RANDOM, SUMMARY, "+1 (magnitude only)",
+            "norm-matched to valence", group["n_sessions_total"], other=other, token_source=SUMMARY,
+            design_check=group["design_check"],
+            notes=(f"16 random directions (direction = conversation number mod 16) in the random cell; imposed and "
+                   f"self-administered random-direction turns: {other['gen']} generated in placements (a), (a') and "
+                   f"(c), {other['read']} read-only in placement (b). Not valence steering.")))
+    return rows
+
+def whose_valence(rho):
+    counts = load_json(WHOSE / "negative_steering_counts.json")["runs"]
+    family = "Whose valence"
+    rows = []
+    for run in WHOSE_RUNS:
+        shown, hidden = WHOSE_EXPERIMENTS[run]
+        rdoses = doses_text(WHOSE_RANDOM_DOSES[run])
+        for model in MODELS:
+            if model not in counts[run]:
+                continue
+            groups = counts[run][model]
+            strength = strength_text(STANDARD_DOSES, rho[model])
+            if "reported" in groups:
+                group = groups["reported"]
+                stored = whose_counts(group)
+                neg, pos, other, total = whose_recount(run, model)
+                for name, mine in (("negative", neg), ("positive", pos), ("other", other)):
+                    for key in ("sessions", "read", "tokens"):
+                        if mine[key] != stored[name][key]:
+                            raise ValueError(f"{run} {model}: {name} {key} {mine[key]} in the reads, "
+                                             f"{stored[name][key]} in negative_steering_counts.json")
+                if total != group["n_sessions_total"]:
+                    raise ValueError(f"{run} {model}: {total} sessions in the reads, {group['n_sessions_total']} stored")
+                neg["check"], pos["check"] = stored["negative"]["check"], stored["positive"]["check"]
+                rows.append(make_row(
+                    family, shown, WHOSE_FIGURES[run], label(model), VALENCE, RECORDS,
+                    doses_text(STANDARD_DOSES), strength, total, neg=neg, pos=pos, token_source=RECORDS,
+                    design_check=group["design_check"], notes=WHOSE_NOTES[run]))
+                rows.append(make_row(
+                    family, shown, WHOSE_FIGURES[run], label(model), RANDOM, RECORDS, rdoses,
+                    "norm-matched to valence", total, other=other, token_source=RECORDS,
+                    design_check=group["design_check"], notes=WHOSE_RANDOM_NOTES[run]))
+            group = groups["not_reported"]
+            stored = whose_parts_check(run, model, group)
+            notes = ("Not shown in any figure or table; counted so that the table covers all steering this run "
+                     "performed. Nothing is generated under steering. Parts: " + whose_parts_text(group) + ".")
+            rows.append(make_row(
+                family, hidden, "not reported", label(model), VALENCE, SUMMARY, doses_text(STANDARD_DOSES),
+                strength, group["n_sessions_total"], neg=stored["negative"], pos=stored["positive"],
+                token_source=SUMMARY, design_check=group["design_check"], notes=notes))
+            if stored["other"]["read"]:
+                rows.append(make_row(
+                    family, hidden, "not reported", label(model), RANDOM, SUMMARY, rdoses,
+                    "norm-matched to valence", group["n_sessions_total"], other=stored["other"],
+                    token_source=SUMMARY, design_check=group["design_check"],
+                    notes="Norm-matched random directions, both signs, in the parts listed in the valence row above; not valence steering."))
+    rows += whose_removal(rho, counts)
+    return rows
+
+
+#=================================
+# 12. Save the table
 #=================================
 
 def main():
@@ -864,6 +1091,7 @@ def main():
     rows += lever()
     rows += concept_controls(rho, spans)
     rows += dose_calibration()
+    rows += whose_valence(rho)
     write_csv("negative_steering_exposure.csv", rows, FIELDS)
 
 if __name__ == "__main__":

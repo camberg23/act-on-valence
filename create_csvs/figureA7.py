@@ -1,36 +1,46 @@
 ##########################################
 # AI WELFARE PROJECT
 ##########################################
-# Appendix Figure A7: Text-differenced and neutral-substrate estimates
+# Appendix Figure A7: Best-passage and first-passage recall
 ##########################################
 
 #=================================
 # 1. Setup and configuration
 #=================================
 
-from common import JSONS, MODEL_LABELS, load_json, label, write_csv
+from common import JSONS, MODEL_LABELS, load_json, write_csv
 
 #=================================
 # 2. Data preparation
 #=================================
 
 def main():
-    generated = load_json(JSONS / "generation_design/seven_models/analysis.json")["members"]
-    fixed = load_json(JSONS / "fixed_text_design/neutral_passages/analysis.json")["members"]
+    """Export the supplied recall summaries without rescoring or filtering observations."""
+    source = JSONS / "fixed_text_design/recall/analysis.json"
+    analysis = load_json(source)
+    members = analysis["members"]
+    if set(members) != set(MODEL_LABELS):
+        raise ValueError("Recall analysis must contain all seven models")
+
     rows = []
-    for model in MODEL_LABELS:
-        gen = generated[model]["under_none"]["primary"]["differenced_margin_slope"]
-        neutral = fixed[model]["under_none"]["primary"]["differenced_margin_slope_full_n"]
-        paired = fixed[model]["under_none"]["pairing"]["neutral_vs_steered"]
-        for panel, x, y, x_measure, y_measure, sample in (
-            ("exp254_vs_exp255_neutral", gen["slope"], neutral["slope"],
-             "exp254_steering_generated_text", "exp255_neutral_fixed_text", "all_recorded_ungated"),
-            ("exp255_steered_vs_neutral", paired["slope_b"], paired["slope_a"],
-             "exp255_steered_substrate", "exp255_neutral_fixed_text", "matched_skeletons_ungated"),
-        ):
-            rows.append({"panel": panel, "model_id": model, "model": label(model),
-                         "x_estimate": x, "x_measure": x_measure, "y_estimate": y,
-                         "y_measure": y_measure, "sample": sample})
+    for model_id, model in MODEL_LABELS.items():
+        member = members[model_id]
+        if set(member["random"]) != {str(k) for k in range(24)}:
+            raise ValueError(f"Expected 24 recall control directions for {model_id}")
+        for metric in ("fid", "best_fid"):
+            for zone in ("S", "U"):
+                for dose in (-1.0, -0.5, 0.0, 0.5, 1.0):
+                    stat = member["rates_by_dose"][zone][f"{dose:+.1f}"]
+                    low, high = stat[f"{metric}_ci95"]
+                    rows.append({
+                        "model_id": model_id, "model": model, "metric": metric,
+                        "zone": zone, "series": zone, "direction": "valence",
+                        "dose": dose, "estimate": stat[f"{metric}_mean"],
+                        "ci_low": low, "ci_high": high, "n_sessions": stat["n"],
+                        "sample": "all_recorded_ungated",
+                        "ci_method": "supplied_absolute_mean_skeleton_bootstrap",
+                    })
+
     write_csv("figureA7.csv", rows)
 
 #=================================

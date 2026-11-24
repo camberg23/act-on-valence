@@ -1,6 +1,6 @@
 # Non-valence concept controls and probes
 
-These records reproduce Figure A14 and Appendix Table A1. They are unchanged copies of the recorded outputs of three runs: fixed-text concept steering (`reads288.jsonl`), the concept-word probes (`arrival/`, `questions289.json`) and the full-sample Qwen2.5 random-direction comparison (`reads290.jsonl`). The numbers in the file names are run labels.
+These records reproduce Figure A17 and Appendix Table A1. They are unchanged copies of the recorded outputs of three runs: fixed-text concept steering (`reads288.jsonl`), the concept-word probes (`arrival/`, `questions289.json`) and the full-sample Qwen2.5 random-direction comparison (`reads290.jsonl`). The numbers in the file names are run labels.
 
 ## Included inputs
 
@@ -11,9 +11,9 @@ These records reproduce Figure A14 and Appendix Table A1. They are unchanged cop
 
 The other six models' random curves use the existing `../neutral_passages/reduced.json` records. They have 40 recorded conversations per direction. No additional data downloads, API calls or model inference are needed to reproduce the figure or table.
 
-## Figure A14
+## Figure A17
 
-Run `python3 create_csvs/figureA14.py` and `Rscript create_figures/figureA14.R` from the repository root. The CSV has 980 rows: seven models, 28 directions (valence, three concepts and 24 random directions), and five doses.
+Run `python3 create_csvs/figureA17.py` and `Rscript create_figures/figureA17.R` from the repository root. The CSV has 980 rows: seven models, 28 directions (valence, three concepts and 24 random directions), and five doses.
 
 The outcome is the conditioned-zone minus other-zone log-probability margin under steering, minus the same conversation's margin under no steering. Fields `member`, `run`, `direction`, `point` and `margin` identify each read. `ids_sha` verifies the shared text across doses. The original records also contain reconstruction and reproduction diagnostics, which are not exclusion rules.
 
@@ -31,4 +31,4 @@ The table has three rows per model, using all recorded conversations and the sam
 
 ## Scope
 
-The included analysis scripts reproduce the published summaries from recorded data. The code that produced these records is in `experiments/fixed_text_design/concept_control/`: `run.py` builds the vectors and writes the fixed-text reads, `probe.py` runs the concept-word probe and `floor_qwen25.py` runs the full-sample Qwen2.5 random directions. Its README maps each committed file to the stage that wrote it. The concept corpora used to build the vectors are in `experiments/steering_vectors/concept_corpora/` (56 passages for each of four sub-states per pole, so 224 per pole). The concept vectors and their cosines with the valence vector are in `vectors/<model>/` in this folder. The largest absolute cosine between a concept direction and the valence vector, across the 21 model-concept pairs, is 0.0697. Repeating the model-inference runs is separate from reproducing the figure and table.
+The included analysis scripts reproduce the published summaries from recorded data. The model-inference code, concept corpora and steering vectors are available from the authors on request, as described in the repository's main README. They are not needed to reproduce Figure A17 or Table A1 from these records.

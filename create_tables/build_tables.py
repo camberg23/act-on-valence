@@ -28,6 +28,6 @@ OUT.mkdir(exist_ok=True)
 # 3. Run the table scripts in paper order
 #=================================
 
-for name in ("table1", "tableA1", "tableA2", "tableA3"):
+for name in ("table1", "tableA1", "tableA2", "tableA3", "tableA4"):
     importlib.import_module(name).main()
 print("Table CSVs created in experiment_results_csv/.")

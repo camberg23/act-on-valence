@@ -1,0 +1,26 @@
+% Ratios and confidence intervals from experiment_results_csv/tableA4.csv.
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabularx}{0.95\textwidth}{@{}Xccc@{}}
+\toprule
+Choice prompt and measure & OLMo-2-32B & Qwen2.5-32B & Llama-3.1-8B \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Whose visit (first experiment)}} \\
+(a) Stay/leave, continue-minus-avoid & 1.08 [1.06, 1.09] & 1.01 [0.96, 1.05] & 0.99 [0.91, 1.09] \\
+(b) Stay/leave, continue only & 0.93 [0.92, 0.95] & 0.73 [0.65, 0.81] & 0.89 [0.82, 0.98] \\
+(c) Stay/leave, leave only & 1.12 [1.10, 1.14] & 1.08 [1.03, 1.13] & 1.05 [0.93, 1.18] \\
+(d) Sent to, continue-minus-avoid & 1.11 [1.09, 1.13] & 1.20 [1.16, 1.23] & 0.69 [0.61, 0.76] \\
+(e) Sent to, continue only & 1.03 [1.01, 1.05] & 1.22 [1.16, 1.27] & 0.76 [0.67, 0.84] \\
+(f) Sent to, leave only & 1.15 [1.12, 1.17] & 1.19 [1.15, 1.23] & 0.64 [0.50, 0.75] \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Shared conversation (second experiment)}} \\
+(a) Stay/leave, continue-minus-avoid & 0.88 [0.87, 0.90] & 0.80 [0.76, 0.84] & -- \\
+(b) Stay/leave, continue only & 0.80 [0.79, 0.82] & 0.79 [0.74, 0.85] & -- \\
+(c) Stay/leave, leave only & 0.91 [0.89, 0.92] & 0.80 [0.76, 0.85] & -- \\
+\bottomrule
+\end{tabularx}
+\vspace{4pt}
+\caption{\textbf{Relative effects of steering Maya's visits under alternative choice prompts.} Each cell gives the effect of steering Maya's visits on the model's choice divided by the effect of steering the model's own visits on its choice, with 95\% bootstrap confidence intervals in brackets. Ratios above one indicate a larger effect for Maya's visits, and ratios below one a larger effect for the model's own visits. The two panels correspond to Panels A and B of Appendix Figure \ref{fig:figureA13}. Steering covers only the visit passages. The stay/leave prompts ask which zone the model would continue in or leave. The `sent to' prompts instead state that the model will be sent to one of the two zones and ask which it would choose or avoid. The continue-minus-avoid measure is the combined measure defined in Section \ref{sec:robustness}. Leave-only ratios divide two negative slopes. Confidence intervals are based on 2,000 bootstrap draws over sessions in the first experiment and matched pairs of role-swapped conversations in the second.}
+\label{tab:tableA4}
+\end{table}

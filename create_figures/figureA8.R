@@ -1,7 +1,7 @@
 ##########################################
 # AI WELFARE PROJECT
 ##########################################
-# Appendix Figure A8: Injected span
+# Appendix Figure A8: Text-differenced and neutral-substrate estimates
 ##########################################
 
 #=================================
@@ -10,6 +10,8 @@
 
 library(tidyverse)
 library(ggplot2)
+library(ggrepel)
+library(patchwork)
 
 # Run this script from the repository root directory.
 dir.create("figures", showWarnings = FALSE)
@@ -18,24 +20,19 @@ theme_set(
   theme_minimal(base_size = 14) +
     theme(
       plot.title = element_text(hjust = 0.5, size = 15, face = "bold"),
-      strip.text = element_text(size = 12, face = "bold"),
       axis.title = element_text(size = 12.5, face = "bold"),
       axis.text = element_text(size = 11),
       axis.line = element_line(colour = "black", linewidth = 0.55),
       axis.ticks = element_line(colour = "black", linewidth = 0.55),
       panel.grid.minor = element_blank(),
-      panel.grid.major.x = element_blank(),
-      legend.position = "bottom",
-      legend.text = element_text(size = 10.5),
-      legend.title = element_text(size = 11, face = "bold"),
+      legend.position = "none",
       plot.background = element_rect(fill = "white", colour = NA),
       panel.background = element_rect(fill = "white", colour = NA)
     )
 )
 
 model_order <- c("OLMo-2-32B", "Qwen2.5-32B", "Qwen3-14B", "Qwen3-32B", "Mistral-24B", "Gemma-3-27B", "Llama-3.1-8B")
-span_order <- c("bare", "sentence", "passage")
-span_colours <- setNames(hcl.colors(5, palette = "Heat")[c(5, 3, 1)], span_order)
+model_colours <- setNames(hcl.colors(7, palette = "Heat"), model_order)
 
 #=================================
 # 2. Data loading and preparation
@@ -45,82 +42,81 @@ data <- read_csv(
   "experiment_results_csv/figureA8.csv",
   show_col_types = FALSE
 ) %>%
-  mutate(
-    model = factor(model, levels = model_order),
-    span = factor(span, levels = span_order),
-    floor_status = factor(
-      if_else(clears_random_floor == 1, "Clears random-direction floor", "Does not clear floor"),
-      levels = c("Clears random-direction floor", "Does not clear floor")
-    )
-  )
+  mutate(model = factor(model, levels = model_order))
 
 stopifnot(
-  nrow(data) == 21,
+  nrow(data) == 14,
   n_distinct(data$model) == 7,
-  n_distinct(data$span) == 3
-)
-
-span_labels <- data %>%
-  group_by(span) %>%
-  summarise(mean_tokens = round(mean(steered_span_tokens)), .groups = "drop") %>%
-  mutate(label = str_c(str_to_title(span), "\n(", mean_tokens, " tokens)")) %>%
-  {setNames(.$label, .$span)}
-
-panel_labels <- setNames(
-  str_c("Panel ", LETTERS[1:7], ": ", model_order),
-  model_order
+  n_distinct(data$panel) == 2
 )
 
 #=================================
-# 3. Create figure
+# 3. Plotting function
 #=================================
 
-figureA8 <- ggplot(
-  data,
-  aes(x = span, y = estimate, fill = span)
-) +
-  geom_hline(yintercept = 0, colour = "grey75", linewidth = 0.5) +
-  geom_col(width = 0.72, colour = "grey20", linewidth = 0.35) +
-  geom_errorbar(
-    aes(ymin = ci_low, ymax = ci_high),
-    width = 0.16,
-    linewidth = 0.7
-  ) +
-  geom_point(
-    aes(shape = floor_status),
-    size = 2.4,
-    stroke = 0.8,
-    fill = "white",
-    colour = "black"
-  ) +
-  facet_wrap(
-    ~model,
-    ncol = 3,
-    scales = "free_y",
-    labeller = as_labeller(panel_labels)
-  ) +
-  scale_fill_manual(values = span_colours, guide = "none") +
-  scale_shape_manual(
-    values = c("Clears random-direction floor" = 21, "Does not clear floor" = 4),
-    drop = FALSE
-  ) +
-  scale_x_discrete(labels = span_labels) +
-  labs(
-    x = "Injected span and mean number of injected tokens",
-    y = expression(bold("Slope of "*Delta*" choice margin on steering dose (nats)")),
-    shape = "Valenced direction"
-  ) +
-  guides(shape = guide_legend(nrow = 1))
+create_scatterplot <- function(plot_data, plot_title, x_label, y_label, seed) {
+  axis_limits <- range(c(plot_data$x_estimate, plot_data$y_estimate, 0))
+  padding <- diff(axis_limits) * 0.07
+  axis_limits <- axis_limits + c(-padding, padding)
+
+  ggplot(plot_data, aes(x = x_estimate, y = y_estimate, colour = model, label = model)) +
+    geom_abline(slope = 1, intercept = 0, colour = "grey55", linetype = "dashed", linewidth = 0.75) +
+    geom_hline(yintercept = 0, colour = "grey85", linewidth = 0.5) +
+    geom_vline(xintercept = 0, colour = "grey85", linewidth = 0.5) +
+    geom_point(size = 3.4) +
+    geom_text_repel(
+      seed = seed,
+      size = 3.7,
+      colour = "grey15",
+      box.padding = 0.4,
+      point.padding = 0.3,
+      max.overlaps = Inf,
+      show.legend = FALSE
+    ) +
+    scale_colour_manual(values = model_colours) +
+    scale_x_continuous(limits = axis_limits) +
+    scale_y_continuous(limits = axis_limits) +
+    coord_equal() +
+    labs(
+      title = plot_title,
+      x = x_label,
+      y = y_label
+    )
+}
 
 #=================================
-# 4. Save figure
+# 4. Create panels
 #=================================
+
+panel_a <- data %>%
+  filter(panel == "exp254_vs_exp255_neutral") %>%
+  create_scatterplot(
+    plot_title = "Panel A: Estimates from separate experiments",
+    x_label = expression(bold("Steering-generated text: slope of "*Delta*" choice margin (nats)")),
+    y_label = expression(bold("Fixed unsteered text: slope of "*Delta*" choice margin (nats)")),
+    seed = 254
+  )
+
+panel_b <- data %>%
+  filter(panel == "exp255_steered_vs_neutral") %>%
+  create_scatterplot(
+    plot_title = "Panel B: Estimates from matched sessions",
+    x_label = expression(bold("Steering-generated text: slope of "*Delta*" choice margin (nats)")),
+    y_label = expression(bold("Fixed unsteered text: slope of "*Delta*" choice margin (nats)")),
+    seed = 255
+  )
+
+#=================================
+# 5. Combine and save figure
+#=================================
+
+figureA8 <- panel_a + panel_b
 
 ggsave(
   "figures/figureA8.png",
   figureA8,
   width = 12,
-  height = 9,
+  height = 6.5,
   dpi = 300,
   bg = "white"
 )
